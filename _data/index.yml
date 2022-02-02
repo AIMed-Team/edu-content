@@ -22,7 +22,6 @@ meta:
 - name: author
   content: AI-Med
 config:
-  content: null
   search:
     content: true
     links: false
