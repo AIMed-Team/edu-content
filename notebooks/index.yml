@@ -1,3 +1,1 @@
-notebooks:
-  label: Notebooks
-  background: images/bg.jpeg
+patch: notebooks/learning-tasks/index.yml

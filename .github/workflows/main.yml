@@ -26,4 +26,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           enable_jekyll: true
           publish_dir: ./webified/
-          exclude_assets: '.github'
+          exclude_assets: '.github .gitignore'
