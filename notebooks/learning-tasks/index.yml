@@ -1,8 +1,10 @@
 learning-tasks:
-  label: Learning Tasks
+  label: 
+    text: Learning Tasks
+    position: top
   background: images/bg.jpeg
   content:
-    - notebook: notebooks/learning-tasks/1_mnist_classification_fc.ipynb
+    - notebook: notebooks/learning-tasks/1_mnist_classification_fc
       text: 1. Classification with Fully Connected Neural Network
       kind: Notebook Exercise
       description: MNIST classification with a fully connected model
