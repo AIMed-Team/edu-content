@@ -25,9 +25,15 @@ config:
   search:
     content: true
     links: false
-notebooks:
-  label: Notebooks
+learning-tasks:
+  label: Learning Tasks
   background: /edu-content/assets/images/bg.jpeg
+  content:
+  - notebook: notebooks/learning-tasks/1_mnist_classification_fc.ipynb
+    text: 1. Classification with Fully Connected Neural Network
+    kind: Notebook Exercise
+    description: <p>MNIST classification with a fully connected model</p>
+    link: /edu-content/notebooks/learning-tasks/1_mnist_classification_fc.html
 kind: Index
 search:
   content: true
