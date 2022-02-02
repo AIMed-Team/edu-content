@@ -1,0 +1,20 @@
+title: AI-Med | Educational Content
+
+header:
+  title: AI-Med | Educational Content
+  background: images/bg.jpeg
+  description: Educational Content for Deep Learning
+
+footer:
+  background: images/bg.jpeg
+
+nav:
+  patch: common/nav.yml
+
+meta:
+  patch: common/meta.yml
+
+config:
+  patch: common/config.yml
+
+patch: notebooks/index.yml
