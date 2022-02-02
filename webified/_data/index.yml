@@ -1,0 +1,35 @@
+title: AI-Med | Educational Content
+header:
+  title: <p>AI-Med | Educational Content</p>
+  background: /edu-content/assets/images/bg.jpeg
+  description: <p>Educational Content for Deep Learning</p>
+footer:
+  background: /edu-content/assets/images/bg.jpeg
+nav:
+  brand:
+    text: AI-Med
+    link: https://aimed-team.github.io/
+  content:
+  - index: index
+    text: Educational Content
+    description: Educational Content for Deep Learning
+    link: /edu-content/
+    kind: Index
+meta:
+- name: keywords
+  content: Webifier, AI-Med, Deep Learning, Artificial Intelligence, Education, Machine
+    Learning, Medical Image Analysis
+- name: author
+  content: AI-Med
+config:
+  content: null
+  search:
+    content: true
+    links: false
+notebooks:
+  label: Notebooks
+  background: /edu-content/assets/images/bg.jpeg
+kind: Index
+search:
+  content: true
+  links: false
