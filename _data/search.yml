@@ -4,8 +4,8 @@
   description: Educational Content for Deep Learning
   title: AI-Med | Educational Content
   url: /edu-content/
-notebooks/learning-tasks/1_mnist_classification_fc:
-  category: Notebook Exercise
+notebooks/learning-tasks/1_mnist_classification_fc/index:
+  category: Content
   content: "\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
     prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
     \ border-box-sizing rendered_html\">\n<p>In this task, you should train a fully-connected\
@@ -44,7 +44,11 @@ notebooks/learning-tasks/1_mnist_classification_fc:
     </div>\n<div class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"\
     input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\"\
     >\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span>\n\
-    </pre></div>\n</div>\n</div>\n</div>\n</div>\n"
-  description: MNIST classification with a fully connected model
-  title: 1. Classification with Fully Connected Neural Network
-  url: notebooks/learning-tasks/1_mnist_classification_fc
+    </pre></div>\n</div>\n</div>\n</div>\n</div>\n <p>Classification with Fully Connected\
+    \ Neural Network</p> <p>MNIST classification with a fully connected model with\
+    \ pytorch.</p> Ahmad Salimi"
+  description: 'MNIST classification with a fully connected model with pytorch.
+
+    '
+  title: Classification with Fully Connected Neural Network
+  url: notebooks/learning-tasks/1_mnist_classification_fc/index.html
