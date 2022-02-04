@@ -6,64 +6,69 @@
   url: /edu-content/
 notebooks/learning-tasks/1_mnist_classification_fc/index:
   category: Content
-  content: "<p>MNIST classification with a fully connected model with pytorch.</p>\
-    \ Ahmad Salimi \n<div class=\"cell border-box-sizing text_cell rendered\"><div\
-    \ class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"\
-    text_cell_render border-box-sizing rendered_html\">\n<p>In this task, you should\
-    \ train a fully-connected model to classify MNIST dataset.</p>\n</div>\n</div>\n\
-    </div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
+  content: "\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
     prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
-    \ border-box-sizing rendered_html\">\n<h1 id=\"Load-the-dataset\">Load the dataset<a\
-    \ class=\"anchor-link\" href=\"#Load-the-dataset\">\xB6</a></h1><p>Load the MNIST\
-    \ dataset bellow.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
-    \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
-    >In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
-    \ class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n\
-    </div>\n</div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div\
-    \ class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"\
-    text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"Design-your-model\"\
-    >Design your model<a class=\"anchor-link\" href=\"#Design-your-model\">\xB6</a></h1><p>Write\
-    \ your fully-connected model below. Feel free to add extra cells.</p>\n</div>\n\
-    </div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\">\n<div\
-    \ class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n<div class=\"\
-    inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"\
-    ><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"\
-    cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
+    \ border-box-sizing rendered_html\">\n<p>In this task, you should train a fully-connected\
+    \ model with pytorch to classify MNIST dataset.</p>\n</div>\n</div>\n</div>\n\
+    <div class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
     >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
-    \ rendered_html\">\n<h1 id=\"Train-your-model\">Train your model<a class=\"anchor-link\"\
-    \ href=\"#Train-your-model\">\xB6</a></h1><p>Write the training proecss below.\
-    \ Feel free to add extra cells.</p>\n</div>\n</div>\n</div>\n<div class=\"cell\
-    \ border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    \ rendered_html\">\n<h1 id=\"Load-the-dataset\">Load the dataset<a class=\"anchor-link\"\
+    \ href=\"#Load-the-dataset\">\xB6</a></h1><p>Load the MNIST dataset bellow. You\
+    \ can use either <code>torchvision.datasets.MNIST</code> or <code>sklearn.datasets.fetch_openml()</code>\
+    \ or any other way to load the dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"\
+    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
     prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
     input_area\">\n<div class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n\
     </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
     \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
     >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"\
-    Draw-the-training-curves\">Draw the training curves<a class=\"anchor-link\" href=\"\
-    #Draw-the-training-curves\">\xB6</a></h1><p>Draw two diagrams for train and validation,\
-    \ one showing loss of each epoch, and another showing accuracy of each epoch.</p>\n\
+    Design-your-model\">Design your model<a class=\"anchor-link\" href=\"#Design-your-model\"\
+    >\xB6</a></h1><p>Write your fully-connected model below using <code>torch.nn</code>\
+    \ modules. Feel free to add extra cells.</p>\n</div>\n</div>\n</div>\n<div class=\"\
+    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n\
+    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
+    \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
+    >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"\
+    Train-your-model\">Train your model<a class=\"anchor-link\" href=\"#Train-your-model\"\
+    >\xB6</a></h1><p>Write the training process below. Instantiate your model, Create\
+    \ an optimizer function such as Adam or SGD, and write your train/validation loop.\
+    \ Then train your model until it converges. Feel free to add extra cells.</p>\n\
     </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
     >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
     <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
     \ hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
     <div class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
     >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
-    \ rendered_html\">\n<h1 id=\"Evaluate-your-model\">Evaluate your model<a class=\"\
-    anchor-link\" href=\"#Evaluate-your-model\">\xB6</a></h1><p>Evaluate your model\
-    \ on the test set.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
-    \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
-    >In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
-    \ class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n\
-    </div>\n</div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div\
-    \ class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"\
-    text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"Draw-misclassified-images\"\
-    >Draw misclassified images<a class=\"anchor-link\" href=\"#Draw-misclassified-images\"\
-    >\xB6</a></h1><p>Draw 20 misclassified images from test set with expected and\
-    \ predicted labels.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
-    \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
-    >In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
-    \ class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n\
-    </div>\n</div>\n <p>Classification with Fully Connected Neural Network</p>"
+    \ rendered_html\">\n<h1 id=\"Draw-the-training-curves\">Draw the training curves<a\
+    \ class=\"anchor-link\" href=\"#Draw-the-training-curves\">\xB6</a></h1><p>Draw\
+    \ two diagrams for train and validation, one showing loss of each epoch, and another\
+    \ showing accuracy of each epoch.</p>\n</div>\n</div>\n</div>\n<div class=\"cell\
+    \ border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n\
+    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
+    \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
+    >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"\
+    Evaluate-your-model\">Evaluate your model<a class=\"anchor-link\" href=\"#Evaluate-your-model\"\
+    >\xB6</a></h1><p>Evaluate the best epoch's model (according to the validation\
+    \ accuracy) on the test set, and report the accuracy. Is your model overfitted?</p>\n\
+    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
+    >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
+    <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
+    \ hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
+    <div class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
+    >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
+    \ rendered_html\">\n<h1 id=\"Draw-misclassified-images\">Draw misclassified images<a\
+    \ class=\"anchor-link\" href=\"#Draw-misclassified-images\">\xB6</a></h1><p>Draw\
+    \ 20 misclassified images from test set with expected and predicted labels.</p>\n\
+    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
+    >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
+    <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
+    \ hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
+    \ <p>MNIST classification with a fully connected model with pytorch.</p> Ahmad\
+    \ Salimi <p>Classification with Fully Connected Neural Network</p>"
   description: 'MNIST classification with a fully connected model with pytorch.
 
     '
