@@ -1,22 +1,22 @@
-title: Classification with Fully Connected Neural Network
+title: 'Classification with Fully Connected Neural Network: A solution'
 meta:
 - name: keywords
   content: Artificial Intelligence, Deep Learning, Fully Connected Neural Network,
     Classification, MNIST
 header:
-  title: <p>Classification with Fully Connected Neural Network</p>
+  title: '<p>Classification with Fully Connected Neural Network: A solution</p>'
   description: <p>MNIST classification with a fully connected model with pytorch.</p>
   background: /edu-content/assets/images/header.png
-solution:
+blank:
   label:
-    text: A solution
+    text: The blank notebook
     position: top
   content:
-  - notebook: notebooks/learning-tasks/solutions/1_mnist_classification_fc
-    text: 'Classification with Fully Connected Neural Network: A Solution'
-    kind: ''
-    description: <p>Please see this after you have done it yourself.</p>
-    link: /edu-content/notebooks/learning-tasks/solutions/1_mnist_classification_fc/
+  - notebook: notebooks/learning-tasks/1_mnist_classification_fc
+    text: Classification with Fully Connected Neural Network
+    kind: Notebook Exercise
+    description: <p>MNIST classification with a fully connected model</p>
+    link: /edu-content/notebooks/learning-tasks/1_mnist_classification_fc/
 authors:
   label:
     position: top
