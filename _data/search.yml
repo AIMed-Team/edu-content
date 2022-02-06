@@ -1,18 +1,17 @@
 /edu-content/:
   category: Index
-  content: <p>AI-Med | Educational Content</p> <p>Educational Content for Deep Learning</p>
+  content: <p>Educational Content for Deep Learning</p> <p>AI-Med | Educational Content</p>
   description: Educational Content for Deep Learning
   title: AI-Med | Educational Content
   url: /edu-content/
 notebooks/learning-tasks/1_mnist_classification_fc/index:
   category: Content
   content: "<p>MNIST classification with a fully connected model with pytorch.</p>\
-    \ Ahmad Salimi <p>Classification with Fully Connected Neural Networks</p> \n<div\
-    \ class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
-    >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
-    \ rendered_html\">\n<p>In this task, you should train a fully-connected model\
-    \ with pytorch to classify MNIST dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"\
-    cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
+    \ \n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt\
+    \ input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
+    \ border-box-sizing rendered_html\">\n<p>In this task, you should train a fully-connected\
+    \ model with pytorch to classify MNIST dataset.</p>\n</div>\n</div>\n</div>\n\
+    <div class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
     >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
     \ rendered_html\">\n<h1 id=\"Load-the-dataset\">Load the dataset<a class=\"anchor-link\"\
     \ href=\"#Load-the-dataset\">\xB6</a></h1><p>Load the MNIST dataset bellow. You\
@@ -68,7 +67,8 @@ notebooks/learning-tasks/1_mnist_classification_fc/index:
     </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
     >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
     <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
-    \ hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n"
+    \ hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
+    \ <p>Classification with Fully Connected Neural Networks</p> Ahmad Salimi"
   description: 'MNIST classification with a fully connected model with pytorch.
 
     '
@@ -76,8 +76,8 @@ notebooks/learning-tasks/1_mnist_classification_fc/index:
   url: notebooks/learning-tasks/1_mnist_classification_fc/index.html
 notebooks/learning-tasks/2_cifar10_classification_cnn/index:
   category: Content
-  content: "Ahmad Salimi <p>Classification with Convolutional Neural Networks</p>\
-    \ <p>CIFAR10 classification with a convolutional model with pytorch.</p> \n<div\
+  content: "<p>CIFAR10 classification with a convolutional model with pytorch.</p>\
+    \ <p>Classification with Convolutional Neural Networks</p> Ahmad Salimi \n<div\
     \ class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
     >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
     \ rendered_html\">\n<p>In this task, you should train a CNN model with pytorch\
@@ -146,10 +146,9 @@ notebooks/learning-tasks/2_cifar10_classification_cnn/index:
   url: notebooks/learning-tasks/2_cifar10_classification_cnn/index.html
 notebooks/learning-tasks/solutions/1_mnist_classification_fc/index:
   category: Content
-  content: "<p>Classification with Fully Connected Neural Networks: A solution</p>\
-    \ <p>MNIST classification with a fully connected model with pytorch.</p> Ahmad\
-    \ Salimi \n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
-    prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
+  content: "<p>MNIST classification with a fully connected model with pytorch.</p>\
+    \ \n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt\
+    \ input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
     \ border-box-sizing rendered_html\">\n<p>In this task, you should train a fully-connected\
     \ model with pytorch to classify MNIST dataset.</p>\n</div>\n</div>\n</div>\n\
     <div class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"input\"\
@@ -1236,7 +1235,8 @@ notebooks/learning-tasks/solutions/1_mnist_classification_fc/index:
     \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
     >In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
     \ class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n\
-    </div>\n</div>\n"
+    </div>\n</div>\n Ahmad Salimi <p>Classification with Fully Connected Neural Networks:\
+    \ A solution</p>"
   description: 'MNIST classification with a fully connected model with pytorch.
 
     '
@@ -1244,191 +1244,190 @@ notebooks/learning-tasks/solutions/1_mnist_classification_fc/index:
   url: notebooks/learning-tasks/solutions/1_mnist_classification_fc/index.html
 notebooks/learning-tasks/solutions/2_cifar10_classification_cnn/index:
   category: Content
-  content: "<p>Classification with Convolutional Neural Networks: A solution</p> Ahmad\
-    \ Salimi <p>CIFAR10 classification with a convolutional model with pytorch.</p>\
-    \ \n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt\
-    \ input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
-    \ border-box-sizing rendered_html\">\n<p>In this task, you should train a CNN\
-    \ model with pytorch to classify CIFAR10 dataset.</p>\n</div>\n</div>\n</div>\n\
+  content: "<p>CIFAR10 classification with a convolutional model with pytorch.</p>\
+    \ <p>Classification with Convolutional Neural Networks: A solution</p> \n<div\
+    \ class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
+    >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
+    \ rendered_html\">\n<p>In this task, you should train a CNN model with pytorch\
+    \ to classify CIFAR10 dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"cell\
+    \ border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[1]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span class=\"\
+    kn\">from</span> <span class=\"nn\">typing</span> <span class=\"kn\">import</span>\
+    \ <span class=\"n\">Tuple</span><span class=\"p\">,</span> <span class=\"n\">Iterable</span>\n\
+    <span class=\"kn\">from</span> <span class=\"nn\">tqdm</span> <span class=\"kn\"\
+    >import</span> <span class=\"n\">tqdm</span>\n<span class=\"kn\">from</span> <span\
+    \ class=\"nn\">time</span> <span class=\"kn\">import</span> <span class=\"n\"\
+    >time</span>\n\n<span class=\"kn\">import</span> <span class=\"nn\">torchvision</span>\n\
+    <span class=\"kn\">from</span> <span class=\"nn\">torchvision</span> <span class=\"\
+    kn\">import</span> <span class=\"n\">datasets</span><span class=\"p\">,</span>\
+    \ <span class=\"n\">transforms</span>\n<span class=\"kn\">import</span> <span\
+    \ class=\"nn\">torch</span>\n<span class=\"kn\">from</span> <span class=\"nn\"\
+    >torch</span> <span class=\"kn\">import</span> <span class=\"n\">nn</span>\n<span\
+    \ class=\"kn\">from</span> <span class=\"nn\">torch.utils.data</span> <span class=\"\
+    kn\">import</span> <span class=\"n\">DataLoader</span>\n<span class=\"kn\">import</span>\
+    \ <span class=\"nn\">torch.nn.functional</span> <span class=\"k\">as</span> <span\
+    \ class=\"nn\">F</span>\n<span class=\"kn\">import</span> <span class=\"nn\">numpy</span>\
+    \ <span class=\"k\">as</span> <span class=\"nn\">np</span>\n<span class=\"kn\"\
+    >import</span> <span class=\"nn\">matplotlib.pyplot</span> <span class=\"k\">as</span>\
+    \ <span class=\"nn\">plt</span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
     <div class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"input\"\
-    >\n<div class=\"prompt input_prompt\">In\_[1]:</div>\n<div class=\"inner_cell\"\
+    >\n<div class=\"prompt input_prompt\">In\_[2]:</div>\n<div class=\"inner_cell\"\
     >\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span\
-    \ class=\"kn\">from</span> <span class=\"nn\">typing</span> <span class=\"kn\"\
-    >import</span> <span class=\"n\">Tuple</span><span class=\"p\">,</span> <span\
-    \ class=\"n\">Iterable</span>\n<span class=\"kn\">from</span> <span class=\"nn\"\
-    >tqdm</span> <span class=\"kn\">import</span> <span class=\"n\">tqdm</span>\n\
-    <span class=\"kn\">from</span> <span class=\"nn\">time</span> <span class=\"kn\"\
-    >import</span> <span class=\"n\">time</span>\n\n<span class=\"kn\">import</span>\
-    \ <span class=\"nn\">torchvision</span>\n<span class=\"kn\">from</span> <span\
-    \ class=\"nn\">torchvision</span> <span class=\"kn\">import</span> <span class=\"\
-    n\">datasets</span><span class=\"p\">,</span> <span class=\"n\">transforms</span>\n\
-    <span class=\"kn\">import</span> <span class=\"nn\">torch</span>\n<span class=\"\
-    kn\">from</span> <span class=\"nn\">torch</span> <span class=\"kn\">import</span>\
-    \ <span class=\"n\">nn</span>\n<span class=\"kn\">from</span> <span class=\"nn\"\
-    >torch.utils.data</span> <span class=\"kn\">import</span> <span class=\"n\">DataLoader</span>\n\
-    <span class=\"kn\">import</span> <span class=\"nn\">torch.nn.functional</span>\
-    \ <span class=\"k\">as</span> <span class=\"nn\">F</span>\n<span class=\"kn\"\
-    >import</span> <span class=\"nn\">numpy</span> <span class=\"k\">as</span> <span\
-    \ class=\"nn\">np</span>\n<span class=\"kn\">import</span> <span class=\"nn\"\
-    >matplotlib.pyplot</span> <span class=\"k\">as</span> <span class=\"nn\">plt</span>\n\
-    </pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
-    \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
-    >In\_[2]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
-    \ class=\"highlight hl-python\"><pre><span></span><span class=\"n\">device</span>\
-    \ <span class=\"o\">=</span> <span class=\"n\">torch</span><span class=\"o\">.</span><span\
-    \ class=\"n\">device</span><span class=\"p\">(</span><span class=\"s1\">'cuda'</span>\
-    \ <span class=\"k\">if</span> <span class=\"n\">torch</span><span class=\"o\"\
-    >.</span><span class=\"n\">cuda</span><span class=\"o\">.</span><span class=\"\
-    n\">is_available</span><span class=\"p\">()</span> <span class=\"k\">else</span>\
-    \ <span class=\"s1\">'cpu'</span><span class=\"p\">)</span>\n<span class=\"n\"\
-    >device</span>\n</pre></div>\n</div>\n</div>\n</div>\n<div class=\"output_wrapper\"\
-    >\n<div class=\"output\">\n<div class=\"output_area\">\n<div class=\"prompt output_prompt\"\
-    >Out[2]:</div>\n<div class=\"output_text output_subarea output_execute_result\"\
-    >\n<pre>device(type='cuda')</pre>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div\
-    \ class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n\
-    <div class=\"prompt input_prompt\">In\_[3]:</div>\n<div class=\"inner_cell\">\n\
-    <div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span\
-    \ class=\"n\">SEED</span> <span class=\"o\">=</span> <span class=\"mi\">51</span>\n\
-    <span class=\"n\">torch</span><span class=\"o\">.</span><span class=\"n\">random</span><span\
-    \ class=\"o\">.</span><span class=\"n\">manual_seed</span><span class=\"p\">(</span><span\
-    \ class=\"n\">SEED</span><span class=\"p\">)</span>\n<span class=\"n\">torch</span><span\
+    \ class=\"n\">device</span> <span class=\"o\">=</span> <span class=\"n\">torch</span><span\
+    \ class=\"o\">.</span><span class=\"n\">device</span><span class=\"p\">(</span><span\
+    \ class=\"s1\">'cuda'</span> <span class=\"k\">if</span> <span class=\"n\">torch</span><span\
     \ class=\"o\">.</span><span class=\"n\">cuda</span><span class=\"o\">.</span><span\
-    \ class=\"n\">manual_seed_all</span><span class=\"p\">(</span><span class=\"n\"\
-    >SEED</span><span class=\"p\">)</span>\n<span class=\"n\">np</span><span class=\"\
-    o\">.</span><span class=\"n\">random</span><span class=\"o\">.</span><span class=\"\
-    n\">seed</span><span class=\"p\">(</span><span class=\"n\">SEED</span><span class=\"\
-    p\">)</span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell\
-    \ border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\">\n\
-    </div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
-    \ rendered_html\">\n<h1 id=\"Load-the-dataset\">Load the dataset<a class=\"anchor-link\"\
-    \ href=\"#Load-the-dataset\">\xB6</a></h1><p>Load the CIFAR10 dataset bellow.\
-    \ You can use either <code>torchvision.datasets.CIFAR10</code> or <code>sklearn.datasets.fetch_openml()</code>\
-    \ or any other way to load the dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"\
-    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
-    prompt input_prompt\">In\_[4]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
-    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span class=\"\
-    n\">cifar_root</span> <span class=\"o\">=</span> <span class=\"s1\">'cifir10'</span>\n\
-    <span class=\"n\">transform</span> <span class=\"o\">=</span> <span class=\"n\"\
-    >transforms</span><span class=\"o\">.</span><span class=\"n\">Compose</span><span\
-    \ class=\"p\">([</span>\n    <span class=\"n\">transforms</span><span class=\"\
-    o\">.</span><span class=\"n\">ToTensor</span><span class=\"p\">(),</span>\n  \
-    \  <span class=\"n\">transforms</span><span class=\"o\">.</span><span class=\"\
-    n\">Normalize</span><span class=\"p\">((</span><span class=\"mf\">0.5</span><span\
-    \ class=\"p\">,</span> <span class=\"mf\">0.5</span><span class=\"p\">,</span>\
-    \ <span class=\"mf\">0.5</span><span class=\"p\">),</span> <span class=\"p\">(</span><span\
+    \ class=\"n\">is_available</span><span class=\"p\">()</span> <span class=\"k\"\
+    >else</span> <span class=\"s1\">'cpu'</span><span class=\"p\">)</span>\n<span\
+    \ class=\"n\">device</span>\n</pre></div>\n</div>\n</div>\n</div>\n<div class=\"\
+    output_wrapper\">\n<div class=\"output\">\n<div class=\"output_area\">\n<div class=\"\
+    prompt output_prompt\">Out[2]:</div>\n<div class=\"output_text output_subarea\
+    \ output_execute_result\">\n<pre>device(type='cuda')</pre>\n</div>\n</div>\n</div>\n\
+    </div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\">\n<div\
+    \ class=\"input\">\n<div class=\"prompt input_prompt\">In\_[3]:</div>\n<div class=\"\
+    inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"\
+    ><pre><span></span><span class=\"n\">SEED</span> <span class=\"o\">=</span> <span\
+    \ class=\"mi\">51</span>\n<span class=\"n\">torch</span><span class=\"o\">.</span><span\
+    \ class=\"n\">random</span><span class=\"o\">.</span><span class=\"n\">manual_seed</span><span\
+    \ class=\"p\">(</span><span class=\"n\">SEED</span><span class=\"p\">)</span>\n\
+    <span class=\"n\">torch</span><span class=\"o\">.</span><span class=\"n\">cuda</span><span\
+    \ class=\"o\">.</span><span class=\"n\">manual_seed_all</span><span class=\"p\"\
+    >(</span><span class=\"n\">SEED</span><span class=\"p\">)</span>\n<span class=\"\
+    n\">np</span><span class=\"o\">.</span><span class=\"n\">random</span><span class=\"\
+    o\">.</span><span class=\"n\">seed</span><span class=\"p\">(</span><span class=\"\
+    n\">SEED</span><span class=\"p\">)</span>\n</pre></div>\n</div>\n</div>\n</div>\n\
+    </div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
+    prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
+    \ border-box-sizing rendered_html\">\n<h1 id=\"Load-the-dataset\">Load the dataset<a\
+    \ class=\"anchor-link\" href=\"#Load-the-dataset\">\xB6</a></h1><p>Load the CIFAR10\
+    \ dataset bellow. You can use either <code>torchvision.datasets.CIFAR10</code>\
+    \ or <code>sklearn.datasets.fetch_openml()</code> or any other way to load the\
+    \ dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell\
+    \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
+    [4]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
+    highlight hl-python\"><pre><span></span><span class=\"n\">cifar_root</span> <span\
+    \ class=\"o\">=</span> <span class=\"s1\">'cifir10'</span>\n<span class=\"n\"\
+    >transform</span> <span class=\"o\">=</span> <span class=\"n\">transforms</span><span\
+    \ class=\"o\">.</span><span class=\"n\">Compose</span><span class=\"p\">([</span>\n\
+    \    <span class=\"n\">transforms</span><span class=\"o\">.</span><span class=\"\
+    n\">ToTensor</span><span class=\"p\">(),</span>\n    <span class=\"n\">transforms</span><span\
+    \ class=\"o\">.</span><span class=\"n\">Normalize</span><span class=\"p\">((</span><span\
     \ class=\"mf\">0.5</span><span class=\"p\">,</span> <span class=\"mf\">0.5</span><span\
-    \ class=\"p\">,</span> <span class=\"mf\">0.5</span><span class=\"p\">)),</span>\n\
-    <span class=\"p\">])</span>\n<span class=\"n\">trainset</span> <span class=\"\
-    o\">=</span> <span class=\"n\">torchvision</span><span class=\"o\">.</span><span\
-    \ class=\"n\">datasets</span><span class=\"o\">.</span><span class=\"n\">CIFAR10</span><span\
-    \ class=\"p\">(</span><span class=\"n\">cifar_root</span><span class=\"p\">,</span>\
-    \ <span class=\"n\">train</span><span class=\"o\">=</span><span class=\"kc\">True</span><span\
-    \ class=\"p\">,</span> <span class=\"n\">download</span><span class=\"o\">=</span><span\
-    \ class=\"kc\">True</span><span class=\"p\">,</span> <span class=\"n\">transform</span><span\
-    \ class=\"o\">=</span><span class=\"n\">transform</span><span class=\"p\">)</span>\n\
-    <span class=\"n\">trainsize</span> <span class=\"o\">=</span> <span class=\"nb\"\
-    >int</span><span class=\"p\">(</span><span class=\"nb\">len</span><span class=\"\
-    p\">(</span><span class=\"n\">trainset</span><span class=\"p\">)</span> <span\
-    \ class=\"o\">*</span> <span class=\"mf\">0.9</span><span class=\"p\">)</span>\n\
-    <span class=\"n\">valsize</span> <span class=\"o\">=</span> <span class=\"nb\"\
-    >len</span><span class=\"p\">(</span><span class=\"n\">trainset</span><span class=\"\
-    p\">)</span> <span class=\"o\">-</span> <span class=\"n\">trainsize</span>\n<span\
-    \ class=\"n\">trainset</span><span class=\"p\">,</span> <span class=\"n\">valset</span>\
-    \ <span class=\"o\">=</span> <span class=\"n\">torch</span><span class=\"o\">.</span><span\
-    \ class=\"n\">utils</span><span class=\"o\">.</span><span class=\"n\">data</span><span\
-    \ class=\"o\">.</span><span class=\"n\">random_split</span><span class=\"p\">(</span><span\
-    \ class=\"n\">trainset</span><span class=\"p\">,</span> <span class=\"p\">[</span><span\
-    \ class=\"n\">trainsize</span><span class=\"p\">,</span> <span class=\"n\">valsize</span><span\
-    \ class=\"p\">])</span>\n<span class=\"n\">testset</span> <span class=\"o\">=</span>\
-    \ <span class=\"n\">torchvision</span><span class=\"o\">.</span><span class=\"\
-    n\">datasets</span><span class=\"o\">.</span><span class=\"n\">CIFAR10</span><span\
-    \ class=\"p\">(</span><span class=\"n\">cifar_root</span><span class=\"p\">,</span>\
-    \ <span class=\"n\">train</span><span class=\"o\">=</span><span class=\"kc\">False</span><span\
-    \ class=\"p\">,</span> <span class=\"n\">download</span><span class=\"o\">=</span><span\
-    \ class=\"kc\">True</span><span class=\"p\">,</span> <span class=\"n\">transform</span><span\
-    \ class=\"o\">=</span><span class=\"n\">transform</span><span class=\"p\">)</span>\n\
-    </pre></div>\n</div>\n</div>\n</div>\n<div class=\"output_wrapper\">\n<div class=\"\
-    output\">\n<div class=\"output_area\">\n<div class=\"prompt\"></div>\n<div class=\"\
-    output_subarea output_stream output_stdout output_text\">\n<pre>Files already\
-    \ downloaded and verified\nFiles already downloaded and verified\n</pre>\n</div>\n\
-    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
-    \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
-    >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"\
-    Design-your-model\">Design your model<a class=\"anchor-link\" href=\"#Design-your-model\"\
-    >\xB6</a></h1><p>Write your CNN model below using <code>torch.nn</code> modules.\
-    \ Feel free to add extra cells.</p>\n</div>\n</div>\n</div>\n<div class=\"cell\
-    \ border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
-    prompt input_prompt\">In\_[5]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
-    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span class=\"\
-    k\">class</span> <span class=\"nc\">Net</span><span class=\"p\">(</span><span\
-    \ class=\"n\">nn</span><span class=\"o\">.</span><span class=\"n\">Module</span><span\
-    \ class=\"p\">):</span>\n    <span class=\"k\">def</span> <span class=\"fm\">__init__</span><span\
-    \ class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">):</span>\n\
-    \        <span class=\"nb\">super</span><span class=\"p\">()</span><span class=\"\
-    o\">.</span><span class=\"fm\">__init__</span><span class=\"p\">()</span>\n  \
-    \      <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"\
-    n\">conv</span> <span class=\"o\">=</span> <span class=\"n\">nn</span><span class=\"\
-    o\">.</span><span class=\"n\">Sequential</span><span class=\"p\">(</span>    \
-    \          <span class=\"c1\"># B 3   32  32</span>\n            <span class=\"\
-    n\">nn</span><span class=\"o\">.</span><span class=\"n\">Conv2d</span><span class=\"\
-    p\">(</span><span class=\"mi\">3</span><span class=\"p\">,</span> <span class=\"\
-    mi\">16</span><span class=\"p\">,</span> <span class=\"mi\">3</span><span class=\"\
-    p\">,</span> <span class=\"n\">padding</span><span class=\"o\">=</span><span class=\"\
-    mi\">1</span><span class=\"p\">),</span>     <span class=\"c1\"># B 16  32  32</span>\n\
+    \ class=\"p\">,</span> <span class=\"mf\">0.5</span><span class=\"p\">),</span>\
+    \ <span class=\"p\">(</span><span class=\"mf\">0.5</span><span class=\"p\">,</span>\
+    \ <span class=\"mf\">0.5</span><span class=\"p\">,</span> <span class=\"mf\">0.5</span><span\
+    \ class=\"p\">)),</span>\n<span class=\"p\">])</span>\n<span class=\"n\">trainset</span>\
+    \ <span class=\"o\">=</span> <span class=\"n\">torchvision</span><span class=\"\
+    o\">.</span><span class=\"n\">datasets</span><span class=\"o\">.</span><span class=\"\
+    n\">CIFAR10</span><span class=\"p\">(</span><span class=\"n\">cifar_root</span><span\
+    \ class=\"p\">,</span> <span class=\"n\">train</span><span class=\"o\">=</span><span\
+    \ class=\"kc\">True</span><span class=\"p\">,</span> <span class=\"n\">download</span><span\
+    \ class=\"o\">=</span><span class=\"kc\">True</span><span class=\"p\">,</span>\
+    \ <span class=\"n\">transform</span><span class=\"o\">=</span><span class=\"n\"\
+    >transform</span><span class=\"p\">)</span>\n<span class=\"n\">trainsize</span>\
+    \ <span class=\"o\">=</span> <span class=\"nb\">int</span><span class=\"p\">(</span><span\
+    \ class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">trainset</span><span\
+    \ class=\"p\">)</span> <span class=\"o\">*</span> <span class=\"mf\">0.9</span><span\
+    \ class=\"p\">)</span>\n<span class=\"n\">valsize</span> <span class=\"o\">=</span>\
+    \ <span class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">trainset</span><span\
+    \ class=\"p\">)</span> <span class=\"o\">-</span> <span class=\"n\">trainsize</span>\n\
+    <span class=\"n\">trainset</span><span class=\"p\">,</span> <span class=\"n\"\
+    >valset</span> <span class=\"o\">=</span> <span class=\"n\">torch</span><span\
+    \ class=\"o\">.</span><span class=\"n\">utils</span><span class=\"o\">.</span><span\
+    \ class=\"n\">data</span><span class=\"o\">.</span><span class=\"n\">random_split</span><span\
+    \ class=\"p\">(</span><span class=\"n\">trainset</span><span class=\"p\">,</span>\
+    \ <span class=\"p\">[</span><span class=\"n\">trainsize</span><span class=\"p\"\
+    >,</span> <span class=\"n\">valsize</span><span class=\"p\">])</span>\n<span class=\"\
+    n\">testset</span> <span class=\"o\">=</span> <span class=\"n\">torchvision</span><span\
+    \ class=\"o\">.</span><span class=\"n\">datasets</span><span class=\"o\">.</span><span\
+    \ class=\"n\">CIFAR10</span><span class=\"p\">(</span><span class=\"n\">cifar_root</span><span\
+    \ class=\"p\">,</span> <span class=\"n\">train</span><span class=\"o\">=</span><span\
+    \ class=\"kc\">False</span><span class=\"p\">,</span> <span class=\"n\">download</span><span\
+    \ class=\"o\">=</span><span class=\"kc\">True</span><span class=\"p\">,</span>\
+    \ <span class=\"n\">transform</span><span class=\"o\">=</span><span class=\"n\"\
+    >transform</span><span class=\"p\">)</span>\n</pre></div>\n</div>\n</div>\n</div>\n\
+    <div class=\"output_wrapper\">\n<div class=\"output\">\n<div class=\"output_area\"\
+    >\n<div class=\"prompt\"></div>\n<div class=\"output_subarea output_stream output_stdout\
+    \ output_text\">\n<pre>Files already downloaded and verified\nFiles already downloaded\
+    \ and verified\n</pre>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"\
+    cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
+    >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
+    \ rendered_html\">\n<h1 id=\"Design-your-model\">Design your model<a class=\"\
+    anchor-link\" href=\"#Design-your-model\">\xB6</a></h1><p>Write your CNN model\
+    \ below using <code>torch.nn</code> modules. Feel free to add extra cells.</p>\n\
+    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
+    >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[5]:</div>\n\
+    <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
+    \ hl-python\"><pre><span></span><span class=\"k\">class</span> <span class=\"\
+    nc\">Net</span><span class=\"p\">(</span><span class=\"n\">nn</span><span class=\"\
+    o\">.</span><span class=\"n\">Module</span><span class=\"p\">):</span>\n    <span\
+    \ class=\"k\">def</span> <span class=\"fm\">__init__</span><span class=\"p\">(</span><span\
+    \ class=\"bp\">self</span><span class=\"p\">):</span>\n        <span class=\"\
+    nb\">super</span><span class=\"p\">()</span><span class=\"o\">.</span><span class=\"\
+    fm\">__init__</span><span class=\"p\">()</span>\n        <span class=\"bp\">self</span><span\
+    \ class=\"o\">.</span><span class=\"n\">conv</span> <span class=\"o\">=</span>\
+    \ <span class=\"n\">nn</span><span class=\"o\">.</span><span class=\"n\">Sequential</span><span\
+    \ class=\"p\">(</span>              <span class=\"c1\"># B 3   32  32</span>\n\
     \            <span class=\"n\">nn</span><span class=\"o\">.</span><span class=\"\
-    n\">ReLU</span><span class=\"p\">(),</span>\n            <span class=\"n\">nn</span><span\
-    \ class=\"o\">.</span><span class=\"n\">Conv2d</span><span class=\"p\">(</span><span\
-    \ class=\"mi\">16</span><span class=\"p\">,</span> <span class=\"mi\">16</span><span\
-    \ class=\"p\">,</span> <span class=\"mi\">3</span><span class=\"p\">,</span> <span\
-    \ class=\"n\">padding</span><span class=\"o\">=</span><span class=\"mi\">1</span><span\
-    \ class=\"p\">),</span>    <span class=\"c1\"># B 16  32  32</span>\n        \
-    \    <span class=\"n\">nn</span><span class=\"o\">.</span><span class=\"n\">ReLU</span><span\
-    \ class=\"p\">(),</span>\n            <span class=\"n\">nn</span><span class=\"\
-    o\">.</span><span class=\"n\">MaxPool2d</span><span class=\"p\">(</span><span\
-    \ class=\"mi\">2</span><span class=\"p\">,</span> <span class=\"mi\">2</span><span\
-    \ class=\"p\">),</span>                 <span class=\"c1\"># B 16  16  16</span>\n\
+    n\">Conv2d</span><span class=\"p\">(</span><span class=\"mi\">3</span><span class=\"\
+    p\">,</span> <span class=\"mi\">16</span><span class=\"p\">,</span> <span class=\"\
+    mi\">3</span><span class=\"p\">,</span> <span class=\"n\">padding</span><span\
+    \ class=\"o\">=</span><span class=\"mi\">1</span><span class=\"p\">),</span> \
+    \    <span class=\"c1\"># B 16  32  32</span>\n            <span class=\"n\">nn</span><span\
+    \ class=\"o\">.</span><span class=\"n\">ReLU</span><span class=\"p\">(),</span>\n\
     \            <span class=\"n\">nn</span><span class=\"o\">.</span><span class=\"\
-    n\">Dropout2d</span><span class=\"p\">(</span><span class=\"n\">p</span><span\
-    \ class=\"o\">=</span><span class=\"mf\">0.2</span><span class=\"p\">),</span>\n\
+    n\">Conv2d</span><span class=\"p\">(</span><span class=\"mi\">16</span><span class=\"\
+    p\">,</span> <span class=\"mi\">16</span><span class=\"p\">,</span> <span class=\"\
+    mi\">3</span><span class=\"p\">,</span> <span class=\"n\">padding</span><span\
+    \ class=\"o\">=</span><span class=\"mi\">1</span><span class=\"p\">),</span> \
+    \   <span class=\"c1\"># B 16  32  32</span>\n            <span class=\"n\">nn</span><span\
+    \ class=\"o\">.</span><span class=\"n\">ReLU</span><span class=\"p\">(),</span>\n\
     \            <span class=\"n\">nn</span><span class=\"o\">.</span><span class=\"\
-    n\">BatchNorm2d</span><span class=\"p\">(</span><span class=\"mi\">16</span><span\
-    \ class=\"p\">),</span>\n        <span class=\"p\">)</span>\n        <span class=\"\
-    bp\">self</span><span class=\"o\">.</span><span class=\"n\">fc</span> <span class=\"\
-    o\">=</span> <span class=\"n\">nn</span><span class=\"o\">.</span><span class=\"\
-    n\">Sequential</span><span class=\"p\">(</span>\n            <span class=\"n\"\
-    >nn</span><span class=\"o\">.</span><span class=\"n\">Flatten</span><span class=\"\
-    p\">(),</span>                       <span class=\"c1\"># B 4096</span>\n    \
-    \        <span class=\"n\">nn</span><span class=\"o\">.</span><span class=\"n\"\
-    >Linear</span><span class=\"p\">(</span><span class=\"mi\">4096</span><span class=\"\
-    p\">,</span> <span class=\"mi\">10</span><span class=\"p\">),</span>         \
-    \       <span class=\"c1\"># B 10</span>\n        <span class=\"p\">)</span>\n\
-    \n    <span class=\"k\">def</span> <span class=\"nf\">forward</span><span class=\"\
-    p\">(</span><span class=\"bp\">self</span><span class=\"p\">,</span> <span class=\"\
-    n\">x</span><span class=\"p\">:</span> <span class=\"n\">torch</span><span class=\"\
-    o\">.</span><span class=\"n\">Tensor</span><span class=\"p\">)</span> <span class=\"\
-    o\">-&gt;</span> <span class=\"n\">torch</span><span class=\"o\">.</span><span\
-    \ class=\"n\">Tensor</span><span class=\"p\">:</span>\n        <span class=\"\
-    n\">x</span> <span class=\"o\">=</span> <span class=\"bp\">self</span><span class=\"\
-    o\">.</span><span class=\"n\">conv</span><span class=\"p\">(</span><span class=\"\
-    n\">x</span><span class=\"p\">)</span>\n        <span class=\"n\">x</span> <span\
-    \ class=\"o\">=</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span\
-    \ class=\"n\">fc</span><span class=\"p\">(</span><span class=\"n\">x</span><span\
-    \ class=\"p\">)</span>\n        <span class=\"k\">return</span> <span class=\"\
-    n\">x</span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell\
-    \ border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\">\n\
-    </div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
-    \ rendered_html\">\n<h1 id=\"Train-your-model\">Train your model<a class=\"anchor-link\"\
-    \ href=\"#Train-your-model\">\xB6</a></h1><p>Write the training process below.\
-    \ Instantiate your model, Create an optimizer function such as Adam or SGD, and\
-    \ write your train/validation loop. Then train your model until it converges.\
-    \ Feel free to add extra cells.</p>\n</div>\n</div>\n</div>\n<div class=\"cell\
-    \ border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
-    prompt input_prompt\">In\_[6]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
-    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span class=\"\
-    k\">class</span> <span class=\"nc\">Trainer</span><span class=\"p\">:</span>\n\
-    \    <span class=\"n\">CHECKPOINT</span> <span class=\"o\">=</span> <span class=\"\
-    s1\">'cifar-cnn.pth'</span>\n    <span class=\"n\">CLASSES</span> <span class=\"\
-    o\">=</span> <span class=\"p\">(</span><span class=\"s1\">'plane'</span><span\
+    n\">MaxPool2d</span><span class=\"p\">(</span><span class=\"mi\">2</span><span\
+    \ class=\"p\">,</span> <span class=\"mi\">2</span><span class=\"p\">),</span>\
+    \                 <span class=\"c1\"># B 16  16  16</span>\n            <span\
+    \ class=\"n\">nn</span><span class=\"o\">.</span><span class=\"n\">Dropout2d</span><span\
+    \ class=\"p\">(</span><span class=\"n\">p</span><span class=\"o\">=</span><span\
+    \ class=\"mf\">0.2</span><span class=\"p\">),</span>\n            <span class=\"\
+    n\">nn</span><span class=\"o\">.</span><span class=\"n\">BatchNorm2d</span><span\
+    \ class=\"p\">(</span><span class=\"mi\">16</span><span class=\"p\">),</span>\n\
+    \        <span class=\"p\">)</span>\n        <span class=\"bp\">self</span><span\
+    \ class=\"o\">.</span><span class=\"n\">fc</span> <span class=\"o\">=</span> <span\
+    \ class=\"n\">nn</span><span class=\"o\">.</span><span class=\"n\">Sequential</span><span\
+    \ class=\"p\">(</span>\n            <span class=\"n\">nn</span><span class=\"\
+    o\">.</span><span class=\"n\">Flatten</span><span class=\"p\">(),</span>     \
+    \                  <span class=\"c1\"># B 4096</span>\n            <span class=\"\
+    n\">nn</span><span class=\"o\">.</span><span class=\"n\">Linear</span><span class=\"\
+    p\">(</span><span class=\"mi\">4096</span><span class=\"p\">,</span> <span class=\"\
+    mi\">10</span><span class=\"p\">),</span>                <span class=\"c1\">#\
+    \ B 10</span>\n        <span class=\"p\">)</span>\n\n    <span class=\"k\">def</span>\
+    \ <span class=\"nf\">forward</span><span class=\"p\">(</span><span class=\"bp\"\
+    >self</span><span class=\"p\">,</span> <span class=\"n\">x</span><span class=\"\
+    p\">:</span> <span class=\"n\">torch</span><span class=\"o\">.</span><span class=\"\
+    n\">Tensor</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span> <span\
+    \ class=\"n\">torch</span><span class=\"o\">.</span><span class=\"n\">Tensor</span><span\
+    \ class=\"p\">:</span>\n        <span class=\"n\">x</span> <span class=\"o\">=</span>\
+    \ <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">conv</span><span\
+    \ class=\"p\">(</span><span class=\"n\">x</span><span class=\"p\">)</span>\n \
+    \       <span class=\"n\">x</span> <span class=\"o\">=</span> <span class=\"bp\"\
+    >self</span><span class=\"o\">.</span><span class=\"n\">fc</span><span class=\"\
+    p\">(</span><span class=\"n\">x</span><span class=\"p\">)</span>\n        <span\
+    \ class=\"k\">return</span> <span class=\"n\">x</span>\n</pre></div>\n</div>\n\
+    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell rendered\"\
+    ><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"\
+    text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"Train-your-model\"\
+    >Train your model<a class=\"anchor-link\" href=\"#Train-your-model\">\xB6</a></h1><p>Write\
+    \ the training process below. Instantiate your model, Create an optimizer function\
+    \ such as Adam or SGD, and write your train/validation loop. Then train your model\
+    \ until it converges. Feel free to add extra cells.</p>\n</div>\n</div>\n</div>\n\
+    <div class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"input\"\
+    >\n<div class=\"prompt input_prompt\">In\_[6]:</div>\n<div class=\"inner_cell\"\
+    >\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span\
+    \ class=\"k\">class</span> <span class=\"nc\">Trainer</span><span class=\"p\"\
+    >:</span>\n    <span class=\"n\">CHECKPOINT</span> <span class=\"o\">=</span>\
+    \ <span class=\"s1\">'cifar-cnn.pth'</span>\n    <span class=\"n\">CLASSES</span>\
+    \ <span class=\"o\">=</span> <span class=\"p\">(</span><span class=\"s1\">'plane'</span><span\
     \ class=\"p\">,</span> <span class=\"s1\">'car'</span><span class=\"p\">,</span>\
     \ <span class=\"s1\">'bird'</span><span class=\"p\">,</span> <span class=\"s1\"\
     >'cat'</span><span class=\"p\">,</span> \n               <span class=\"s1\">'deer'</span><span\
@@ -2885,7 +2884,7 @@ notebooks/learning-tasks/solutions/2_cifar10_classification_cnn/index:
     \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
     >In\_[11]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
     \ class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n\
-    </div>\n</div>\n"
+    </div>\n</div>\n Ahmad Salimi"
   description: 'CIFAR10 classification with a convolutional model with pytorch.
 
     '
