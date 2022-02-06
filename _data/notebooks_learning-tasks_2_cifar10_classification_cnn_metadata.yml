@@ -1,0 +1,40 @@
+title: Classification with Convolutional Neural Networks
+meta:
+- name: keywords
+  content: Artificial Intelligence, Deep Learning, Convolutional Neural Networks,
+    Classification, CIFAR10
+header:
+  title: <p>Classification with Convolutional Neural Networks</p>
+  description: <p>CIFAR10 classification with a convolutional model with pytorch.</p>
+  background: /edu-content/assets/images/header.png
+solution:
+  label:
+    text: A solution
+    position: top
+  content:
+  - notebook: notebooks/learning-tasks/solutions/2_cifar10_classification_cnn
+    text: 'Classification with Convolutional Neural Networks: A Solution'
+    kind: ''
+    description: <p>Please see this after you have done it yourself.</p>
+    link: /edu-content/notebooks/learning-tasks/solutions/2_cifar10_classification_cnn/
+authors:
+  label:
+    position: top
+    text: Authors
+  kind: people
+  content:
+  - name: Ahmad Salimi
+    role: Author
+    contact:
+    - link: https://github.com/ahmadsalimi
+      icon: fab fa-github
+    - link: https://www.linkedin.com/in/ahmadsalimi/
+      icon: fab fa-linkedin
+    - link: mailto://ahsalimi@ce.sharif.edu
+      icon: fas fa-envelope
+    kind: person
+    image: https://github.com/ahmadsalimi.png
+kind: Content
+search:
+  content: true
+  links: false

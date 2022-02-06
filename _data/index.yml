@@ -36,6 +36,11 @@ learning-tasks:
     kind: Notebook Exercise
     description: <p>MNIST classification with a fully connected model</p>
     link: /edu-content/notebooks/learning-tasks/1_mnist_classification_fc/
+  - notebook: notebooks/learning-tasks/2_cifar10_classification_cnn
+    text: 2. Classification with Convolutional Neural Networks
+    kind: Notebook Exercise
+    description: <p>CIFAR10 classification with a convolutional model</p>
+    link: /edu-content/notebooks/learning-tasks/2_cifar10_classification_cnn/
 kind: Index
 search:
   content: true
