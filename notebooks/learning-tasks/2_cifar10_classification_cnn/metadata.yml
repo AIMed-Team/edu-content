@@ -7,7 +7,7 @@ meta:
 header:
   title: Classification with Convolutional Neural Networks
   description: |
-    CIFAR10 classification with a Convolutional model with pytorch.
+    CIFAR10 classification with a convolutional model with pytorch.
   background: images/header.png
 
 solution:

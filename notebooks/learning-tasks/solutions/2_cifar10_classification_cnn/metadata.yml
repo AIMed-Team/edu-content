@@ -7,7 +7,7 @@ meta:
 header:
   title: 'Classification with Convolutional Neural Networks: A solution'
   description: |
-    CIFAR10 classification with a Convolutional model with pytorch.
+    CIFAR10 classification with a convolutional model with pytorch.
   background: images/header.png
 
 blank:
@@ -18,7 +18,7 @@ blank:
     - notebook: notebooks/learning-tasks/2_cifar10_classification_cnn
       text: Classification with Convolutional Neural Networks
       kind: Notebook Exercise
-      description: CIFAR10 classification with a Convolutional model
+      description: CIFAR10 classification with a convolutional model
 
 authors:
   label:
