@@ -1,0 +1,176 @@
+---
+layout: content
+metadata: notebooks_learning-tasks_3_transfer_learning_metadata
+colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/master/notebooks/learning-tasks/3_transfer_learning/index.ipynb
+---
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In this task, you should train Inception V3 with pytorch using transfer learning to classify CIFAR10 dataset.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Load-the-dataset">Load the dataset<a class="anchor-link" href="#Load-the-dataset">¶</a></h1><p>Load the CIFAR10 dataset bellow. You can use either <code>torchvision.datasets.CIFAR10</code> or <code>sklearn.datasets.fetch_openml()</code> or any other way to load the dataset.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Get-Inception-V3">Get Inception V3<a class="anchor-link" href="#Get-Inception-V3">¶</a></h1><p>Instantiate Inception V3 model (pretrained on imagenet) from <code>torchvision</code>'s model zoo.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Modify-for-CIFAR10">Modify for CIFAR10<a class="anchor-link" href="#Modify-for-CIFAR10">¶</a></h1><p>Imagenet has 1000 classes, but CIFAR10 has 10. So, the decider layers of the model must be changed so that we can use the model for CIFAR10. Therefore, adapt <code>net.fc</code> and <code>net.AuxLogits.fc</code> with CIFAR10.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Freeze-the-convolutional-part">Freeze the convolutional part<a class="anchor-link" href="#Freeze-the-convolutional-part">¶</a></h1><p>In order to apply transfer learning, freeze all layers except the deciders. Freezing consist of disabling optimization by disabling grad calculation. Also in batch normalization layers, updating mooving average and variance must be disabled. Note that you must later filter out the frozen parameter for optimizer.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Instantiate-the-optimizer">Instantiate the optimizer<a class="anchor-link" href="#Instantiate-the-optimizer">¶</a></h1><p>Create the optimizer filtering out freezed parameters.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Train-the-model">Train the model<a class="anchor-link" href="#Train-the-model">¶</a></h1><p>Write your train/validation loop bellow. Then train the model until it converges. Feel free to add extra cells.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Draw-the-training-curves">Draw the training curves<a class="anchor-link" href="#Draw-the-training-curves">¶</a></h1><p>Draw two diagrams for train and validat
+ion, one showing loss of each epoch, and another showing accuracy of each epoch.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Evaluate-your-model">Evaluate your model<a class="anchor-link" href="#Evaluate-your-model">¶</a></h1><p>Evaluate the best epoch's model (according to the validation accuracy) on the test set, and report the accuracy. Is your model overfitted?</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Draw-misclassified-images">Draw misclassified images<a class="anchor-link" href="#Draw-misclassified-images">¶</a></h1><p>Draw 20 misclassified images from test set with expected and predicted labels.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>

@@ -52,6 +52,11 @@ learning-tasks:
     kind: Notebook Exercise
     description: <p>CIFAR10 classification with a convolutional model</p>
     link: /edu-content/notebooks/learning-tasks/2_cifar10_classification_cnn/
+  - notebook: notebooks/learning-tasks/3_transfer_learning
+    text: 3. Classification with Transfer Learning
+    kind: Notebook Exercise
+    description: <p>CIFAR10 classification with transfer learning on Inception V3</p>
+    link: /edu-content/notebooks/learning-tasks/3_transfer_learning/
 kind: Index
 search:
   content: true
