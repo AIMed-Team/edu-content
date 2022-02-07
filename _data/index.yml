@@ -25,6 +25,17 @@ config:
   search:
     content: true
     links: false
+basics:
+  label:
+    text: Learning basics of Machine learning
+    position: top
+  background: /edu-content/assets/images/bg.jpeg
+  content:
+  - notebook: notebooks/basics/numpy/numpy.ipynb
+    text: 1. Numpy basics
+    kind: Notebook Exercise
+    description: <p>numpy excersices</p>
+    link: /edu-content/notebooks/basics/numpy/numpy.html
 learning-tasks:
   label:
     text: Learning Tasks
