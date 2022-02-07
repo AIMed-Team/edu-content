@@ -1,1 +1,3 @@
-patch: notebooks/learning-tasks/index.yml
+patch:
+  -notebooks/learning-tasks/index.yml
+  -notebooks/basics/index.yml
