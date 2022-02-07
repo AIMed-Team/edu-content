@@ -1,0 +1,41 @@
+title: 'Classification with Transfer Learning: A solution'
+
+meta:
+  - name: keywords
+    content: Artificial Intelligence, Deep Learning, Convolutional Neural Networks, Transfer Learning, Inception V3, Classification, CIFAR10
+    
+header:
+  title: 'Classification with Transfer Learning: A solution'
+  description: |
+    CIFAR10 classification with transfer learning on Inception V3.
+  background: images/header.png
+
+blank:
+  label: 
+    text: The blank notebook
+    position: top
+  content:
+    - notebook: notebooks/learning-tasks/3_transfer_learning
+      text: Classification with Transfer Learning
+      kind: Notebook Exercise
+      description: CIFAR10 classification with transfer learning on Inception V3
+
+authors:
+  label:
+    position: top
+    text: Authors
+  kind: people
+  content:
+    - name: Ahmad Salimi
+      role: Author
+      contact:
+        - link: https://github.com/ahmadsalimi
+          icon: fab fa-github
+        - link: https://www.linkedin.com/in/ahmadsalimi/
+          icon: fab fa-linkedin
+        - link: mailto://ahsalimi@ce.sharif.edu
+          icon: fas fa-envelope
+
+# comments:
+#   label: false
+#   kind: comments
