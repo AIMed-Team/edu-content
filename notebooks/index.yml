@@ -1,3 +1,34 @@
+basics:
+  label:
+    text: Learning basics of Machine learning
+    position: top
+  background: images/bg.jpeg
+  content:
+    - notebook: notebooks/basics/numpy/numpy.ipynb
+      text: 1. Numpy basics
+      kind: Notebook Exercise
+      description: numpy excersices
+
+    # - notebook: notebooks/basics/matplotlib/matplotlib.ipynb
+    #   text: ''
+    #   kind: Notebook Exercise
+    #   description: matplotlib excersices
+
+    # - notebook: notebooks/basics/pandas/pandas.ipynb
+    #   text: ''
+    #   kind: Notebook Exercise
+    #   description: pandas excersices
+
+    # - notebook: notebooks/basics/linear_algebra_and_statistics/linear_algebra_and_statistics.ipynb
+    #   text: ''
+    #   kind: Notebook Exercise
+    #   description: linear algebra and statistics excersices
+
+    # - notebook: notebooks/basics/image_processing/image_processing.ipynb
+    #   text: ''
+    #   kind: Notebook Exercise
+    #   description: image processing excersices
+
 learning-tasks:
   label: 
     text: Learning Tasks

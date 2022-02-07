@@ -15,7 +15,7 @@ solution:
     text: A solution
     position: top
   content:
-    - notebook: D:\python_projects\edu-content\notebooks\basics\solutions\numpy\numpy_solutions.ipynb
+    - notebook: notebooks/basics/solutions/numpy/numpy_solutions.ipynb
       text: 'Main preprocessing techniques for Numpy package'
       kind: ''
       description: 'Please see this after you have done it yourself.'
