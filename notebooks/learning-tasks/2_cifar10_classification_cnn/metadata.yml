@@ -1,13 +1,13 @@
-title: Classification with Fully Connected Neural Networks
+title: Classification with Convolutional Neural Networks
 
 meta:
   - name: keywords
-    content: Artificial Intelligence, Deep Learning, Fully Connected Neural Network, Classification, MNIST
+    content: Artificial Intelligence, Deep Learning, Convolutional Neural Networks, Classification, CIFAR10
     
 header:
-  title: Classification with Fully Connected Neural Networks
+  title: Classification with Convolutional Neural Networks
   description: |
-    MNIST classification with a fully connected model with pytorch.
+    CIFAR10 classification with a convolutional model with pytorch.
   background: images/header.png
 
 solution:
@@ -15,8 +15,8 @@ solution:
     text: A solution
     position: top
   content:
-    - notebook: notebooks/learning-tasks/solutions/1_mnist_classification_fc
-      text: 'Classification with Fully Connected Neural Networks: A Solution'
+    - notebook: notebooks/learning-tasks/solutions/2_cifar10_classification_cnn
+      text: 'Classification with Convolutional Neural Networks: A Solution'
       kind: ''
       description: 'Please see this after you have done it yourself.'
 

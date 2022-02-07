@@ -5,6 +5,11 @@ learning-tasks:
   background: images/bg.jpeg
   content:
     - notebook: notebooks/learning-tasks/1_mnist_classification_fc
-      text: 1. Classification with Fully Connected Neural Network
+      text: 1. Classification with Fully Connected Neural Networks
       kind: Notebook Exercise
       description: MNIST classification with a fully connected model
+
+    - notebook: notebooks/learning-tasks/2_cifar10_classification_cnn
+      text: 2. Classification with Convolutional Neural Networks
+      kind: Notebook Exercise
+      description: CIFAR10 classification with a convolutional model
