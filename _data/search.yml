@@ -1,13 +1,13 @@
 /edu-content/:
   category: Index
-  content: <p>AI-Med | Educational Content</p> <p>Educational Content for Deep Learning</p>
+  content: <p>Educational Content for Deep Learning</p> <p>AI-Med | Educational Content</p>
   description: Educational Content for Deep Learning
   title: AI-Med | Educational Content
   url: /edu-content/
 notebooks/basics/numpy/numpy:
   category: Content
-  content: "<p>Basic and tricky numpy functions</p> Amin Rezaee <p>Main preprocessing\
-    \ techniques for Numpy package</p> \n<div class=\"cell border-box-sizing code_cell\
+  content: "<p>Main preprocessing techniques for Numpy package</p> <p>Basic and tricky\
+    \ numpy functions</p> Amin Rezaee \n<div class=\"cell border-box-sizing code_cell\
     \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
     [\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
     highlight hl-python\"><pre><span></span><span class=\"kn\">import</span> <span\
@@ -239,21 +239,22 @@ notebooks/basics/numpy/numpy:
   url: notebooks/basics/numpy/numpy.html
 notebooks/basics/pandas/pandas:
   category: Content
-  content: "Amin Rezaee <p>Basic and tricky Pandas functions</p> \n<div class=\"cell\
-    \ border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
-    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
-    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span class=\"\
-    kn\">import</span> <span class=\"nn\">pandas</span> <span class=\"k\">as</span>\
-    \ <span class=\"nn\">pd</span>\n<span class=\"kn\">import</span> <span class=\"\
-    nn\">numpy</span> <span class=\"k\">as</span> <span class=\"nn\">np</span>\n</pre></div>\n\
-    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
-    \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
-    >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<p>read csv\
-    \ file and print first five samples</p>\n</div>\n</div>\n</div>\n<div class=\"\
-    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
-    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
-    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span class=\"\
-    n\">dataset_path</span> <span class=\"o\">=</span> <span class=\"s1\">'https://datahub.io/machine-learning/iris/r/iris.csv'</span>\n\
+  content: "<p>Basic and tricky Pandas functions</p> <p>Main preprocessing techniques\
+    \ for pandas package</p> Amin Rezaee \n<div class=\"cell border-box-sizing code_cell\
+    \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
+    [\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
+    highlight hl-python\"><pre><span></span><span class=\"kn\">import</span> <span\
+    \ class=\"nn\">pandas</span> <span class=\"k\">as</span> <span class=\"nn\">pd</span>\n\
+    <span class=\"kn\">import</span> <span class=\"nn\">numpy</span> <span class=\"\
+    k\">as</span> <span class=\"nn\">np</span>\n</pre></div>\n</div>\n</div>\n</div>\n\
+    </div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
+    prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
+    \ border-box-sizing rendered_html\">\n<p>read csv file and print first five samples</p>\n\
+    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
+    >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
+    <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
+    \ hl-python\"><pre><span></span><span class=\"n\">dataset_path</span> <span class=\"\
+    o\">=</span> <span class=\"s1\">'https://datahub.io/machine-learning/iris/r/iris.csv'</span>\n\
     </pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
     \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
     inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
@@ -324,8 +325,7 @@ notebooks/basics/pandas/pandas:
     <div class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"input\"\
     >\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\"\
     >\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span>\n\
-    </pre></div>\n</div>\n</div>\n</div>\n</div>\n <p>Main preprocessing techniques\
-    \ for pandas package</p>"
+    </pre></div>\n</div>\n</div>\n</div>\n</div>\n"
   description: 'Main preprocessing techniques for pandas package
 
     '
@@ -333,17 +333,17 @@ notebooks/basics/pandas/pandas:
   url: notebooks/basics/pandas/pandas.html
 notebooks/basics/solutions/numpy/numpy_solutions:
   category: Content
-  content: "<p>Basic and tricky numpy functions</p> Amin Rezaee <p>Main preprocessing\
-    \ techniques for Numpy package</p> \n<div class=\"cell border-box-sizing code_cell\
-    \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
-    [1]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
-    highlight hl-python\"><pre><span></span><span class=\"kn\">import</span> <span\
-    \ class=\"nn\">numpy</span> <span class=\"k\">as</span> <span class=\"nn\">np</span>\n\
-    </pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
-    \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
-    inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
-    >\n<ol>\n<li>read array from text</li>\n<li>save as npy</li>\n<li>read from npy</li>\n\
-    </ol>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
+  content: "<p>Main preprocessing techniques for Numpy package</p> <p>Basic and tricky\
+    \ numpy functions</p> \n<div class=\"cell border-box-sizing code_cell rendered\"\
+    >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[1]:</div>\n\
+    <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
+    \ hl-python\"><pre><span></span><span class=\"kn\">import</span> <span class=\"\
+    nn\">numpy</span> <span class=\"k\">as</span> <span class=\"nn\">np</span>\n</pre></div>\n\
+    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
+    \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
+    >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<ol>\n<li>read\
+    \ array from text</li>\n<li>save as npy</li>\n<li>read from npy</li>\n</ol>\n\
+    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
     >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
     <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
     \ hl-python\"><pre><span></span><span class=\"n\">text_path</span> <span class=\"\
@@ -805,7 +805,7 @@ notebooks/basics/solutions/numpy/numpy_solutions:
     \ 37599 25288 30227]\n [22708 26322 23890 11625 21578 17268 19588 25626 16443\
     \ 23737]\n [16523 18736 18315  9807 15515 11387 13486 17895 12104 16508]\n [27075\
     \ 26769 30413 17316 21743 19047 20645 28790 25230 20812]]\n</pre>\n</div>\n</div>\n\
-    </div>\n</div>\n</div>\n"
+    </div>\n</div>\n</div>\n Amin Rezaee"
   description: 'Main preprocessing techniques for Numpy package
 
     '
@@ -813,44 +813,42 @@ notebooks/basics/solutions/numpy/numpy_solutions:
   url: notebooks/basics/solutions/numpy/numpy_solutions.html
 notebooks/basics/solutions/pandas/pandas_solutions:
   category: Content
-  content: "Amin Rezaee <p>Basic and tricky pandas functions</p> <p>Main preprocessing\
-    \ techniques for pandas package</p> \n<div class=\"cell border-box-sizing code_cell\
-    \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
-    [1]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
-    highlight hl-python\"><pre><span></span><span class=\"kn\">import</span> <span\
-    \ class=\"nn\">pandas</span> <span class=\"k\">as</span> <span class=\"nn\">pd</span>\n\
-    <span class=\"kn\">import</span> <span class=\"nn\">numpy</span> <span class=\"\
-    k\">as</span> <span class=\"nn\">np</span>\n</pre></div>\n</div>\n</div>\n</div>\n\
-    </div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
-    prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
-    \ border-box-sizing rendered_html\">\n<p>read csv file and print first five samples</p>\n\
-    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
-    >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[3]:</div>\n\
-    <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
-    \ hl-python\"><pre><span></span><span class=\"n\">dataset_path</span> <span class=\"\
-    o\">=</span> <span class=\"s1\">'https://datahub.io/machine-learning/iris/r/iris.csv'</span>\
-    \ \n<span class=\"n\">dataframe</span> <span class=\"o\">=</span> <span class=\"\
-    n\">pd</span><span class=\"o\">.</span><span class=\"n\">read_csv</span><span\
-    \ class=\"p\">(</span><span class=\"n\">dataset_path</span><span class=\"p\">)</span>\n\
-    <span class=\"n\">dataframe</span><span class=\"o\">.</span><span class=\"n\"\
-    >head</span><span class=\"p\">()</span>\n</pre></div>\n</div>\n</div>\n</div>\n\
-    <div class=\"output_wrapper\">\n<div class=\"output\">\n<div class=\"output_area\"\
-    >\n<div class=\"prompt output_prompt\">Out[3]:</div>\n<div class=\"output_html\
-    \ rendered_html output_subarea output_execute_result\">\n<div id=\"df-6e6a08a7-805f-4690-8c2d-eeedbf1c912e\"\
-    >\n<div class=\"colab-df-container\">\n<div>\n<style scoped=\"\">\n    .dataframe\
-    \ tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe\
-    \ tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th\
-    \ {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"\
-    dataframe\">\n<thead>\n<tr style=\"text-align: right;\">\n<th></th>\n<th>sepallength</th>\n\
-    <th>sepalwidth</th>\n<th>petallength</th>\n<th>petalwidth</th>\n<th>class</th>\n\
-    </tr>\n</thead>\n<tbody>\n<tr>\n<th>0</th>\n<td>5.1</td>\n<td>3.5</td>\n<td>1.4</td>\n\
-    <td>0.2</td>\n<td>Iris-setosa</td>\n</tr>\n<tr>\n<th>1</th>\n<td>4.9</td>\n<td>3.0</td>\n\
-    <td>1.4</td>\n<td>0.2</td>\n<td>Iris-setosa</td>\n</tr>\n<tr>\n<th>2</th>\n<td>4.7</td>\n\
-    <td>3.2</td>\n<td>1.3</td>\n<td>0.2</td>\n<td>Iris-setosa</td>\n</tr>\n<tr>\n\
-    <th>3</th>\n<td>4.6</td>\n<td>3.1</td>\n<td>1.5</td>\n<td>0.2</td>\n<td>Iris-setosa</td>\n\
-    </tr>\n<tr>\n<th>4</th>\n<td>5.0</td>\n<td>3.6</td>\n<td>1.4</td>\n<td>0.2</td>\n\
-    <td>Iris-setosa</td>\n</tr>\n</tbody>\n</table>\n</div>\n<button class=\"colab-df-convert\"\
-    \ onclick=\"convertToInteractive('df-6e6a08a7-805f-4690-8c2d-eeedbf1c912e')\"\
+  content: "\n<div class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"\
+    input\">\n<div class=\"prompt input_prompt\">In\_[1]:</div>\n<div class=\"inner_cell\"\
+    >\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span\
+    \ class=\"kn\">import</span> <span class=\"nn\">pandas</span> <span class=\"k\"\
+    >as</span> <span class=\"nn\">pd</span>\n<span class=\"kn\">import</span> <span\
+    \ class=\"nn\">numpy</span> <span class=\"k\">as</span> <span class=\"nn\">np</span>\n\
+    </pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+    \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
+    inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
+    >\n<p>read csv file and print first five samples</p>\n</div>\n</div>\n</div>\n\
+    <div class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"input\"\
+    >\n<div class=\"prompt input_prompt\">In\_[3]:</div>\n<div class=\"inner_cell\"\
+    >\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span\
+    \ class=\"n\">dataset_path</span> <span class=\"o\">=</span> <span class=\"s1\"\
+    >'https://datahub.io/machine-learning/iris/r/iris.csv'</span> \n<span class=\"\
+    n\">dataframe</span> <span class=\"o\">=</span> <span class=\"n\">pd</span><span\
+    \ class=\"o\">.</span><span class=\"n\">read_csv</span><span class=\"p\">(</span><span\
+    \ class=\"n\">dataset_path</span><span class=\"p\">)</span>\n<span class=\"n\"\
+    >dataframe</span><span class=\"o\">.</span><span class=\"n\">head</span><span\
+    \ class=\"p\">()</span>\n</pre></div>\n</div>\n</div>\n</div>\n<div class=\"output_wrapper\"\
+    >\n<div class=\"output\">\n<div class=\"output_area\">\n<div class=\"prompt output_prompt\"\
+    >Out[3]:</div>\n<div class=\"output_html rendered_html output_subarea output_execute_result\"\
+    >\n<div id=\"df-6e6a08a7-805f-4690-8c2d-eeedbf1c912e\">\n<div class=\"colab-df-container\"\
+    >\n<div>\n<style scoped=\"\">\n    .dataframe tbody tr th:only-of-type {\n   \
+    \     vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n       \
+    \ vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align:\
+    \ right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n<thead>\n\
+    <tr style=\"text-align: right;\">\n<th></th>\n<th>sepallength</th>\n<th>sepalwidth</th>\n\
+    <th>petallength</th>\n<th>petalwidth</th>\n<th>class</th>\n</tr>\n</thead>\n<tbody>\n\
+    <tr>\n<th>0</th>\n<td>5.1</td>\n<td>3.5</td>\n<td>1.4</td>\n<td>0.2</td>\n<td>Iris-setosa</td>\n\
+    </tr>\n<tr>\n<th>1</th>\n<td>4.9</td>\n<td>3.0</td>\n<td>1.4</td>\n<td>0.2</td>\n\
+    <td>Iris-setosa</td>\n</tr>\n<tr>\n<th>2</th>\n<td>4.7</td>\n<td>3.2</td>\n<td>1.3</td>\n\
+    <td>0.2</td>\n<td>Iris-setosa</td>\n</tr>\n<tr>\n<th>3</th>\n<td>4.6</td>\n<td>3.1</td>\n\
+    <td>1.5</td>\n<td>0.2</td>\n<td>Iris-setosa</td>\n</tr>\n<tr>\n<th>4</th>\n<td>5.0</td>\n\
+    <td>3.6</td>\n<td>1.4</td>\n<td>0.2</td>\n<td>Iris-setosa</td>\n</tr>\n</tbody>\n\
+    </table>\n</div>\n<button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-6e6a08a7-805f-4690-8c2d-eeedbf1c912e')\"\
     \ style=\"display:none;\" title=\"Convert this dataframe to an interactive table.\"\
     >\n<svg height=\"24px\" viewbox=\"0 0 24 24\" width=\"24px\" xmlns=\"http://www.w3.org/2000/svg\"\
     >\n<path d=\"M0 0h24v24H0V0z\" fill=\"none\"></path>\n<path d=\"M18.56 5.44l.94\
@@ -1301,7 +1299,9 @@ notebooks/basics/solutions/pandas/pandas_solutions:
     \ class=\"o\">=</span><span class=\"p\">(</span><span class=\"s1\">'_left'</span><span\
     \ class=\"p\">,</span> <span class=\"s1\">'_right'</span><span class=\"p\">),</span><span\
     \ class=\"n\">how</span><span class=\"o\">=</span><span class=\"s1\">'outer'</span><span\
-    \ class=\"p\">)</span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n"
+    \ class=\"p\">)</span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n <p>Main\
+    \ preprocessing techniques for pandas package</p> <p>Basic and tricky pandas functions</p>\
+    \ Amin Rezaee"
   description: 'Main preprocessing techniques for pandas package
 
     '
@@ -1309,11 +1309,13 @@ notebooks/basics/solutions/pandas/pandas_solutions:
   url: notebooks/basics/solutions/pandas/pandas_solutions.html
 notebooks/learning-tasks/1_mnist_classification_fc/index:
   category: Content
-  content: "\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
-    prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
-    \ border-box-sizing rendered_html\">\n<p>In this task, you should train a fully-connected\
-    \ model with pytorch to classify MNIST dataset.</p>\n</div>\n</div>\n</div>\n\
-    <div class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
+  content: "<p>Classification with Fully Connected Neural Networks</p> <p>MNIST classification\
+    \ with a fully connected model with pytorch.</p> Ahmad Salimi \n<div class=\"\
+    cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
+    >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
+    \ rendered_html\">\n<p>In this task, you should train a fully-connected model\
+    \ with pytorch to classify MNIST dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"\
+    cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
     >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
     \ rendered_html\">\n<h1 id=\"Load-the-dataset\">Load the dataset<a class=\"anchor-link\"\
     \ href=\"#Load-the-dataset\">\xB6</a></h1><p>Load the MNIST dataset bellow. You\
@@ -1369,9 +1371,7 @@ notebooks/learning-tasks/1_mnist_classification_fc/index:
     </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
     >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
     <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
-    \ hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
-    \ <p>Classification with Fully Connected Neural Networks</p> Ahmad Salimi <p>MNIST\
-    \ classification with a fully connected model with pytorch.</p>"
+    \ hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n"
   description: 'MNIST classification with a fully connected model with pytorch.
 
     '
@@ -1379,61 +1379,59 @@ notebooks/learning-tasks/1_mnist_classification_fc/index:
   url: notebooks/learning-tasks/1_mnist_classification_fc/index.html
 notebooks/learning-tasks/2_cifar10_classification_cnn/index:
   category: Content
-  content: "<p>Classification with Convolutional Neural Networks</p> <p>CIFAR10 classification\
-    \ with a convolutional model with pytorch.</p> \n<div class=\"cell border-box-sizing\
-    \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
-    inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
-    >\n<p>In this task, you should train a CNN model with pytorch to classify CIFAR10\
-    \ dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
+  content: "\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
+    prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
+    \ border-box-sizing rendered_html\">\n<p>In this task, you should train a CNN\
+    \ model with pytorch to classify CIFAR10 dataset.</p>\n</div>\n</div>\n</div>\n\
+    <div class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
+    >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
+    \ rendered_html\">\n<h1 id=\"Load-the-dataset\">Load the dataset<a class=\"anchor-link\"\
+    \ href=\"#Load-the-dataset\">\xB6</a></h1><p>Load the CIFAR10 dataset bellow.\
+    \ You can use either <code>torchvision.datasets.CIFAR10</code> or <code>sklearn.datasets.fetch_openml()</code>\
+    \ or any other way to load the dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"\
+    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n\
+    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
     \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
     >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"\
-    Load-the-dataset\">Load the dataset<a class=\"anchor-link\" href=\"#Load-the-dataset\"\
-    >\xB6</a></h1><p>Load the CIFAR10 dataset bellow. You can use either <code>torchvision.datasets.CIFAR10</code>\
-    \ or <code>sklearn.datasets.fetch_openml()</code> or any other way to load the\
-    \ dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell\
-    \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
-    [\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
-    highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n\
-    </div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
-    prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
-    \ border-box-sizing rendered_html\">\n<h1 id=\"Design-your-model\">Design your\
-    \ model<a class=\"anchor-link\" href=\"#Design-your-model\">\xB6</a></h1><p>Write\
-    \ your CNN model below using <code>torch.nn</code> modules. Feel free to add extra\
-    \ cells.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell\
-    \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
-    [\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
-    highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n\
-    </div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
-    prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
-    \ border-box-sizing rendered_html\">\n<h1 id=\"Train-your-model\">Train your model<a\
-    \ class=\"anchor-link\" href=\"#Train-your-model\">\xB6</a></h1><p>Write the training\
-    \ process below. Instantiate your model, Create an optimizer function such as\
-    \ Adam or SGD, and write your train/validation loop. Then train your model until\
-    \ it converges. Feel free to add extra cells.</p>\n</div>\n</div>\n</div>\n<div\
-    \ class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n\
-    <div class=\"prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\"\
-    >\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span>\n\
-    </pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
-    \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
-    inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
-    >\n<h1 id=\"Draw-the-training-curves\">Draw the training curves<a class=\"anchor-link\"\
-    \ href=\"#Draw-the-training-curves\">\xB6</a></h1><p>Draw two diagrams for train\
-    \ and validat\nion, one showing loss of each epoch, and another showing accuracy\
-    \ of each epoch.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
-    \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
-    >In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
-    \ class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n\
-    </div>\n</div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div\
-    \ class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"\
-    text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"Evaluate-your-model\"\
-    >Evaluate your model<a class=\"anchor-link\" href=\"#Evaluate-your-model\">\xB6\
-    </a></h1><p>Evaluate the best epoch's model (according to the validation accuracy)\
-    \ on the test set, and report the accuracy. Is your model overfitted?</p>\n</div>\n\
-    </div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\">\n<div\
-    \ class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n<div class=\"\
-    inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"\
-    ><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"\
-    cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
+    Design-your-model\">Design your model<a class=\"anchor-link\" href=\"#Design-your-model\"\
+    >\xB6</a></h1><p>Write your CNN model below using <code>torch.nn</code> modules.\
+    \ Feel free to add extra cells.</p>\n</div>\n</div>\n</div>\n<div class=\"cell\
+    \ border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n\
+    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
+    \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
+    >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"\
+    Train-your-model\">Train your model<a class=\"anchor-link\" href=\"#Train-your-model\"\
+    >\xB6</a></h1><p>Write the training process below. Instantiate your model, Create\
+    \ an optimizer function such as Adam or SGD, and write your train/validation loop.\
+    \ Then train your model until it converges. Feel free to add extra cells.</p>\n\
+    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
+    >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
+    <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
+    \ hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
+    <div class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
+    >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
+    \ rendered_html\">\n<h1 id=\"Draw-the-training-curves\">Draw the training curves<a\
+    \ class=\"anchor-link\" href=\"#Draw-the-training-curves\">\xB6</a></h1><p>Draw\
+    \ two diagrams for train and validat\nion, one showing loss of each epoch, and\
+    \ another showing accuracy of each epoch.</p>\n</div>\n</div>\n</div>\n<div class=\"\
+    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n\
+    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
+    \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
+    >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"\
+    Evaluate-your-model\">Evaluate your model<a class=\"anchor-link\" href=\"#Evaluate-your-model\"\
+    >\xB6</a></h1><p>Evaluate the best epoch's model (according to the validation\
+    \ accuracy) on the test set, and report the accuracy. Is your model overfitted?</p>\n\
+    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
+    >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
+    <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
+    \ hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
+    <div class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
     >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
     \ rendered_html\">\n<h1 id=\"Draw-misclassified-images\">Draw misclassified images<a\
     \ class=\"anchor-link\" href=\"#Draw-misclassified-images\">\xB6</a></h1><p>Draw\
@@ -1442,7 +1440,8 @@ notebooks/learning-tasks/2_cifar10_classification_cnn/index:
     >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
     <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
     \ hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
-    \ Ahmad Salimi"
+    \ Ahmad Salimi <p>Classification with Convolutional Neural Networks</p> <p>CIFAR10\
+    \ classification with a convolutional model with pytorch.</p>"
   description: 'CIFAR10 classification with a convolutional model with pytorch.
 
     '
@@ -1450,49 +1449,49 @@ notebooks/learning-tasks/2_cifar10_classification_cnn/index:
   url: notebooks/learning-tasks/2_cifar10_classification_cnn/index.html
 notebooks/learning-tasks/3_transfer_learning/index:
   category: Content
-  content: "<p>CIFAR10 classification with transfer learning on Inception V3.</p>\
-    \ Ahmad Salimi \n<div class=\"cell border-box-sizing text_cell rendered\"><div\
-    \ class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"\
-    text_cell_render border-box-sizing rendered_html\">\n<p>In this task, you should\
-    \ train Inception V3 with pytorch using transfer learning to classify CIFAR10\
-    \ dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
+  content: "<p>Classification with Transfer Learning</p> Ahmad Salimi <p>CIFAR10 classification\
+    \ with transfer learning on Inception V3.</p> \n<div class=\"cell border-box-sizing\
+    \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
+    inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
+    >\n<p>In this task, you should train Inception V3 with pytorch using transfer\
+    \ learning to classify CIFAR10 dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"\
+    cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
+    >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
+    \ rendered_html\">\n<h1 id=\"Load-the-dataset\">Load the dataset<a class=\"anchor-link\"\
+    \ href=\"#Load-the-dataset\">\xB6</a></h1><p>Load the CIFAR10 dataset bellow.\
+    \ You can use either <code>torchvision.datasets.CIFAR10</code> or <code>sklearn.datasets.fetch_openml()</code>\
+    \ or any other way to load the dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"\
+    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-ipython3\"><pre><span></span> \n</pre></div>\n\
+    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
     \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
     >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"\
-    Load-the-dataset\">Load the dataset<a class=\"anchor-link\" href=\"#Load-the-dataset\"\
-    >\xB6</a></h1><p>Load the CIFAR10 dataset bellow. You can use either <code>torchvision.datasets.CIFAR10</code>\
-    \ or <code>sklearn.datasets.fetch_openml()</code> or any other way to load the\
-    \ dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell\
+    Get-Inception-V3\">Get Inception V3<a class=\"anchor-link\" href=\"#Get-Inception-V3\"\
+    >\xB6</a></h1><p>Instantiate Inception V3 model (pretrained on imagenet) from\
+    \ <code>torchvision</code>'s model zoo.</p>\n</div>\n</div>\n</div>\n<div class=\"\
+    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-ipython3\"><pre><span></span> \n</pre></div>\n\
+    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
+    \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
+    >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"\
+    Modify-for-CIFAR10\">Modify for CIFAR10<a class=\"anchor-link\" href=\"#Modify-for-CIFAR10\"\
+    >\xB6</a></h1><p>Imagenet has 1000 classes, but CIFAR10 has 10. So, the decider\
+    \ layers of the model must be changed so that we can use the model for CIFAR10.\
+    \ Therefore, adapt <code>net.fc</code> and <code>net.AuxLogits.fc</code> with\
+    \ CIFAR10.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell\
     \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
     [\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
     highlight hl-ipython3\"><pre><span></span> \n</pre></div>\n</div>\n</div>\n</div>\n\
     </div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
     prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
-    \ border-box-sizing rendered_html\">\n<h1 id=\"Get-Inception-V3\">Get Inception\
-    \ V3<a class=\"anchor-link\" href=\"#Get-Inception-V3\">\xB6</a></h1><p>Instantiate\
-    \ Inception V3 model (pretrained on imagenet) from <code>torchvision</code>'s\
-    \ model zoo.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
-    \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
-    >In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
-    \ class=\"highlight hl-ipython3\"><pre><span></span> \n</pre></div>\n</div>\n\
-    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell rendered\"\
-    ><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"\
-    text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"Modify-for-CIFAR10\"\
-    >Modify for CIFAR10<a class=\"anchor-link\" href=\"#Modify-for-CIFAR10\">\xB6\
-    </a></h1><p>Imagenet has 1000 classes, but CIFAR10 has 10. So, the decider layers\
-    \ of the model must be changed so that we can use the model for CIFAR10. Therefore,\
-    \ adapt <code>net.fc</code> and <code>net.AuxLogits.fc</code> with CIFAR10.</p>\n\
-    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
-    >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
-    <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
-    \ hl-ipython3\"><pre><span></span> \n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
-    <div class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
-    >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
-    \ rendered_html\">\n<h1 id=\"Freeze-the-convolutional-part\">Freeze the convolutional\
-    \ part<a class=\"anchor-link\" href=\"#Freeze-the-convolutional-part\">\xB6</a></h1><p>In\
-    \ order to apply transfer learning, freeze all layers except the deciders. Freezing\
-    \ consist of disabling optimization by disabling grad calculation. Also in batch\
-    \ normalization layers, updating mooving average and variance must be disabled.\
-    \ Note that you must later filter out the frozen parameter for optimizer.</p>\n\
+    \ border-box-sizing rendered_html\">\n<h1 id=\"Freeze-the-convolutional-part\"\
+    >Freeze the convolutional part<a class=\"anchor-link\" href=\"#Freeze-the-convolutional-part\"\
+    >\xB6</a></h1><p>In order to apply transfer learning, freeze all layers except\
+    \ the deciders. Freezing consist of disabling optimization by disabling grad calculation.\
+    \ Also in batch normalization layers, updating mooving average and variance must\
+    \ be disabled. Note that you must later filter out the frozen parameter for optimizer.</p>\n\
     </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
     >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
     <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
@@ -1542,8 +1541,7 @@ notebooks/learning-tasks/3_transfer_learning/index:
     </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
     >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
     <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
-    \ hl-ipython3\"><pre><span></span> \n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
-    \ <p>Classification with Transfer Learning</p>"
+    \ hl-ipython3\"><pre><span></span> \n</pre></div>\n</div>\n</div>\n</div>\n</div>\n"
   description: 'CIFAR10 classification with transfer learning on Inception V3.
 
     '
@@ -2648,9 +2646,9 @@ notebooks/learning-tasks/solutions/1_mnist_classification_fc/index:
   url: notebooks/learning-tasks/solutions/1_mnist_classification_fc/index.html
 notebooks/learning-tasks/solutions/2_cifar10_classification_cnn/index:
   category: Content
-  content: "<p>CIFAR10 classification with a convolutional model with pytorch.</p>\
-    \ \n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt\
-    \ input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
+  content: "<p>Classification with Convolutional Neural Networks: A solution</p> Ahmad\
+    \ Salimi \n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
+    prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
     \ border-box-sizing rendered_html\">\n<p>In this task, you should train a CNN\
     \ model with pytorch to classify CIFAR10 dataset.</p>\n</div>\n</div>\n</div>\n\
     <div class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"input\"\
@@ -4288,8 +4286,7 @@ notebooks/learning-tasks/solutions/2_cifar10_classification_cnn/index:
     \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
     >In\_[11]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
     \ class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n\
-    </div>\n</div>\n Ahmad Salimi <p>Classification with Convolutional Neural Networks:\
-    \ A solution</p>"
+    </div>\n</div>\n <p>CIFAR10 classification with a convolutional model with pytorch.</p>"
   description: 'CIFAR10 classification with a convolutional model with pytorch.
 
     '
@@ -4408,9 +4405,9 @@ notebooks/learning-tasks/solutions/3_transfer_learning/index:
     >\n<div class=\"prompt\"></div>\n<div class=\"output_subarea output_stream output_stdout\
     \ output_text\">\n<pre>Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz\
     \ to cifir10/cifar-10-python.tar.gz\n</pre>\n</div>\n</div>\n<div class=\"output_area\"\
-    >\n<div class=\"prompt\"></div>\n<div id=\"2b6fd6b2-332d-4493-b839-0fb1817e47f3\"\
+    >\n<div class=\"prompt\"></div>\n<div id=\"3883a9d3-4946-4da3-9f02-d00c078a4df5\"\
     ></div>\n<div class=\"output_subarea output_widget_view\">\n<script type=\"text/javascript\"\
-    >\nvar element = $('#2b6fd6b2-332d-4493-b839-0fb1817e47f3');\n</script>\n<script\
+    >\nvar element = $('#3883a9d3-4946-4da3-9f02-d00c078a4df5');\n</script>\n<script\
     \ type=\"application/vnd.jupyter.widget-view+json\">\n{\"model_id\": \"580bb0a57f5c4248955c4706c0bbef37\"\
     , \"version_minor\": 0, \"version_major\": 2}\n</script>\n</div>\n</div>\n<div\
     \ class=\"output_area\">\n<div class=\"prompt\"></div>\n<div class=\"output_subarea\
@@ -4436,8 +4433,8 @@ notebooks/learning-tasks/solutions/3_transfer_learning/index:
     >\n<pre>Downloading: \"https://download.pytorch.org/models/inception_v3_google-0cc3c7bd.pth\"\
     \ to /root/.cache/torch/hub/checkpoints/inception_v3_google-0cc3c7bd.pth\n</pre>\n\
     </div>\n</div>\n<div class=\"output_area\">\n<div class=\"prompt\"></div>\n<div\
-    \ id=\"040642d2-4fe5-49e8-bf21-6d29932e85d4\"></div>\n<div class=\"output_subarea\
-    \ output_widget_view\">\n<script type=\"text/javascript\">\nvar element = $('#040642d2-4fe5-49e8-bf21-6d29932e85d4');\n\
+    \ id=\"6651fc53-d038-4f1a-8fc7-fc5fcbf6da78\"></div>\n<div class=\"output_subarea\
+    \ output_widget_view\">\n<script type=\"text/javascript\">\nvar element = $('#6651fc53-d038-4f1a-8fc7-fc5fcbf6da78');\n\
     </script>\n<script type=\"application/vnd.jupyter.widget-view+json\">\n{\"model_id\"\
     : \"b2020f9c8c8f4c96b4437b02641ae31f\", \"version_minor\": 0, \"version_major\"\
     : 2}\n</script>\n</div>\n</div>\n<div class=\"output_area\">\n<div class=\"prompt\
@@ -5870,8 +5867,8 @@ notebooks/learning-tasks/solutions/3_transfer_learning/index:
     \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
     >In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
     \ class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n\
-    </div>\n</div>\n <p>CIFAR10 classification with transfer learning on Inception\
-    \ V3.</p> Ahmad Salimi <p>Classification with Transfer Learning: A solution</p>"
+    </div>\n</div>\n Ahmad Salimi <p>Classification with Transfer Learning: A solution</p>\
+    \ <p>CIFAR10 classification with transfer learning on Inception V3.</p>"
   description: 'CIFAR10 classification with transfer learning on Inception V3.
 
     '
