@@ -6,21 +6,20 @@
   url: /edu-content/
 notebooks/basics/numpy/numpy:
   category: Content
-  content: "<p>Main preprocessing techniques for Numpy package</p> <p>Basic and tricky\
-    \ numpy functions</p> Amin Rezaee \n<div class=\"cell border-box-sizing code_cell\
-    \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
-    [\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
-    highlight hl-python\"><pre><span></span><span class=\"kn\">import</span> <span\
-    \ class=\"nn\">numpy</span> <span class=\"k\">as</span> <span class=\"nn\">np</span>\n\
-    </pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
-    \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
-    inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
-    >\n<ol>\n<li>read array from text</li>\n<li>save as npy</li>\n<li>read from npy</li>\n\
-    </ol>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
-    >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
-    <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
-    \ hl-python\"><pre><span></span><span class=\"n\">text_path</span> <span class=\"\
-    o\">=</span> <span class=\"s1\">'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'</span>\n\
+  content: "<p>Main preprocessing techniques for Numpy package</p> \n<div class=\"\
+    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span class=\"\
+    kn\">import</span> <span class=\"nn\">numpy</span> <span class=\"k\">as</span>\
+    \ <span class=\"nn\">np</span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
+    <div class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
+    >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
+    \ rendered_html\">\n<ol>\n<li>read array from text</li>\n<li>save as npy</li>\n\
+    <li>read from npy</li>\n</ol>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+    \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
+    >In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
+    \ class=\"highlight hl-python\"><pre><span></span><span class=\"n\">text_path</span>\
+    \ <span class=\"o\">=</span> <span class=\"s1\">'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'</span>\n\
     </pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
     \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
     inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
@@ -231,7 +230,8 @@ notebooks/basics/numpy/numpy:
     \ class=\"p\">,</span><span class=\"n\">size</span><span class=\"o\">=</span><span\
     \ class=\"p\">(</span><span class=\"mi\">8</span><span class=\"p\">,</span><span\
     \ class=\"mi\">10</span><span class=\"p\">))</span>\n<span class=\"c1\"># return\
-    \ A x B and it's shape</span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n"
+    \ A x B and it's shape</span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
+    \ Amin Rezaee <p>Basic and tricky numpy functions</p>"
   description: 'Main preprocessing techniques for Numpy package
 
     '
@@ -239,22 +239,21 @@ notebooks/basics/numpy/numpy:
   url: notebooks/basics/numpy/numpy.html
 notebooks/basics/pandas/pandas:
   category: Content
-  content: "<p>Basic and tricky Pandas functions</p> <p>Main preprocessing techniques\
-    \ for pandas package</p> Amin Rezaee \n<div class=\"cell border-box-sizing code_cell\
-    \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
-    [\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
-    highlight hl-python\"><pre><span></span><span class=\"kn\">import</span> <span\
-    \ class=\"nn\">pandas</span> <span class=\"k\">as</span> <span class=\"nn\">pd</span>\n\
-    <span class=\"kn\">import</span> <span class=\"nn\">numpy</span> <span class=\"\
-    k\">as</span> <span class=\"nn\">np</span>\n</pre></div>\n</div>\n</div>\n</div>\n\
-    </div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
-    prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
-    \ border-box-sizing rendered_html\">\n<p>read csv file and print first five samples</p>\n\
-    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
-    >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
-    <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
-    \ hl-python\"><pre><span></span><span class=\"n\">dataset_path</span> <span class=\"\
-    o\">=</span> <span class=\"s1\">'https://datahub.io/machine-learning/iris/r/iris.csv'</span>\n\
+  content: "<p>Main preprocessing techniques for pandas package</p> \n<div class=\"\
+    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span class=\"\
+    kn\">import</span> <span class=\"nn\">pandas</span> <span class=\"k\">as</span>\
+    \ <span class=\"nn\">pd</span>\n<span class=\"kn\">import</span> <span class=\"\
+    nn\">numpy</span> <span class=\"k\">as</span> <span class=\"nn\">np</span>\n</pre></div>\n\
+    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
+    \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
+    >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<p>read csv\
+    \ file and print first five samples</p>\n</div>\n</div>\n</div>\n<div class=\"\
+    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span class=\"\
+    n\">dataset_path</span> <span class=\"o\">=</span> <span class=\"s1\">'https://datahub.io/machine-learning/iris/r/iris.csv'</span>\n\
     </pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
     \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
     inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
@@ -325,7 +324,8 @@ notebooks/basics/pandas/pandas:
     <div class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"input\"\
     >\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\"\
     >\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span>\n\
-    </pre></div>\n</div>\n</div>\n</div>\n</div>\n"
+    </pre></div>\n</div>\n</div>\n</div>\n</div>\n Amin Rezaee <p>Basic and tricky\
+    \ Pandas functions</p>"
   description: 'Main preprocessing techniques for pandas package
 
     '
@@ -333,17 +333,17 @@ notebooks/basics/pandas/pandas:
   url: notebooks/basics/pandas/pandas.html
 notebooks/basics/solutions/numpy/numpy_solutions:
   category: Content
-  content: "<p>Main preprocessing techniques for Numpy package</p> <p>Basic and tricky\
-    \ numpy functions</p> \n<div class=\"cell border-box-sizing code_cell rendered\"\
-    >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[1]:</div>\n\
-    <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
-    \ hl-python\"><pre><span></span><span class=\"kn\">import</span> <span class=\"\
-    nn\">numpy</span> <span class=\"k\">as</span> <span class=\"nn\">np</span>\n</pre></div>\n\
-    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
-    \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
-    >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<ol>\n<li>read\
-    \ array from text</li>\n<li>save as npy</li>\n<li>read from npy</li>\n</ol>\n\
-    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
+  content: "<p>Main preprocessing techniques for Numpy package</p> Amin Rezaee <p>Basic\
+    \ and tricky numpy functions</p> \n<div class=\"cell border-box-sizing code_cell\
+    \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
+    [1]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
+    highlight hl-python\"><pre><span></span><span class=\"kn\">import</span> <span\
+    \ class=\"nn\">numpy</span> <span class=\"k\">as</span> <span class=\"nn\">np</span>\n\
+    </pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+    \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
+    inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
+    >\n<ol>\n<li>read array from text</li>\n<li>save as npy</li>\n<li>read from npy</li>\n\
+    </ol>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
     >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
     <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
     \ hl-python\"><pre><span></span><span class=\"n\">text_path</span> <span class=\"\
@@ -805,7 +805,7 @@ notebooks/basics/solutions/numpy/numpy_solutions:
     \ 37599 25288 30227]\n [22708 26322 23890 11625 21578 17268 19588 25626 16443\
     \ 23737]\n [16523 18736 18315  9807 15515 11387 13486 17895 12104 16508]\n [27075\
     \ 26769 30413 17316 21743 19047 20645 28790 25230 20812]]\n</pre>\n</div>\n</div>\n\
-    </div>\n</div>\n</div>\n Amin Rezaee"
+    </div>\n</div>\n</div>\n"
   description: 'Main preprocessing techniques for Numpy package
 
     '
@@ -813,8 +813,9 @@ notebooks/basics/solutions/numpy/numpy_solutions:
   url: notebooks/basics/solutions/numpy/numpy_solutions.html
 notebooks/basics/solutions/pandas/pandas_solutions:
   category: Content
-  content: "\n<div class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"\
-    input\">\n<div class=\"prompt input_prompt\">In\_[1]:</div>\n<div class=\"inner_cell\"\
+  content: "<p>Main preprocessing techniques for pandas package</p> Amin Rezaee \n\
+    <div class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"input\"\
+    >\n<div class=\"prompt input_prompt\">In\_[1]:</div>\n<div class=\"inner_cell\"\
     >\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span\
     \ class=\"kn\">import</span> <span class=\"nn\">pandas</span> <span class=\"k\"\
     >as</span> <span class=\"nn\">pd</span>\n<span class=\"kn\">import</span> <span\
@@ -1299,9 +1300,8 @@ notebooks/basics/solutions/pandas/pandas_solutions:
     \ class=\"o\">=</span><span class=\"p\">(</span><span class=\"s1\">'_left'</span><span\
     \ class=\"p\">,</span> <span class=\"s1\">'_right'</span><span class=\"p\">),</span><span\
     \ class=\"n\">how</span><span class=\"o\">=</span><span class=\"s1\">'outer'</span><span\
-    \ class=\"p\">)</span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n <p>Main\
-    \ preprocessing techniques for pandas package</p> <p>Basic and tricky pandas functions</p>\
-    \ Amin Rezaee"
+    \ class=\"p\">)</span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n <p>Basic\
+    \ and tricky pandas functions</p>"
   description: 'Main preprocessing techniques for pandas package
 
     '
@@ -1309,8 +1309,7 @@ notebooks/basics/solutions/pandas/pandas_solutions:
   url: notebooks/basics/solutions/pandas/pandas_solutions.html
 notebooks/learning-tasks/1_mnist_classification_fc/index:
   category: Content
-  content: "<p>Classification with Fully Connected Neural Networks</p> <p>MNIST classification\
-    \ with a fully connected model with pytorch.</p> Ahmad Salimi \n<div class=\"\
+  content: "<p>Classification with Fully Connected Neural Networks</p> \n<div class=\"\
     cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
     >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
     \ rendered_html\">\n<p>In this task, you should train a fully-connected model\
@@ -1371,7 +1370,8 @@ notebooks/learning-tasks/1_mnist_classification_fc/index:
     </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
     >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
     <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
-    \ hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n"
+    \ hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
+    \ Ahmad Salimi <p>MNIST classification with a fully connected model with pytorch.</p>"
   description: 'MNIST classification with a fully connected model with pytorch.
 
     '
@@ -1379,59 +1379,60 @@ notebooks/learning-tasks/1_mnist_classification_fc/index:
   url: notebooks/learning-tasks/1_mnist_classification_fc/index.html
 notebooks/learning-tasks/2_cifar10_classification_cnn/index:
   category: Content
-  content: "\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
+  content: "Ahmad Salimi \n<div class=\"cell border-box-sizing text_cell rendered\"\
+    ><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"\
+    text_cell_render border-box-sizing rendered_html\">\n<p>In this task, you should\
+    \ train a CNN model with pytorch to classify CIFAR10 dataset.</p>\n</div>\n</div>\n\
+    </div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
     prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
-    \ border-box-sizing rendered_html\">\n<p>In this task, you should train a CNN\
-    \ model with pytorch to classify CIFAR10 dataset.</p>\n</div>\n</div>\n</div>\n\
-    <div class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
-    >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
-    \ rendered_html\">\n<h1 id=\"Load-the-dataset\">Load the dataset<a class=\"anchor-link\"\
-    \ href=\"#Load-the-dataset\">\xB6</a></h1><p>Load the CIFAR10 dataset bellow.\
-    \ You can use either <code>torchvision.datasets.CIFAR10</code> or <code>sklearn.datasets.fetch_openml()</code>\
-    \ or any other way to load the dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"\
-    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
-    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
-    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n\
-    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
-    \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
-    >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"\
-    Design-your-model\">Design your model<a class=\"anchor-link\" href=\"#Design-your-model\"\
-    >\xB6</a></h1><p>Write your CNN model below using <code>torch.nn</code> modules.\
-    \ Feel free to add extra cells.</p>\n</div>\n</div>\n</div>\n<div class=\"cell\
-    \ border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
-    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
-    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n\
-    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
-    \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
-    >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"\
-    Train-your-model\">Train your model<a class=\"anchor-link\" href=\"#Train-your-model\"\
-    >\xB6</a></h1><p>Write the training process below. Instantiate your model, Create\
-    \ an optimizer function such as Adam or SGD, and write your train/validation loop.\
-    \ Then train your model until it converges. Feel free to add extra cells.</p>\n\
-    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
-    >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
-    <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
-    \ hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
-    <div class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
-    >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
-    \ rendered_html\">\n<h1 id=\"Draw-the-training-curves\">Draw the training curves<a\
-    \ class=\"anchor-link\" href=\"#Draw-the-training-curves\">\xB6</a></h1><p>Draw\
-    \ two diagrams for train and validat\nion, one showing loss of each epoch, and\
-    \ another showing accuracy of each epoch.</p>\n</div>\n</div>\n</div>\n<div class=\"\
-    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
-    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
-    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n\
-    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
-    \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
-    >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"\
-    Evaluate-your-model\">Evaluate your model<a class=\"anchor-link\" href=\"#Evaluate-your-model\"\
-    >\xB6</a></h1><p>Evaluate the best epoch's model (according to the validation\
-    \ accuracy) on the test set, and report the accuracy. Is your model overfitted?</p>\n\
-    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
-    >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
-    <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
-    \ hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
-    <div class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
+    \ border-box-sizing rendered_html\">\n<h1 id=\"Load-the-dataset\">Load the dataset<a\
+    \ class=\"anchor-link\" href=\"#Load-the-dataset\">\xB6</a></h1><p>Load the CIFAR10\
+    \ dataset bellow. You can use either <code>torchvision.datasets.CIFAR10</code>\
+    \ or <code>sklearn.datasets.fetch_openml()</code> or any other way to load the\
+    \ dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell\
+    \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
+    [\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
+    highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n\
+    </div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
+    prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
+    \ border-box-sizing rendered_html\">\n<h1 id=\"Design-your-model\">Design your\
+    \ model<a class=\"anchor-link\" href=\"#Design-your-model\">\xB6</a></h1><p>Write\
+    \ your CNN model below using <code>torch.nn</code> modules. Feel free to add extra\
+    \ cells.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell\
+    \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
+    [\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
+    highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n\
+    </div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
+    prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
+    \ border-box-sizing rendered_html\">\n<h1 id=\"Train-your-model\">Train your model<a\
+    \ class=\"anchor-link\" href=\"#Train-your-model\">\xB6</a></h1><p>Write the training\
+    \ process below. Instantiate your model, Create an optimizer function such as\
+    \ Adam or SGD, and write your train/validation loop. Then train your model until\
+    \ it converges. Feel free to add extra cells.</p>\n</div>\n</div>\n</div>\n<div\
+    \ class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n\
+    <div class=\"prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\"\
+    >\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span>\n\
+    </pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+    \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
+    inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
+    >\n<h1 id=\"Draw-the-training-curves\">Draw the training curves<a class=\"anchor-link\"\
+    \ href=\"#Draw-the-training-curves\">\xB6</a></h1><p>Draw two diagrams for train\
+    \ and validat\nion, one showing loss of each epoch, and another showing accuracy\
+    \ of each epoch.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+    \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
+    >In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
+    \ class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n\
+    </div>\n</div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div\
+    \ class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"\
+    text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"Evaluate-your-model\"\
+    >Evaluate your model<a class=\"anchor-link\" href=\"#Evaluate-your-model\">\xB6\
+    </a></h1><p>Evaluate the best epoch's model (according to the validation accuracy)\
+    \ on the test set, and report the accuracy. Is your model overfitted?</p>\n</div>\n\
+    </div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\">\n<div\
+    \ class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n<div class=\"\
+    inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"\
+    ><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"\
+    cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
     >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
     \ rendered_html\">\n<h1 id=\"Draw-misclassified-images\">Draw misclassified images<a\
     \ class=\"anchor-link\" href=\"#Draw-misclassified-images\">\xB6</a></h1><p>Draw\
@@ -1440,8 +1441,8 @@ notebooks/learning-tasks/2_cifar10_classification_cnn/index:
     >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
     <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
     \ hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
-    \ Ahmad Salimi <p>Classification with Convolutional Neural Networks</p> <p>CIFAR10\
-    \ classification with a convolutional model with pytorch.</p>"
+    \ <p>CIFAR10 classification with a convolutional model with pytorch.</p> <p>Classification\
+    \ with Convolutional Neural Networks</p>"
   description: 'CIFAR10 classification with a convolutional model with pytorch.
 
     '
@@ -1449,49 +1450,48 @@ notebooks/learning-tasks/2_cifar10_classification_cnn/index:
   url: notebooks/learning-tasks/2_cifar10_classification_cnn/index.html
 notebooks/learning-tasks/3_transfer_learning/index:
   category: Content
-  content: "<p>Classification with Transfer Learning</p> Ahmad Salimi <p>CIFAR10 classification\
-    \ with transfer learning on Inception V3.</p> \n<div class=\"cell border-box-sizing\
-    \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
-    inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
-    >\n<p>In this task, you should train Inception V3 with pytorch using transfer\
-    \ learning to classify CIFAR10 dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"\
-    cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
-    >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
-    \ rendered_html\">\n<h1 id=\"Load-the-dataset\">Load the dataset<a class=\"anchor-link\"\
-    \ href=\"#Load-the-dataset\">\xB6</a></h1><p>Load the CIFAR10 dataset bellow.\
-    \ You can use either <code>torchvision.datasets.CIFAR10</code> or <code>sklearn.datasets.fetch_openml()</code>\
-    \ or any other way to load the dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"\
-    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
-    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
-    input_area\">\n<div class=\"highlight hl-ipython3\"><pre><span></span> \n</pre></div>\n\
-    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
-    \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
-    >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"\
-    Get-Inception-V3\">Get Inception V3<a class=\"anchor-link\" href=\"#Get-Inception-V3\"\
-    >\xB6</a></h1><p>Instantiate Inception V3 model (pretrained on imagenet) from\
-    \ <code>torchvision</code>'s model zoo.</p>\n</div>\n</div>\n</div>\n<div class=\"\
-    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
-    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
-    input_area\">\n<div class=\"highlight hl-ipython3\"><pre><span></span> \n</pre></div>\n\
-    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
-    \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
-    >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"\
-    Modify-for-CIFAR10\">Modify for CIFAR10<a class=\"anchor-link\" href=\"#Modify-for-CIFAR10\"\
-    >\xB6</a></h1><p>Imagenet has 1000 classes, but CIFAR10 has 10. So, the decider\
-    \ layers of the model must be changed so that we can use the model for CIFAR10.\
-    \ Therefore, adapt <code>net.fc</code> and <code>net.AuxLogits.fc</code> with\
-    \ CIFAR10.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell\
+  content: "\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
+    prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
+    \ border-box-sizing rendered_html\">\n<p>In this task, you should train Inception\
+    \ V3 with pytorch using transfer learning to classify CIFAR10 dataset.</p>\n</div>\n\
+    </div>\n</div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div\
+    \ class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"\
+    text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"Load-the-dataset\"\
+    >Load the dataset<a class=\"anchor-link\" href=\"#Load-the-dataset\">\xB6</a></h1><p>Load\
+    \ the CIFAR10 dataset bellow. You can use either <code>torchvision.datasets.CIFAR10</code>\
+    \ or <code>sklearn.datasets.fetch_openml()</code> or any other way to load the\
+    \ dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell\
     \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
     [\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
     highlight hl-ipython3\"><pre><span></span> \n</pre></div>\n</div>\n</div>\n</div>\n\
     </div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
     prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
-    \ border-box-sizing rendered_html\">\n<h1 id=\"Freeze-the-convolutional-part\"\
-    >Freeze the convolutional part<a class=\"anchor-link\" href=\"#Freeze-the-convolutional-part\"\
-    >\xB6</a></h1><p>In order to apply transfer learning, freeze all layers except\
-    \ the deciders. Freezing consist of disabling optimization by disabling grad calculation.\
-    \ Also in batch normalization layers, updating mooving average and variance must\
-    \ be disabled. Note that you must later filter out the frozen parameter for optimizer.</p>\n\
+    \ border-box-sizing rendered_html\">\n<h1 id=\"Get-Inception-V3\">Get Inception\
+    \ V3<a class=\"anchor-link\" href=\"#Get-Inception-V3\">\xB6</a></h1><p>Instantiate\
+    \ Inception V3 model (pretrained on imagenet) from <code>torchvision</code>'s\
+    \ model zoo.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+    \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
+    >In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
+    \ class=\"highlight hl-ipython3\"><pre><span></span> \n</pre></div>\n</div>\n\
+    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell rendered\"\
+    ><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"\
+    text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"Modify-for-CIFAR10\"\
+    >Modify for CIFAR10<a class=\"anchor-link\" href=\"#Modify-for-CIFAR10\">\xB6\
+    </a></h1><p>Imagenet has 1000 classes, but CIFAR10 has 10. So, the decider layers\
+    \ of the model must be changed so that we can use the model for CIFAR10. Therefore,\
+    \ adapt <code>net.fc</code> and <code>net.AuxLogits.fc</code> with CIFAR10.</p>\n\
+    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
+    >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
+    <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
+    \ hl-ipython3\"><pre><span></span> \n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
+    <div class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
+    >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
+    \ rendered_html\">\n<h1 id=\"Freeze-the-convolutional-part\">Freeze the convolutional\
+    \ part<a class=\"anchor-link\" href=\"#Freeze-the-convolutional-part\">\xB6</a></h1><p>In\
+    \ order to apply transfer learning, freeze all layers except the deciders. Freezing\
+    \ consist of disabling optimization by disabling grad calculation. Also in batch\
+    \ normalization layers, updating mooving average and variance must be disabled.\
+    \ Note that you must later filter out the frozen parameter for optimizer.</p>\n\
     </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
     >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
     <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
@@ -1541,7 +1541,9 @@ notebooks/learning-tasks/3_transfer_learning/index:
     </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
     >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
     <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
-    \ hl-ipython3\"><pre><span></span> \n</pre></div>\n</div>\n</div>\n</div>\n</div>\n"
+    \ hl-ipython3\"><pre><span></span> \n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
+    \ <p>Classification with Transfer Learning</p> Ahmad Salimi <p>CIFAR10 classification\
+    \ with transfer learning on Inception V3.</p>"
   description: 'CIFAR10 classification with transfer learning on Inception V3.
 
     '
@@ -1549,190 +1551,192 @@ notebooks/learning-tasks/3_transfer_learning/index:
   url: notebooks/learning-tasks/3_transfer_learning/index.html
 notebooks/learning-tasks/solutions/1_mnist_classification_fc/index:
   category: Content
-  content: "\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
-    prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
-    \ border-box-sizing rendered_html\">\n<p>In this task, you should train a fully-connected\
-    \ model with pytorch to classify MNIST dataset.</p>\n</div>\n</div>\n</div>\n\
-    <div class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"input\"\
-    >\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\"\
-    >\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span\
-    \ class=\"kn\">from</span> <span class=\"nn\">typing</span> <span class=\"kn\"\
-    >import</span> <span class=\"n\">Tuple</span><span class=\"p\">,</span> <span\
-    \ class=\"n\">Iterable</span>\n<span class=\"kn\">from</span> <span class=\"nn\"\
-    >tqdm</span> <span class=\"kn\">import</span> <span class=\"n\">tqdm</span>\n\
-    <span class=\"kn\">from</span> <span class=\"nn\">multiprocessing</span> <span\
-    \ class=\"kn\">import</span> <span class=\"n\">cpu_count</span>\n<span class=\"\
-    kn\">from</span> <span class=\"nn\">time</span> <span class=\"kn\">import</span>\
-    \ <span class=\"n\">time</span>\n\n<span class=\"kn\">import</span> <span class=\"\
-    nn\">torchvision</span>\n<span class=\"kn\">from</span> <span class=\"nn\">torchvision</span>\
-    \ <span class=\"kn\">import</span> <span class=\"n\">datasets</span><span class=\"\
-    p\">,</span> <span class=\"n\">transforms</span>\n<span class=\"kn\">import</span>\
-    \ <span class=\"nn\">torch</span>\n<span class=\"kn\">from</span> <span class=\"\
-    nn\">torch</span> <span class=\"kn\">import</span> <span class=\"n\">nn</span>\n\
-    <span class=\"kn\">from</span> <span class=\"nn\">torch.utils.data</span> <span\
-    \ class=\"kn\">import</span> <span class=\"n\">DataLoader</span>\n<span class=\"\
-    kn\">import</span> <span class=\"nn\">torch.nn.functional</span> <span class=\"\
-    k\">as</span> <span class=\"nn\">F</span>\n<span class=\"kn\">import</span> <span\
-    \ class=\"nn\">numpy</span> <span class=\"k\">as</span> <span class=\"nn\">np</span>\n\
-    <span class=\"kn\">import</span> <span class=\"nn\">matplotlib.pyplot</span> <span\
-    \ class=\"k\">as</span> <span class=\"nn\">plt</span>\n</pre></div>\n</div>\n\
-    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
-    >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
-    <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
-    \ hl-python\"><pre><span></span><span class=\"n\">device</span> <span class=\"\
-    o\">=</span> <span class=\"n\">torch</span><span class=\"o\">.</span><span class=\"\
-    n\">device</span><span class=\"p\">(</span><span class=\"s1\">'cuda'</span> <span\
-    \ class=\"k\">if</span> <span class=\"n\">torch</span><span class=\"o\">.</span><span\
-    \ class=\"n\">cuda</span><span class=\"o\">.</span><span class=\"n\">is_available</span><span\
-    \ class=\"p\">()</span> <span class=\"k\">else</span> <span class=\"s1\">'cpu'</span><span\
-    \ class=\"p\">)</span>\n<span class=\"n\">device</span>\n</pre></div>\n</div>\n\
-    </div>\n</div>\n<div class=\"output_wrapper\">\n<div class=\"output\">\n<div class=\"\
-    output_area\">\n<div class=\"prompt output_prompt\">Out[\_]:</div>\n<div class=\"\
-    output_text output_subarea output_execute_result\">\n<pre>device(type='cuda')</pre>\n\
-    </div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell\
-    \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
-    [\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
-    highlight hl-python\"><pre><span></span><span class=\"n\">SEED</span> <span class=\"\
-    o\">=</span> <span class=\"mi\">51</span>\n<span class=\"n\">torch</span><span\
-    \ class=\"o\">.</span><span class=\"n\">random</span><span class=\"o\">.</span><span\
-    \ class=\"n\">manual_seed</span><span class=\"p\">(</span><span class=\"n\">SEED</span><span\
-    \ class=\"p\">)</span>\n<span class=\"n\">torch</span><span class=\"o\">.</span><span\
-    \ class=\"n\">cuda</span><span class=\"o\">.</span><span class=\"n\">manual_seed_all</span><span\
-    \ class=\"p\">(</span><span class=\"n\">SEED</span><span class=\"p\">)</span>\n\
-    <span class=\"n\">np</span><span class=\"o\">.</span><span class=\"n\">random</span><span\
-    \ class=\"o\">.</span><span class=\"n\">seed</span><span class=\"p\">(</span><span\
-    \ class=\"n\">SEED</span><span class=\"p\">)</span>\n</pre></div>\n</div>\n</div>\n\
-    </div>\n</div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div\
-    \ class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"\
-    text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"Load-the-dataset\"\
-    >Load the dataset<a class=\"anchor-link\" href=\"#Load-the-dataset\">\xB6</a></h1><p>Load\
-    \ the MNIST dataset bellow. You can use either <code>torchvision.datasets.MNIST</code>\
-    \ or <code>sklearn.datasets.fetch_openml()</code> or any other way to load the\
-    \ dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell\
-    \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
-    [\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
-    highlight hl-python\"><pre><span></span><span class=\"n\">mnist_root</span> <span\
-    \ class=\"o\">=</span> <span class=\"s1\">'mnist'</span>\n<span class=\"n\">transform</span>\
-    \ <span class=\"o\">=</span> <span class=\"n\">transforms</span><span class=\"\
-    o\">.</span><span class=\"n\">Compose</span><span class=\"p\">([</span>\n    <span\
-    \ class=\"n\">transforms</span><span class=\"o\">.</span><span class=\"n\">ToTensor</span><span\
-    \ class=\"p\">(),</span>\n    <span class=\"n\">transforms</span><span class=\"\
-    o\">.</span><span class=\"n\">Normalize</span><span class=\"p\">((</span><span\
-    \ class=\"mf\">0.1307</span><span class=\"p\">,),</span> <span class=\"p\">(</span><span\
-    \ class=\"mf\">0.3081</span><span class=\"p\">,)),</span>\n<span class=\"p\">])</span>\n\
-    <span class=\"n\">trainset</span> <span class=\"o\">=</span> <span class=\"n\"\
-    >torchvision</span><span class=\"o\">.</span><span class=\"n\">datasets</span><span\
-    \ class=\"o\">.</span><span class=\"n\">MNIST</span><span class=\"p\">(</span><span\
-    \ class=\"n\">mnist_root</span><span class=\"p\">,</span> <span class=\"n\">train</span><span\
-    \ class=\"o\">=</span><span class=\"kc\">True</span><span class=\"p\">,</span>\
-    \ <span class=\"n\">download</span><span class=\"o\">=</span><span class=\"kc\"\
-    >True</span><span class=\"p\">,</span> <span class=\"n\">transform</span><span\
-    \ class=\"o\">=</span><span class=\"n\">transform</span><span class=\"p\">)</span>\n\
-    <span class=\"n\">trainsize</span> <span class=\"o\">=</span> <span class=\"nb\"\
-    >int</span><span class=\"p\">(</span><span class=\"nb\">len</span><span class=\"\
-    p\">(</span><span class=\"n\">trainset</span><span class=\"p\">)</span> <span\
-    \ class=\"o\">*</span> <span class=\"mf\">0.9</span><span class=\"p\">)</span>\n\
-    <span class=\"n\">valsize</span> <span class=\"o\">=</span> <span class=\"nb\"\
-    >len</span><span class=\"p\">(</span><span class=\"n\">trainset</span><span class=\"\
-    p\">)</span> <span class=\"o\">-</span> <span class=\"n\">trainsize</span>\n<span\
-    \ class=\"n\">trainset</span><span class=\"p\">,</span> <span class=\"n\">valset</span>\
-    \ <span class=\"o\">=</span> <span class=\"n\">torch</span><span class=\"o\">.</span><span\
-    \ class=\"n\">utils</span><span class=\"o\">.</span><span class=\"n\">data</span><span\
-    \ class=\"o\">.</span><span class=\"n\">random_split</span><span class=\"p\">(</span><span\
-    \ class=\"n\">trainset</span><span class=\"p\">,</span> <span class=\"p\">[</span><span\
-    \ class=\"n\">trainsize</span><span class=\"p\">,</span> <span class=\"n\">valsize</span><span\
-    \ class=\"p\">])</span>\n<span class=\"n\">testset</span> <span class=\"o\">=</span>\
-    \ <span class=\"n\">torchvision</span><span class=\"o\">.</span><span class=\"\
-    n\">datasets</span><span class=\"o\">.</span><span class=\"n\">MNIST</span><span\
-    \ class=\"p\">(</span><span class=\"n\">mnist_root</span><span class=\"p\">,</span>\
-    \ <span class=\"n\">train</span><span class=\"o\">=</span><span class=\"kc\">False</span><span\
-    \ class=\"p\">,</span> <span class=\"n\">download</span><span class=\"o\">=</span><span\
-    \ class=\"kc\">True</span><span class=\"p\">,</span> <span class=\"n\">transform</span><span\
-    \ class=\"o\">=</span><span class=\"n\">transform</span><span class=\"p\">)</span>\n\
+  content: "<p>MNIST classification with a fully connected model with pytorch.</p>\
+    \ <p>Classification with Fully Connected Neural Networks: A solution</p> \n<div\
+    \ class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
+    >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
+    \ rendered_html\">\n<p>In this task, you should train a fully-connected model\
+    \ with pytorch to classify MNIST dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"\
+    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span class=\"\
+    kn\">from</span> <span class=\"nn\">typing</span> <span class=\"kn\">import</span>\
+    \ <span class=\"n\">Tuple</span><span class=\"p\">,</span> <span class=\"n\">Iterable</span>\n\
+    <span class=\"kn\">from</span> <span class=\"nn\">tqdm</span> <span class=\"kn\"\
+    >import</span> <span class=\"n\">tqdm</span>\n<span class=\"kn\">from</span> <span\
+    \ class=\"nn\">multiprocessing</span> <span class=\"kn\">import</span> <span class=\"\
+    n\">cpu_count</span>\n<span class=\"kn\">from</span> <span class=\"nn\">time</span>\
+    \ <span class=\"kn\">import</span> <span class=\"n\">time</span>\n\n<span class=\"\
+    kn\">import</span> <span class=\"nn\">torchvision</span>\n<span class=\"kn\">from</span>\
+    \ <span class=\"nn\">torchvision</span> <span class=\"kn\">import</span> <span\
+    \ class=\"n\">datasets</span><span class=\"p\">,</span> <span class=\"n\">transforms</span>\n\
+    <span class=\"kn\">import</span> <span class=\"nn\">torch</span>\n<span class=\"\
+    kn\">from</span> <span class=\"nn\">torch</span> <span class=\"kn\">import</span>\
+    \ <span class=\"n\">nn</span>\n<span class=\"kn\">from</span> <span class=\"nn\"\
+    >torch.utils.data</span> <span class=\"kn\">import</span> <span class=\"n\">DataLoader</span>\n\
+    <span class=\"kn\">import</span> <span class=\"nn\">torch.nn.functional</span>\
+    \ <span class=\"k\">as</span> <span class=\"nn\">F</span>\n<span class=\"kn\"\
+    >import</span> <span class=\"nn\">numpy</span> <span class=\"k\">as</span> <span\
+    \ class=\"nn\">np</span>\n<span class=\"kn\">import</span> <span class=\"nn\"\
+    >matplotlib.pyplot</span> <span class=\"k\">as</span> <span class=\"nn\">plt</span>\n\
     </pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
-    \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
-    inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
-    >\n<h1 id=\"Design-your-model\">Design your model<a class=\"anchor-link\" href=\"\
-    #Design-your-model\">\xB6</a></h1><p>Write your fully-connected model below using\
-    \ <code>torch.nn</code> modules. Feel free to add extra cells.</p>\n</div>\n</div>\n\
-    </div>\n<div class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"\
-    input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\"\
+    \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
+    >In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
+    \ class=\"highlight hl-python\"><pre><span></span><span class=\"n\">device</span>\
+    \ <span class=\"o\">=</span> <span class=\"n\">torch</span><span class=\"o\">.</span><span\
+    \ class=\"n\">device</span><span class=\"p\">(</span><span class=\"s1\">'cuda'</span>\
+    \ <span class=\"k\">if</span> <span class=\"n\">torch</span><span class=\"o\"\
+    >.</span><span class=\"n\">cuda</span><span class=\"o\">.</span><span class=\"\
+    n\">is_available</span><span class=\"p\">()</span> <span class=\"k\">else</span>\
+    \ <span class=\"s1\">'cpu'</span><span class=\"p\">)</span>\n<span class=\"n\"\
+    >device</span>\n</pre></div>\n</div>\n</div>\n</div>\n<div class=\"output_wrapper\"\
+    >\n<div class=\"output\">\n<div class=\"output_area\">\n<div class=\"prompt output_prompt\"\
+    >Out[\_]:</div>\n<div class=\"output_text output_subarea output_execute_result\"\
+    >\n<pre>device(type='cuda')</pre>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div\
+    \ class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n\
+    <div class=\"prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\"\
     >\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span\
-    \ class=\"k\">class</span> <span class=\"nc\">Net</span><span class=\"p\">(</span><span\
-    \ class=\"n\">nn</span><span class=\"o\">.</span><span class=\"n\">Module</span><span\
-    \ class=\"p\">):</span>\n\n    <span class=\"k\">def</span> <span class=\"fm\"\
-    >__init__</span><span class=\"p\">(</span><span class=\"bp\">self</span><span\
-    \ class=\"p\">)</span> <span class=\"o\">-&gt;</span> <span class=\"kc\">None</span><span\
-    \ class=\"p\">:</span>\n        <span class=\"nb\">super</span><span class=\"\
-    p\">()</span><span class=\"o\">.</span><span class=\"fm\">__init__</span><span\
-    \ class=\"p\">()</span>\n        <span class=\"bp\">self</span><span class=\"\
-    o\">.</span><span class=\"n\">fc</span> <span class=\"o\">=</span> <span class=\"\
-    n\">nn</span><span class=\"o\">.</span><span class=\"n\">Sequential</span><span\
-    \ class=\"p\">(</span>    <span class=\"c1\"># B 784</span>\n            <span\
-    \ class=\"n\">nn</span><span class=\"o\">.</span><span class=\"n\">Linear</span><span\
-    \ class=\"p\">(</span><span class=\"mi\">784</span><span class=\"p\">,</span>\
-    \ <span class=\"mi\">1024</span><span class=\"p\">),</span>   <span class=\"c1\"\
-    ># B 1024</span>\n            <span class=\"n\">nn</span><span class=\"o\">.</span><span\
-    \ class=\"n\">ReLU</span><span class=\"p\">(),</span>\n            <span class=\"\
-    n\">nn</span><span class=\"o\">.</span><span class=\"n\">BatchNorm1d</span><span\
-    \ class=\"p\">(</span><span class=\"mi\">1024</span><span class=\"p\">),</span>\n\
-    \            <span class=\"n\">nn</span><span class=\"o\">.</span><span class=\"\
-    n\">Dropout</span><span class=\"p\">(</span><span class=\"n\">p</span><span class=\"\
-    o\">=</span><span class=\"mf\">0.2</span><span class=\"p\">),</span>\n       \
-    \     <span class=\"n\">nn</span><span class=\"o\">.</span><span class=\"n\">Linear</span><span\
-    \ class=\"p\">(</span><span class=\"mi\">1024</span><span class=\"p\">,</span>\
-    \ <span class=\"mi\">128</span><span class=\"p\">),</span>   <span class=\"c1\"\
-    ># B 128</span>\n            <span class=\"n\">nn</span><span class=\"o\">.</span><span\
-    \ class=\"n\">ReLU</span><span class=\"p\">(),</span>\n            <span class=\"\
-    n\">nn</span><span class=\"o\">.</span><span class=\"n\">BatchNorm1d</span><span\
-    \ class=\"p\">(</span><span class=\"mi\">128</span><span class=\"p\">),</span>\n\
-    \            <span class=\"n\">nn</span><span class=\"o\">.</span><span class=\"\
-    n\">Dropout</span><span class=\"p\">(</span><span class=\"n\">p</span><span class=\"\
-    o\">=</span><span class=\"mf\">0.2</span><span class=\"p\">),</span>\n       \
-    \     <span class=\"n\">nn</span><span class=\"o\">.</span><span class=\"n\">Linear</span><span\
-    \ class=\"p\">(</span><span class=\"mi\">128</span><span class=\"p\">,</span>\
-    \ <span class=\"mi\">10</span><span class=\"p\">),</span>     <span class=\"c1\"\
-    ># B 10</span>\n        <span class=\"p\">)</span>\n\n    <span class=\"k\">def</span>\
-    \ <span class=\"nf\">forward</span><span class=\"p\">(</span><span class=\"bp\"\
-    >self</span><span class=\"p\">,</span> <span class=\"n\">x</span><span class=\"\
-    p\">:</span> <span class=\"n\">torch</span><span class=\"o\">.</span><span class=\"\
-    n\">Tensor</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span> <span\
-    \ class=\"n\">torch</span><span class=\"o\">.</span><span class=\"n\">Tensor</span><span\
-    \ class=\"p\">:</span>\n        <span class=\"c1\"># x:                      \
-    \    B 1   28  28</span>\n        <span class=\"n\">x</span> <span class=\"o\"\
-    >=</span> <span class=\"n\">x</span><span class=\"o\">.</span><span class=\"n\"\
-    >flatten</span><span class=\"p\">(</span><span class=\"mi\">1</span><span class=\"\
-    p\">)</span>            <span class=\"c1\"># B 784</span>\n        <span class=\"\
-    n\">x</span> <span class=\"o\">=</span> <span class=\"bp\">self</span><span class=\"\
-    o\">.</span><span class=\"n\">fc</span><span class=\"p\">(</span><span class=\"\
-    n\">x</span><span class=\"p\">)</span>              <span class=\"c1\"># B 10</span>\n\
-    \        <span class=\"k\">return</span> <span class=\"n\">x</span>\n</pre></div>\n\
-    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
-    \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
-    >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"\
-    Train-your-model\">Train your model<a class=\"anchor-link\" href=\"#Train-your-model\"\
-    >\xB6</a></h1><p>Write the training process below. Instantiate your model, Create\
-    \ an optimizer function such as Adam or SGD, and write your train/validation loop.\
-    \ Then train your model until it converges. Feel free to add extra cells.</p>\n\
-    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
-    >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
-    <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
-    \ hl-python\"><pre><span></span><span class=\"k\">class</span> <span class=\"\
-    nc\">Trainer</span><span class=\"p\">:</span>\n    <span class=\"n\">CHECKPOINT</span>\
-    \ <span class=\"o\">=</span> <span class=\"s1\">'mnist-fc.pth'</span>\n\n    <span\
-    \ class=\"k\">def</span> <span class=\"fm\">__init__</span><span class=\"p\">(</span><span\
-    \ class=\"bp\">self</span><span class=\"p\">,</span> <span class=\"n\">model</span><span\
-    \ class=\"p\">:</span> <span class=\"n\">nn</span><span class=\"o\">.</span><span\
-    \ class=\"n\">Module</span><span class=\"p\">,</span> <span class=\"n\">optimizer</span><span\
-    \ class=\"p\">:</span> <span class=\"n\">torch</span><span class=\"o\">.</span><span\
-    \ class=\"n\">optim</span><span class=\"o\">.</span><span class=\"n\">Optimizer</span><span\
-    \ class=\"p\">,</span>\n                 <span class=\"n\">trainloader</span><span\
-    \ class=\"p\">:</span> <span class=\"n\">DataLoader</span><span class=\"p\">,</span>\
-    \ <span class=\"n\">valloader</span><span class=\"p\">:</span> <span class=\"\
-    n\">DataLoader</span><span class=\"p\">,</span> <span class=\"n\">testloader</span><span\
-    \ class=\"p\">:</span> <span class=\"n\">DataLoader</span><span class=\"p\">,</span>\n\
-    \                 <span class=\"n\">device</span><span class=\"p\">:</span> <span\
-    \ class=\"n\">torch</span><span class=\"o\">.</span><span class=\"n\">device</span><span\
+    \ class=\"n\">SEED</span> <span class=\"o\">=</span> <span class=\"mi\">51</span>\n\
+    <span class=\"n\">torch</span><span class=\"o\">.</span><span class=\"n\">random</span><span\
+    \ class=\"o\">.</span><span class=\"n\">manual_seed</span><span class=\"p\">(</span><span\
+    \ class=\"n\">SEED</span><span class=\"p\">)</span>\n<span class=\"n\">torch</span><span\
+    \ class=\"o\">.</span><span class=\"n\">cuda</span><span class=\"o\">.</span><span\
+    \ class=\"n\">manual_seed_all</span><span class=\"p\">(</span><span class=\"n\"\
+    >SEED</span><span class=\"p\">)</span>\n<span class=\"n\">np</span><span class=\"\
+    o\">.</span><span class=\"n\">random</span><span class=\"o\">.</span><span class=\"\
+    n\">seed</span><span class=\"p\">(</span><span class=\"n\">SEED</span><span class=\"\
+    p\">)</span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell\
+    \ border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\">\n\
+    </div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
+    \ rendered_html\">\n<h1 id=\"Load-the-dataset\">Load the dataset<a class=\"anchor-link\"\
+    \ href=\"#Load-the-dataset\">\xB6</a></h1><p>Load the MNIST dataset bellow. You\
+    \ can use either <code>torchvision.datasets.MNIST</code> or <code>sklearn.datasets.fetch_openml()</code>\
+    \ or any other way to load the dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"\
+    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span class=\"\
+    n\">mnist_root</span> <span class=\"o\">=</span> <span class=\"s1\">'mnist'</span>\n\
+    <span class=\"n\">transform</span> <span class=\"o\">=</span> <span class=\"n\"\
+    >transforms</span><span class=\"o\">.</span><span class=\"n\">Compose</span><span\
+    \ class=\"p\">([</span>\n    <span class=\"n\">transforms</span><span class=\"\
+    o\">.</span><span class=\"n\">ToTensor</span><span class=\"p\">(),</span>\n  \
+    \  <span class=\"n\">transforms</span><span class=\"o\">.</span><span class=\"\
+    n\">Normalize</span><span class=\"p\">((</span><span class=\"mf\">0.1307</span><span\
+    \ class=\"p\">,),</span> <span class=\"p\">(</span><span class=\"mf\">0.3081</span><span\
+    \ class=\"p\">,)),</span>\n<span class=\"p\">])</span>\n<span class=\"n\">trainset</span>\
+    \ <span class=\"o\">=</span> <span class=\"n\">torchvision</span><span class=\"\
+    o\">.</span><span class=\"n\">datasets</span><span class=\"o\">.</span><span class=\"\
+    n\">MNIST</span><span class=\"p\">(</span><span class=\"n\">mnist_root</span><span\
+    \ class=\"p\">,</span> <span class=\"n\">train</span><span class=\"o\">=</span><span\
+    \ class=\"kc\">True</span><span class=\"p\">,</span> <span class=\"n\">download</span><span\
+    \ class=\"o\">=</span><span class=\"kc\">True</span><span class=\"p\">,</span>\
+    \ <span class=\"n\">transform</span><span class=\"o\">=</span><span class=\"n\"\
+    >transform</span><span class=\"p\">)</span>\n<span class=\"n\">trainsize</span>\
+    \ <span class=\"o\">=</span> <span class=\"nb\">int</span><span class=\"p\">(</span><span\
+    \ class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">trainset</span><span\
+    \ class=\"p\">)</span> <span class=\"o\">*</span> <span class=\"mf\">0.9</span><span\
+    \ class=\"p\">)</span>\n<span class=\"n\">valsize</span> <span class=\"o\">=</span>\
+    \ <span class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">trainset</span><span\
+    \ class=\"p\">)</span> <span class=\"o\">-</span> <span class=\"n\">trainsize</span>\n\
+    <span class=\"n\">trainset</span><span class=\"p\">,</span> <span class=\"n\"\
+    >valset</span> <span class=\"o\">=</span> <span class=\"n\">torch</span><span\
+    \ class=\"o\">.</span><span class=\"n\">utils</span><span class=\"o\">.</span><span\
+    \ class=\"n\">data</span><span class=\"o\">.</span><span class=\"n\">random_split</span><span\
+    \ class=\"p\">(</span><span class=\"n\">trainset</span><span class=\"p\">,</span>\
+    \ <span class=\"p\">[</span><span class=\"n\">trainsize</span><span class=\"p\"\
+    >,</span> <span class=\"n\">valsize</span><span class=\"p\">])</span>\n<span class=\"\
+    n\">testset</span> <span class=\"o\">=</span> <span class=\"n\">torchvision</span><span\
+    \ class=\"o\">.</span><span class=\"n\">datasets</span><span class=\"o\">.</span><span\
+    \ class=\"n\">MNIST</span><span class=\"p\">(</span><span class=\"n\">mnist_root</span><span\
+    \ class=\"p\">,</span> <span class=\"n\">train</span><span class=\"o\">=</span><span\
+    \ class=\"kc\">False</span><span class=\"p\">,</span> <span class=\"n\">download</span><span\
+    \ class=\"o\">=</span><span class=\"kc\">True</span><span class=\"p\">,</span>\
+    \ <span class=\"n\">transform</span><span class=\"o\">=</span><span class=\"n\"\
+    >transform</span><span class=\"p\">)</span>\n</pre></div>\n</div>\n</div>\n</div>\n\
+    </div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
+    prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
+    \ border-box-sizing rendered_html\">\n<h1 id=\"Design-your-model\">Design your\
+    \ model<a class=\"anchor-link\" href=\"#Design-your-model\">\xB6</a></h1><p>Write\
+    \ your fully-connected model below using <code>torch.nn</code> modules. Feel free\
+    \ to add extra cells.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+    \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
+    >In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
+    \ class=\"highlight hl-python\"><pre><span></span><span class=\"k\">class</span>\
+    \ <span class=\"nc\">Net</span><span class=\"p\">(</span><span class=\"n\">nn</span><span\
+    \ class=\"o\">.</span><span class=\"n\">Module</span><span class=\"p\">):</span>\n\
+    \n    <span class=\"k\">def</span> <span class=\"fm\">__init__</span><span class=\"\
+    p\">(</span><span class=\"bp\">self</span><span class=\"p\">)</span> <span class=\"\
+    o\">-&gt;</span> <span class=\"kc\">None</span><span class=\"p\">:</span>\n  \
+    \      <span class=\"nb\">super</span><span class=\"p\">()</span><span class=\"\
+    o\">.</span><span class=\"fm\">__init__</span><span class=\"p\">()</span>\n  \
+    \      <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"\
+    n\">fc</span> <span class=\"o\">=</span> <span class=\"n\">nn</span><span class=\"\
+    o\">.</span><span class=\"n\">Sequential</span><span class=\"p\">(</span>    <span\
+    \ class=\"c1\"># B 784</span>\n            <span class=\"n\">nn</span><span class=\"\
+    o\">.</span><span class=\"n\">Linear</span><span class=\"p\">(</span><span class=\"\
+    mi\">784</span><span class=\"p\">,</span> <span class=\"mi\">1024</span><span\
+    \ class=\"p\">),</span>   <span class=\"c1\"># B 1024</span>\n            <span\
+    \ class=\"n\">nn</span><span class=\"o\">.</span><span class=\"n\">ReLU</span><span\
+    \ class=\"p\">(),</span>\n            <span class=\"n\">nn</span><span class=\"\
+    o\">.</span><span class=\"n\">BatchNorm1d</span><span class=\"p\">(</span><span\
+    \ class=\"mi\">1024</span><span class=\"p\">),</span>\n            <span class=\"\
+    n\">nn</span><span class=\"o\">.</span><span class=\"n\">Dropout</span><span class=\"\
+    p\">(</span><span class=\"n\">p</span><span class=\"o\">=</span><span class=\"\
+    mf\">0.2</span><span class=\"p\">),</span>\n            <span class=\"n\">nn</span><span\
+    \ class=\"o\">.</span><span class=\"n\">Linear</span><span class=\"p\">(</span><span\
+    \ class=\"mi\">1024</span><span class=\"p\">,</span> <span class=\"mi\">128</span><span\
+    \ class=\"p\">),</span>   <span class=\"c1\"># B 128</span>\n            <span\
+    \ class=\"n\">nn</span><span class=\"o\">.</span><span class=\"n\">ReLU</span><span\
+    \ class=\"p\">(),</span>\n            <span class=\"n\">nn</span><span class=\"\
+    o\">.</span><span class=\"n\">BatchNorm1d</span><span class=\"p\">(</span><span\
+    \ class=\"mi\">128</span><span class=\"p\">),</span>\n            <span class=\"\
+    n\">nn</span><span class=\"o\">.</span><span class=\"n\">Dropout</span><span class=\"\
+    p\">(</span><span class=\"n\">p</span><span class=\"o\">=</span><span class=\"\
+    mf\">0.2</span><span class=\"p\">),</span>\n            <span class=\"n\">nn</span><span\
+    \ class=\"o\">.</span><span class=\"n\">Linear</span><span class=\"p\">(</span><span\
+    \ class=\"mi\">128</span><span class=\"p\">,</span> <span class=\"mi\">10</span><span\
+    \ class=\"p\">),</span>     <span class=\"c1\"># B 10</span>\n        <span class=\"\
+    p\">)</span>\n\n    <span class=\"k\">def</span> <span class=\"nf\">forward</span><span\
+    \ class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">,</span>\
+    \ <span class=\"n\">x</span><span class=\"p\">:</span> <span class=\"n\">torch</span><span\
+    \ class=\"o\">.</span><span class=\"n\">Tensor</span><span class=\"p\">)</span>\
+    \ <span class=\"o\">-&gt;</span> <span class=\"n\">torch</span><span class=\"\
+    o\">.</span><span class=\"n\">Tensor</span><span class=\"p\">:</span>\n      \
+    \  <span class=\"c1\"># x:                          B 1   28  28</span>\n    \
+    \    <span class=\"n\">x</span> <span class=\"o\">=</span> <span class=\"n\">x</span><span\
+    \ class=\"o\">.</span><span class=\"n\">flatten</span><span class=\"p\">(</span><span\
+    \ class=\"mi\">1</span><span class=\"p\">)</span>            <span class=\"c1\"\
+    ># B 784</span>\n        <span class=\"n\">x</span> <span class=\"o\">=</span>\
+    \ <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">fc</span><span\
+    \ class=\"p\">(</span><span class=\"n\">x</span><span class=\"p\">)</span>   \
+    \           <span class=\"c1\"># B 10</span>\n        <span class=\"k\">return</span>\
+    \ <span class=\"n\">x</span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n<div\
+    \ class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
+    >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
+    \ rendered_html\">\n<h1 id=\"Train-your-model\">Train your model<a class=\"anchor-link\"\
+    \ href=\"#Train-your-model\">\xB6</a></h1><p>Write the training process below.\
+    \ Instantiate your model, Create an optimizer function such as Adam or SGD, and\
+    \ write your train/validation loop. Then train your model until it converges.\
+    \ Feel free to add extra cells.</p>\n</div>\n</div>\n</div>\n<div class=\"cell\
+    \ border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span class=\"\
+    k\">class</span> <span class=\"nc\">Trainer</span><span class=\"p\">:</span>\n\
+    \    <span class=\"n\">CHECKPOINT</span> <span class=\"o\">=</span> <span class=\"\
+    s1\">'mnist-fc.pth'</span>\n\n    <span class=\"k\">def</span> <span class=\"\
+    fm\">__init__</span><span class=\"p\">(</span><span class=\"bp\">self</span><span\
+    \ class=\"p\">,</span> <span class=\"n\">model</span><span class=\"p\">:</span>\
+    \ <span class=\"n\">nn</span><span class=\"o\">.</span><span class=\"n\">Module</span><span\
+    \ class=\"p\">,</span> <span class=\"n\">optimizer</span><span class=\"p\">:</span>\
+    \ <span class=\"n\">torch</span><span class=\"o\">.</span><span class=\"n\">optim</span><span\
+    \ class=\"o\">.</span><span class=\"n\">Optimizer</span><span class=\"p\">,</span>\n\
+    \                 <span class=\"n\">trainloader</span><span class=\"p\">:</span>\
+    \ <span class=\"n\">DataLoader</span><span class=\"p\">,</span> <span class=\"\
+    n\">valloader</span><span class=\"p\">:</span> <span class=\"n\">DataLoader</span><span\
+    \ class=\"p\">,</span> <span class=\"n\">testloader</span><span class=\"p\">:</span>\
+    \ <span class=\"n\">DataLoader</span><span class=\"p\">,</span>\n            \
+    \     <span class=\"n\">device</span><span class=\"p\">:</span> <span class=\"\
+    n\">torch</span><span class=\"o\">.</span><span class=\"n\">device</span><span\
     \ class=\"p\">)</span> <span class=\"o\">-&gt;</span> <span class=\"kc\">None</span><span\
     \ class=\"p\">:</span>\n        <span class=\"bp\">self</span><span class=\"o\"\
     >.</span><span class=\"n\">__model</span> <span class=\"o\">=</span> <span class=\"\
@@ -2637,8 +2641,7 @@ notebooks/learning-tasks/solutions/1_mnist_classification_fc/index:
     \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
     >In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
     \ class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n\
-    </div>\n</div>\n <p>MNIST classification with a fully connected model with pytorch.</p>\
-    \ Ahmad Salimi <p>Classification with Fully Connected Neural Networks: A solution</p>"
+    </div>\n</div>\n Ahmad Salimi"
   description: 'MNIST classification with a fully connected model with pytorch.
 
     '
@@ -2646,8 +2649,7 @@ notebooks/learning-tasks/solutions/1_mnist_classification_fc/index:
   url: notebooks/learning-tasks/solutions/1_mnist_classification_fc/index.html
 notebooks/learning-tasks/solutions/2_cifar10_classification_cnn/index:
   category: Content
-  content: "<p>Classification with Convolutional Neural Networks: A solution</p> Ahmad\
-    \ Salimi \n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
+  content: "\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
     prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
     \ border-box-sizing rendered_html\">\n<p>In this task, you should train a CNN\
     \ model with pytorch to classify CIFAR10 dataset.</p>\n</div>\n</div>\n</div>\n\
@@ -4286,7 +4288,8 @@ notebooks/learning-tasks/solutions/2_cifar10_classification_cnn/index:
     \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
     >In\_[11]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
     \ class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n\
-    </div>\n</div>\n <p>CIFAR10 classification with a convolutional model with pytorch.</p>"
+    </div>\n</div>\n <p>CIFAR10 classification with a convolutional model with pytorch.</p>\
+    \ Ahmad Salimi <p>Classification with Convolutional Neural Networks: A solution</p>"
   description: 'CIFAR10 classification with a convolutional model with pytorch.
 
     '
@@ -4294,31 +4297,31 @@ notebooks/learning-tasks/solutions/2_cifar10_classification_cnn/index:
   url: notebooks/learning-tasks/solutions/2_cifar10_classification_cnn/index.html
 notebooks/learning-tasks/solutions/3_transfer_learning/index:
   category: Content
-  content: "\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
-    prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
-    \ border-box-sizing rendered_html\">\n<p>In this task, you should train Inception\
-    \ V3 with pytorch using transfer learning to classify CIFAR10 dataset.</p>\n</div>\n\
-    </div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\">\n<div\
-    \ class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n<div class=\"\
-    inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"\
-    ><pre><span></span><span class=\"kn\">from</span> <span class=\"nn\">typing</span>\
-    \ <span class=\"kn\">import</span> <span class=\"n\">Tuple</span><span class=\"\
-    p\">,</span> <span class=\"n\">Iterable</span><span class=\"p\">,</span> <span\
-    \ class=\"n\">List</span>\n<span class=\"kn\">from</span> <span class=\"nn\">tqdm</span>\
-    \ <span class=\"kn\">import</span> <span class=\"n\">tqdm</span>\n<span class=\"\
-    kn\">from</span> <span class=\"nn\">time</span> <span class=\"kn\">import</span>\
-    \ <span class=\"n\">time</span>\n<span class=\"kn\">import</span> <span class=\"\
-    nn\">re</span>\n\n<span class=\"kn\">import</span> <span class=\"nn\">torchvision</span>\n\
-    <span class=\"kn\">from</span> <span class=\"nn\">torchvision</span> <span class=\"\
-    kn\">import</span> <span class=\"n\">datasets</span><span class=\"p\">,</span>\
-    \ <span class=\"n\">transforms</span><span class=\"p\">,</span> <span class=\"\
-    n\">models</span>\n<span class=\"kn\">import</span> <span class=\"nn\">torch</span>\n\
-    <span class=\"kn\">from</span> <span class=\"nn\">torch</span> <span class=\"\
-    kn\">import</span> <span class=\"n\">nn</span>\n<span class=\"kn\">from</span>\
-    \ <span class=\"nn\">torch.utils.data</span> <span class=\"kn\">import</span>\
-    \ <span class=\"n\">DataLoader</span>\n<span class=\"kn\">import</span> <span\
-    \ class=\"nn\">torch.nn.functional</span> <span class=\"k\">as</span> <span class=\"\
-    nn\">F</span>\n<span class=\"kn\">import</span> <span class=\"nn\">numpy</span>\
+  content: "Ahmad Salimi \n<div class=\"cell border-box-sizing text_cell rendered\"\
+    ><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"\
+    text_cell_render border-box-sizing rendered_html\">\n<p>In this task, you should\
+    \ train Inception V3 with pytorch using transfer learning to classify CIFAR10\
+    \ dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell\
+    \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
+    [\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
+    highlight hl-python\"><pre><span></span><span class=\"kn\">from</span> <span class=\"\
+    nn\">typing</span> <span class=\"kn\">import</span> <span class=\"n\">Tuple</span><span\
+    \ class=\"p\">,</span> <span class=\"n\">Iterable</span><span class=\"p\">,</span>\
+    \ <span class=\"n\">List</span>\n<span class=\"kn\">from</span> <span class=\"\
+    nn\">tqdm</span> <span class=\"kn\">import</span> <span class=\"n\">tqdm</span>\n\
+    <span class=\"kn\">from</span> <span class=\"nn\">time</span> <span class=\"kn\"\
+    >import</span> <span class=\"n\">time</span>\n<span class=\"kn\">import</span>\
+    \ <span class=\"nn\">re</span>\n\n<span class=\"kn\">import</span> <span class=\"\
+    nn\">torchvision</span>\n<span class=\"kn\">from</span> <span class=\"nn\">torchvision</span>\
+    \ <span class=\"kn\">import</span> <span class=\"n\">datasets</span><span class=\"\
+    p\">,</span> <span class=\"n\">transforms</span><span class=\"p\">,</span> <span\
+    \ class=\"n\">models</span>\n<span class=\"kn\">import</span> <span class=\"nn\"\
+    >torch</span>\n<span class=\"kn\">from</span> <span class=\"nn\">torch</span>\
+    \ <span class=\"kn\">import</span> <span class=\"n\">nn</span>\n<span class=\"\
+    kn\">from</span> <span class=\"nn\">torch.utils.data</span> <span class=\"kn\"\
+    >import</span> <span class=\"n\">DataLoader</span>\n<span class=\"kn\">import</span>\
+    \ <span class=\"nn\">torch.nn.functional</span> <span class=\"k\">as</span> <span\
+    \ class=\"nn\">F</span>\n<span class=\"kn\">import</span> <span class=\"nn\">numpy</span>\
     \ <span class=\"k\">as</span> <span class=\"nn\">np</span>\n<span class=\"kn\"\
     >import</span> <span class=\"nn\">matplotlib.pyplot</span> <span class=\"k\">as</span>\
     \ <span class=\"nn\">plt</span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
@@ -4405,9 +4408,9 @@ notebooks/learning-tasks/solutions/3_transfer_learning/index:
     >\n<div class=\"prompt\"></div>\n<div class=\"output_subarea output_stream output_stdout\
     \ output_text\">\n<pre>Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz\
     \ to cifir10/cifar-10-python.tar.gz\n</pre>\n</div>\n</div>\n<div class=\"output_area\"\
-    >\n<div class=\"prompt\"></div>\n<div id=\"3883a9d3-4946-4da3-9f02-d00c078a4df5\"\
+    >\n<div class=\"prompt\"></div>\n<div id=\"fede2d86-f843-4cdb-8243-8927d55e0a64\"\
     ></div>\n<div class=\"output_subarea output_widget_view\">\n<script type=\"text/javascript\"\
-    >\nvar element = $('#3883a9d3-4946-4da3-9f02-d00c078a4df5');\n</script>\n<script\
+    >\nvar element = $('#fede2d86-f843-4cdb-8243-8927d55e0a64');\n</script>\n<script\
     \ type=\"application/vnd.jupyter.widget-view+json\">\n{\"model_id\": \"580bb0a57f5c4248955c4706c0bbef37\"\
     , \"version_minor\": 0, \"version_major\": 2}\n</script>\n</div>\n</div>\n<div\
     \ class=\"output_area\">\n<div class=\"prompt\"></div>\n<div class=\"output_subarea\
@@ -4433,8 +4436,8 @@ notebooks/learning-tasks/solutions/3_transfer_learning/index:
     >\n<pre>Downloading: \"https://download.pytorch.org/models/inception_v3_google-0cc3c7bd.pth\"\
     \ to /root/.cache/torch/hub/checkpoints/inception_v3_google-0cc3c7bd.pth\n</pre>\n\
     </div>\n</div>\n<div class=\"output_area\">\n<div class=\"prompt\"></div>\n<div\
-    \ id=\"6651fc53-d038-4f1a-8fc7-fc5fcbf6da78\"></div>\n<div class=\"output_subarea\
-    \ output_widget_view\">\n<script type=\"text/javascript\">\nvar element = $('#6651fc53-d038-4f1a-8fc7-fc5fcbf6da78');\n\
+    \ id=\"da7a0924-9a8f-4104-b000-869808e8aaa2\"></div>\n<div class=\"output_subarea\
+    \ output_widget_view\">\n<script type=\"text/javascript\">\nvar element = $('#da7a0924-9a8f-4104-b000-869808e8aaa2');\n\
     </script>\n<script type=\"application/vnd.jupyter.widget-view+json\">\n{\"model_id\"\
     : \"b2020f9c8c8f4c96b4437b02641ae31f\", \"version_minor\": 0, \"version_major\"\
     : 2}\n</script>\n</div>\n</div>\n<div class=\"output_area\">\n<div class=\"prompt\
@@ -5867,8 +5870,8 @@ notebooks/learning-tasks/solutions/3_transfer_learning/index:
     \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
     >In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
     \ class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n\
-    </div>\n</div>\n Ahmad Salimi <p>Classification with Transfer Learning: A solution</p>\
-    \ <p>CIFAR10 classification with transfer learning on Inception V3.</p>"
+    </div>\n</div>\n <p>Classification with Transfer Learning: A solution</p> <p>CIFAR10\
+    \ classification with transfer learning on Inception V3.</p>"
   description: 'CIFAR10 classification with transfer learning on Inception V3.
 
     '
