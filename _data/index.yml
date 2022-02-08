@@ -62,6 +62,11 @@ learning-tasks:
     kind: Notebook Exercise
     description: <p>CIFAR10 classification with transfer learning on Inception V3</p>
     link: /edu-content/notebooks/learning-tasks/3_transfer_learning/
+  - notebook: notebooks/learning-tasks/4_clustering
+    text: 4. Clustering using pretrained deep models
+    kind: Notebook Exercise
+    description: <p>MNIST clustering using pretrained ResNet 18 and KMeans</p>
+    link: /edu-content/notebooks/learning-tasks/4_clustering/
 kind: Index
 search:
   content: true

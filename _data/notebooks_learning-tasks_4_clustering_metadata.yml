@@ -1,0 +1,40 @@
+title: Clustering using pretrained deep models
+meta:
+- name: keywords
+  content: Artificial Intelligence, Deep Learning, Convolutional Neural Networks,
+    Inception V3, Clustering, MNIST
+header:
+  title: <p>Clustering using pretrained deep models</p>
+  description: <p>MNIST clustering using pretrained ResNet 18 and KMeans.</p>
+  background: /edu-content/assets/images/header.png
+solution:
+  label:
+    text: A solution
+    position: top
+  content:
+  - notebook: notebooks/learning-tasks/solutions/4_clustering
+    text: 'Clustering using pretrained deep models: A Solution'
+    kind: ''
+    description: <p>MNIST clustering using pretrained ResNet 18 and KMeans.</p>
+    link: /edu-content/notebooks/learning-tasks/solutions/4_clustering/
+authors:
+  label:
+    position: top
+    text: Authors
+  kind: people
+  content:
+  - name: Ahmad Salimi
+    role: Author
+    contact:
+    - link: https://github.com/ahmadsalimi
+      icon: fab fa-github
+    - link: https://www.linkedin.com/in/ahmadsalimi/
+      icon: fab fa-linkedin
+    - link: mailto://ahsalimi@ce.sharif.edu
+      icon: fas fa-envelope
+    kind: person
+    image: https://github.com/ahmadsalimi.png
+kind: Content
+search:
+  content: true
+  links: false
