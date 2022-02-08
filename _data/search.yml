@@ -1,17 +1,18 @@
 /edu-content/:
   category: Index
-  content: <p>Educational Content for Deep Learning</p> <p>AI-Med | Educational Content</p>
+  content: <p>AI-Med | Educational Content</p> <p>Educational Content for Deep Learning</p>
   description: Educational Content for Deep Learning
   title: AI-Med | Educational Content
   url: /edu-content/
 notebooks/basics/numpy/numpy:
   category: Content
-  content: "<p>Basic and tricky numpy functions</p> \n<div class=\"cell border-box-sizing\
-    \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
-    >In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
-    \ class=\"highlight hl-python\"><pre><span></span><span class=\"kn\">import</span>\
-    \ <span class=\"nn\">numpy</span> <span class=\"k\">as</span> <span class=\"nn\"\
-    >np</span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+  content: "<p>Basic and tricky numpy functions</p> Amin Rezaee <p>Main preprocessing\
+    \ techniques for Numpy package</p> \n<div class=\"cell border-box-sizing code_cell\
+    \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
+    [\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
+    highlight hl-python\"><pre><span></span><span class=\"kn\">import</span> <span\
+    \ class=\"nn\">numpy</span> <span class=\"k\">as</span> <span class=\"nn\">np</span>\n\
+    </pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
     \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
     inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
     >\n<ol>\n<li>read array from text</li>\n<li>save as npy</li>\n<li>read from npy</li>\n\
@@ -230,21 +231,115 @@ notebooks/basics/numpy/numpy:
     \ class=\"p\">,</span><span class=\"n\">size</span><span class=\"o\">=</span><span\
     \ class=\"p\">(</span><span class=\"mi\">8</span><span class=\"p\">,</span><span\
     \ class=\"mi\">10</span><span class=\"p\">))</span>\n<span class=\"c1\"># return\
-    \ A x B and it's shape</span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
-    \ <p>Main preprocessing techniques for Numpy package</p> Amin Rezaee"
+    \ A x B and it's shape</span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n"
   description: 'Main preprocessing techniques for Numpy package
 
     '
   title: Basic and tricky numpy functions
   url: notebooks/basics/numpy/numpy.html
+notebooks/basics/pandas/pandas:
+  category: Content
+  content: "Amin Rezaee <p>Basic and tricky Pandas functions</p> \n<div class=\"cell\
+    \ border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span class=\"\
+    kn\">import</span> <span class=\"nn\">pandas</span> <span class=\"k\">as</span>\
+    \ <span class=\"nn\">pd</span>\n<span class=\"kn\">import</span> <span class=\"\
+    nn\">numpy</span> <span class=\"k\">as</span> <span class=\"nn\">np</span>\n</pre></div>\n\
+    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
+    \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
+    >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<p>read csv\
+    \ file and print first five samples</p>\n</div>\n</div>\n</div>\n<div class=\"\
+    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span class=\"\
+    n\">dataset_path</span> <span class=\"o\">=</span> <span class=\"s1\">'https://datahub.io/machine-learning/iris/r/iris.csv'</span>\n\
+    </pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+    \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
+    inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
+    >\n<p>sort based on petalwidth and petallength</p>\n</div>\n</div>\n</div>\n<div\
+    \ class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n\
+    <div class=\"prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\"\
+    >\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span\
+    \ class=\"c1\"># sort by petalwidth and petal length</span>\n</pre></div>\n</div>\n\
+    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell rendered\"\
+    ><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"\
+    text_cell_render border-box-sizing rendered_html\">\n<p>convert data to ranks\
+    \ of each value</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+    \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
+    >In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
+    \ class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n\
+    </div>\n</div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div\
+    \ class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"\
+    text_cell_render border-box-sizing rendered_html\">\n<p>select sepallength of\
+    \ first five samples</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+    \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
+    >In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
+    \ class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n\
+    </div>\n</div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div\
+    \ class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"\
+    text_cell_render border-box-sizing rendered_html\">\n<p>group by: get mean of\
+    \ each class using groupby function</p>\n</div>\n</div>\n</div>\n<div class=\"\
+    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n\
+    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
+    \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
+    >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<p>save first\
+    \ ten rows to a csv file</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+    \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
+    >In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
+    \ class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n\
+    </div>\n</div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div\
+    \ class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"\
+    text_cell_render border-box-sizing rendered_html\">\n<p>describe overview of dataset\
+    \ main details using describe function</p>\n</div>\n</div>\n</div>\n<div class=\"\
+    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n\
+    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
+    \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
+    >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<p>find memory\
+    \ usage of each column</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+    \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
+    >In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
+    \ class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n\
+    </div>\n</div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div\
+    \ class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"\
+    text_cell_render border-box-sizing rendered_html\">\n<p>convert type of sepalwidth\
+    \ to int</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell\
+    \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
+    [\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
+    highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n\
+    </div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
+    prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
+    \ border-box-sizing rendered_html\">\n<p>count values of petalwidth</p>\n</div>\n\
+    </div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\">\n<div\
+    \ class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n<div class=\"\
+    inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"\
+    ><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"\
+    cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
+    >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
+    \ rendered_html\">\n<p>merge two dataframes outer join</p>\n</div>\n</div>\n</div>\n\
+    <div class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"input\"\
+    >\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\"\
+    >\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span>\n\
+    </pre></div>\n</div>\n</div>\n</div>\n</div>\n <p>Main preprocessing techniques\
+    \ for pandas package</p>"
+  description: 'Main preprocessing techniques for pandas package
+
+    '
+  title: Basic and tricky Pandas functions
+  url: notebooks/basics/pandas/pandas.html
 notebooks/basics/solutions/numpy/numpy_solutions:
   category: Content
-  content: "<p>Basic and tricky numpy functions</p> \n<div class=\"cell border-box-sizing\
-    \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
-    >In\_[1]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
-    \ class=\"highlight hl-python\"><pre><span></span><span class=\"kn\">import</span>\
-    \ <span class=\"nn\">numpy</span> <span class=\"k\">as</span> <span class=\"nn\"\
-    >np</span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+  content: "<p>Basic and tricky numpy functions</p> Amin Rezaee <p>Main preprocessing\
+    \ techniques for Numpy package</p> \n<div class=\"cell border-box-sizing code_cell\
+    \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
+    [1]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
+    highlight hl-python\"><pre><span></span><span class=\"kn\">import</span> <span\
+    \ class=\"nn\">numpy</span> <span class=\"k\">as</span> <span class=\"nn\">np</span>\n\
+    </pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
     \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
     inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
     >\n<ol>\n<li>read array from text</li>\n<li>save as npy</li>\n<li>read from npy</li>\n\
@@ -710,26 +805,519 @@ notebooks/basics/solutions/numpy/numpy_solutions:
     \ 37599 25288 30227]\n [22708 26322 23890 11625 21578 17268 19588 25626 16443\
     \ 23737]\n [16523 18736 18315  9807 15515 11387 13486 17895 12104 16508]\n [27075\
     \ 26769 30413 17316 21743 19047 20645 28790 25230 20812]]\n</pre>\n</div>\n</div>\n\
-    </div>\n</div>\n</div>\n <p>Main preprocessing techniques for Numpy package</p>\
-    \ Amin Rezaee"
+    </div>\n</div>\n</div>\n"
   description: 'Main preprocessing techniques for Numpy package
 
     '
   title: Basic and tricky numpy functions
   url: notebooks/basics/solutions/numpy/numpy_solutions.html
+notebooks/basics/solutions/pandas/pandas_solutions:
+  category: Content
+  content: "Amin Rezaee <p>Basic and tricky pandas functions</p> <p>Main preprocessing\
+    \ techniques for pandas package</p> \n<div class=\"cell border-box-sizing code_cell\
+    \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
+    [1]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
+    highlight hl-python\"><pre><span></span><span class=\"kn\">import</span> <span\
+    \ class=\"nn\">pandas</span> <span class=\"k\">as</span> <span class=\"nn\">pd</span>\n\
+    <span class=\"kn\">import</span> <span class=\"nn\">numpy</span> <span class=\"\
+    k\">as</span> <span class=\"nn\">np</span>\n</pre></div>\n</div>\n</div>\n</div>\n\
+    </div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
+    prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
+    \ border-box-sizing rendered_html\">\n<p>read csv file and print first five samples</p>\n\
+    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
+    >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[3]:</div>\n\
+    <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
+    \ hl-python\"><pre><span></span><span class=\"n\">dataset_path</span> <span class=\"\
+    o\">=</span> <span class=\"s1\">'https://datahub.io/machine-learning/iris/r/iris.csv'</span>\
+    \ \n<span class=\"n\">dataframe</span> <span class=\"o\">=</span> <span class=\"\
+    n\">pd</span><span class=\"o\">.</span><span class=\"n\">read_csv</span><span\
+    \ class=\"p\">(</span><span class=\"n\">dataset_path</span><span class=\"p\">)</span>\n\
+    <span class=\"n\">dataframe</span><span class=\"o\">.</span><span class=\"n\"\
+    >head</span><span class=\"p\">()</span>\n</pre></div>\n</div>\n</div>\n</div>\n\
+    <div class=\"output_wrapper\">\n<div class=\"output\">\n<div class=\"output_area\"\
+    >\n<div class=\"prompt output_prompt\">Out[3]:</div>\n<div class=\"output_html\
+    \ rendered_html output_subarea output_execute_result\">\n<div id=\"df-6e6a08a7-805f-4690-8c2d-eeedbf1c912e\"\
+    >\n<div class=\"colab-df-container\">\n<div>\n<style scoped=\"\">\n    .dataframe\
+    \ tbody tr th:only-of-type {\n        vertical-align: middle;\n    }\n\n    .dataframe\
+    \ tbody tr th {\n        vertical-align: top;\n    }\n\n    .dataframe thead th\
+    \ {\n        text-align: right;\n    }\n</style>\n<table border=\"1\" class=\"\
+    dataframe\">\n<thead>\n<tr style=\"text-align: right;\">\n<th></th>\n<th>sepallength</th>\n\
+    <th>sepalwidth</th>\n<th>petallength</th>\n<th>petalwidth</th>\n<th>class</th>\n\
+    </tr>\n</thead>\n<tbody>\n<tr>\n<th>0</th>\n<td>5.1</td>\n<td>3.5</td>\n<td>1.4</td>\n\
+    <td>0.2</td>\n<td>Iris-setosa</td>\n</tr>\n<tr>\n<th>1</th>\n<td>4.9</td>\n<td>3.0</td>\n\
+    <td>1.4</td>\n<td>0.2</td>\n<td>Iris-setosa</td>\n</tr>\n<tr>\n<th>2</th>\n<td>4.7</td>\n\
+    <td>3.2</td>\n<td>1.3</td>\n<td>0.2</td>\n<td>Iris-setosa</td>\n</tr>\n<tr>\n\
+    <th>3</th>\n<td>4.6</td>\n<td>3.1</td>\n<td>1.5</td>\n<td>0.2</td>\n<td>Iris-setosa</td>\n\
+    </tr>\n<tr>\n<th>4</th>\n<td>5.0</td>\n<td>3.6</td>\n<td>1.4</td>\n<td>0.2</td>\n\
+    <td>Iris-setosa</td>\n</tr>\n</tbody>\n</table>\n</div>\n<button class=\"colab-df-convert\"\
+    \ onclick=\"convertToInteractive('df-6e6a08a7-805f-4690-8c2d-eeedbf1c912e')\"\
+    \ style=\"display:none;\" title=\"Convert this dataframe to an interactive table.\"\
+    >\n<svg height=\"24px\" viewbox=\"0 0 24 24\" width=\"24px\" xmlns=\"http://www.w3.org/2000/svg\"\
+    >\n<path d=\"M0 0h24v24H0V0z\" fill=\"none\"></path>\n<path d=\"M18.56 5.44l.94\
+    \ 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06\
+    \ 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94\
+    \ 2.06-2.06.94z\"></path><path d=\"M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52\
+    \ 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59\
+    \ 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41\
+    \ 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z\"></path>\n</svg>\n</button>\n<style>\n\
+    \    .colab-df-container {\n      display:flex;\n      flex-wrap:wrap;\n     \
+    \ gap: 12px;\n    }\n\n    .colab-df-convert {\n      background-color: #E8F0FE;\n\
+    \      border: none;\n      border-radius: 50%;\n      cursor: pointer;\n    \
+    \  display: none;\n      fill: #1967D2;\n      height: 32px;\n      padding: 0\
+    \ 0 0 0;\n      width: 32px;\n    }\n\n    .colab-df-convert:hover {\n      background-color:\
+    \ #E2EBFA;\n      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px\
+    \ rgba(60, 64, 67, 0.15);\n      fill: #174EA6;\n    }\n\n    [theme=dark] .colab-df-convert\
+    \ {\n      background-color: #3B4455;\n      fill: #D2E3FC;\n    }\n\n    [theme=dark]\
+    \ .colab-df-convert:hover {\n      background-color: #434B5C;\n      box-shadow:\
+    \ 0px 1px 3px 1px rgba(0, 0, 0, 0.15);\n      filter: drop-shadow(0px 1px 2px\
+    \ rgba(0, 0, 0, 0.3));\n      fill: #FFFFFF;\n    }\n  </style>\n<script>\n  \
+    \      const buttonEl =\n          document.querySelector('#df-6e6a08a7-805f-4690-8c2d-eeedbf1c912e\
+    \ button.colab-df-convert');\n        buttonEl.style.display =\n          google.colab.kernel.accessAllowed\
+    \ ? 'block' : 'none';\n\n        async function convertToInteractive(key) {\n\
+    \          const element = document.querySelector('#df-6e6a08a7-805f-4690-8c2d-eeedbf1c912e');\n\
+    \          const dataTable =\n            await google.colab.kernel.invokeFunction('convertToInteractive',\n\
+    \                                                     [key], {});\n          if\
+    \ (!dataTable) return;\n\n          const docLinkHtml = 'Like what you see? Visit\
+    \ the ' +\n            '<a target=\"_blank\" href=https://colab.research.google.com/notebooks/data_table.ipynb>data\
+    \ table notebook</a>'\n            + ' to learn more about interactive tables.';\n\
+    \          element.innerHTML = '';\n          dataTable['output_type'] = 'display_data';\n\
+    \          await google.colab.output.renderOutput(dataTable, element);\n     \
+    \     const docLink = document.createElement('div');\n          docLink.innerHTML\
+    \ = docLinkHtml;\n          element.appendChild(docLink);\n        }\n      </script>\n\
+    </div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+    \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
+    inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
+    >\n<p>sort based on petalwidth and petallength</p>\n</div>\n</div>\n</div>\n<div\
+    \ class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n\
+    <div class=\"prompt input_prompt\">In\_[5]:</div>\n<div class=\"inner_cell\">\n\
+    <div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span\
+    \ class=\"c1\"># sort by petalwidth and petal length </span>\n<span class=\"n\"\
+    >dataframe</span><span class=\"o\">.</span><span class=\"n\">sort_values</span><span\
+    \ class=\"p\">(</span><span class=\"n\">by</span><span class=\"o\">=</span><span\
+    \ class=\"p\">[</span><span class=\"s1\">'petalwidth'</span><span class=\"p\"\
+    >,</span><span class=\"s1\">'petallength'</span><span class=\"p\">])</span>\n\
+    <span class=\"n\">dataframe</span><span class=\"o\">.</span><span class=\"n\"\
+    >head</span><span class=\"p\">(</span><span class=\"mi\">10</span><span class=\"\
+    p\">)</span>\n</pre></div>\n</div>\n</div>\n</div>\n<div class=\"output_wrapper\"\
+    >\n<div class=\"output\">\n<div class=\"output_area\">\n<div class=\"prompt output_prompt\"\
+    >Out[5]:</div>\n<div class=\"output_html rendered_html output_subarea output_execute_result\"\
+    >\n<div id=\"df-af963caa-990f-43d9-855a-078271c8a58a\">\n<div class=\"colab-df-container\"\
+    >\n<div>\n<style scoped=\"\">\n    .dataframe tbody tr th:only-of-type {\n   \
+    \     vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n       \
+    \ vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align:\
+    \ right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n<thead>\n\
+    <tr style=\"text-align: right;\">\n<th></th>\n<th>sepallength</th>\n<th>sepalwidth</th>\n\
+    <th>petallength</th>\n<th>petalwidth</th>\n<th>class</th>\n</tr>\n</thead>\n<tbody>\n\
+    <tr>\n<th>0</th>\n<td>5.1</td>\n<td>3.5</td>\n<td>1.4</td>\n<td>0.2</td>\n<td>Iris-setosa</td>\n\
+    </tr>\n<tr>\n<th>1</th>\n<td>4.9</td>\n<td>3.0</td>\n<td>1.4</td>\n<td>0.2</td>\n\
+    <td>Iris-setosa</td>\n</tr>\n<tr>\n<th>2</th>\n<td>4.7</td>\n<td>3.2</td>\n<td>1.3</td>\n\
+    <td>0.2</td>\n<td>Iris-setosa</td>\n</tr>\n<tr>\n<th>3</th>\n<td>4.6</td>\n<td>3.1</td>\n\
+    <td>1.5</td>\n<td>0.2</td>\n<td>Iris-setosa</td>\n</tr>\n<tr>\n<th>4</th>\n<td>5.0</td>\n\
+    <td>3.6</td>\n<td>1.4</td>\n<td>0.2</td>\n<td>Iris-setosa</td>\n</tr>\n<tr>\n\
+    <th>5</th>\n<td>5.4</td>\n<td>3.9</td>\n<td>1.7</td>\n<td>0.4</td>\n<td>Iris-setosa</td>\n\
+    </tr>\n<tr>\n<th>6</th>\n<td>4.6</td>\n<td>3.4</td>\n<td>1.4</td>\n<td>0.3</td>\n\
+    <td>Iris-setosa</td>\n</tr>\n<tr>\n<th>7</th>\n<td>5.0</td>\n<td>3.4</td>\n<td>1.5</td>\n\
+    <td>0.2</td>\n<td>Iris-setosa</td>\n</tr>\n<tr>\n<th>8</th>\n<td>4.4</td>\n<td>2.9</td>\n\
+    <td>1.4</td>\n<td>0.2</td>\n<td>Iris-setosa</td>\n</tr>\n<tr>\n<th>9</th>\n<td>4.9</td>\n\
+    <td>3.1</td>\n<td>1.5</td>\n<td>0.1</td>\n<td>Iris-setosa</td>\n</tr>\n</tbody>\n\
+    </table>\n</div>\n<button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-af963caa-990f-43d9-855a-078271c8a58a')\"\
+    \ style=\"display:none;\" title=\"Convert this dataframe to an interactive table.\"\
+    >\n<svg height=\"24px\" viewbox=\"0 0 24 24\" width=\"24px\" xmlns=\"http://www.w3.org/2000/svg\"\
+    >\n<path d=\"M0 0h24v24H0V0z\" fill=\"none\"></path>\n<path d=\"M18.56 5.44l.94\
+    \ 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06\
+    \ 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94\
+    \ 2.06-2.06.94z\"></path><path d=\"M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52\
+    \ 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59\
+    \ 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41\
+    \ 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z\"></path>\n</svg>\n</button>\n<style>\n\
+    \    .colab-df-container {\n      display:flex;\n      flex-wrap:wrap;\n     \
+    \ gap: 12px;\n    }\n\n    .colab-df-convert {\n      background-color: #E8F0FE;\n\
+    \      border: none;\n      border-radius: 50%;\n      cursor: pointer;\n    \
+    \  display: none;\n      fill: #1967D2;\n      height: 32px;\n      padding: 0\
+    \ 0 0 0;\n      width: 32px;\n    }\n\n    .colab-df-convert:hover {\n      background-color:\
+    \ #E2EBFA;\n      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px\
+    \ rgba(60, 64, 67, 0.15);\n      fill: #174EA6;\n    }\n\n    [theme=dark] .colab-df-convert\
+    \ {\n      background-color: #3B4455;\n      fill: #D2E3FC;\n    }\n\n    [theme=dark]\
+    \ .colab-df-convert:hover {\n      background-color: #434B5C;\n      box-shadow:\
+    \ 0px 1px 3px 1px rgba(0, 0, 0, 0.15);\n      filter: drop-shadow(0px 1px 2px\
+    \ rgba(0, 0, 0, 0.3));\n      fill: #FFFFFF;\n    }\n  </style>\n<script>\n  \
+    \      const buttonEl =\n          document.querySelector('#df-af963caa-990f-43d9-855a-078271c8a58a\
+    \ button.colab-df-convert');\n        buttonEl.style.display =\n          google.colab.kernel.accessAllowed\
+    \ ? 'block' : 'none';\n\n        async function convertToInteractive(key) {\n\
+    \          const element = document.querySelector('#df-af963caa-990f-43d9-855a-078271c8a58a');\n\
+    \          const dataTable =\n            await google.colab.kernel.invokeFunction('convertToInteractive',\n\
+    \                                                     [key], {});\n          if\
+    \ (!dataTable) return;\n\n          const docLinkHtml = 'Like what you see? Visit\
+    \ the ' +\n            '<a target=\"_blank\" href=https://colab.research.google.com/notebooks/data_table.ipynb>data\
+    \ table notebook</a>'\n            + ' to learn more about interactive tables.';\n\
+    \          element.innerHTML = '';\n          dataTable['output_type'] = 'display_data';\n\
+    \          await google.colab.output.renderOutput(dataTable, element);\n     \
+    \     const docLink = document.createElement('div');\n          docLink.innerHTML\
+    \ = docLinkHtml;\n          element.appendChild(docLink);\n        }\n      </script>\n\
+    </div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+    \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
+    inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
+    >\n<p>numerical data ranks convert data to ranks of values</p>\n</div>\n</div>\n\
+    </div>\n<div class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"\
+    input\">\n<div class=\"prompt input_prompt\">In\_[6]:</div>\n<div class=\"inner_cell\"\
+    >\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span\
+    \ class=\"n\">dataframe</span><span class=\"o\">.</span><span class=\"n\">rank</span><span\
+    \ class=\"p\">()</span>\n</pre></div>\n</div>\n</div>\n</div>\n<div class=\"output_wrapper\"\
+    >\n<div class=\"output\">\n<div class=\"output_area\">\n<div class=\"prompt output_prompt\"\
+    >Out[6]:</div>\n<div class=\"output_html rendered_html output_subarea output_execute_result\"\
+    >\n<div id=\"df-947fcfd3-247e-423a-9d52-96b1d42f124a\">\n<div class=\"colab-df-container\"\
+    >\n<div>\n<style scoped=\"\">\n    .dataframe tbody tr th:only-of-type {\n   \
+    \     vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n       \
+    \ vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align:\
+    \ right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n<thead>\n\
+    <tr style=\"text-align: right;\">\n<th></th>\n<th>sepallength</th>\n<th>sepalwidth</th>\n\
+    <th>petallength</th>\n<th>petalwidth</th>\n<th>class</th>\n</tr>\n</thead>\n<tbody>\n\
+    <tr>\n<th>0</th>\n<td>37.0</td>\n<td>129.5</td>\n<td>17.5</td>\n<td>20.5</td>\n\
+    <td>25.5</td>\n</tr>\n<tr>\n<th>1</th>\n<td>19.5</td>\n<td>70.5</td>\n<td>17.5</td>\n\
+    <td>20.5</td>\n<td>25.5</td>\n</tr>\n<tr>\n<th>2</th>\n<td>10.5</td>\n<td>102.0</td>\n\
+    <td>8.0</td>\n<td>20.5</td>\n<td>25.5</td>\n</tr>\n<tr>\n<th>3</th>\n<td>7.5</td>\n\
+    <td>89.5</td>\n<td>30.5</td>\n<td>20.5</td>\n<td>25.5</td>\n</tr>\n<tr>\n<th>4</th>\n\
+    <td>27.5</td>\n<td>134.0</td>\n<td>17.5</td>\n<td>20.5</td>\n<td>25.5</td>\n</tr>\n\
+    <tr>\n<th>...</th>\n<td>...</td>\n<td>...</td>\n<td>...</td>\n<td>...</td>\n<td>...</td>\n\
+    </tr>\n<tr>\n<th>145</th>\n<td>126.5</td>\n<td>70.5</td>\n<td>117.5</td>\n<td>140.5</td>\n\
+    <td>125.5</td>\n</tr>\n<tr>\n<th>146</th>\n<td>104.0</td>\n<td>15.5</td>\n<td>106.5</td>\n\
+    <td>119.0</td>\n<td>125.5</td>\n</tr>\n<tr>\n<th>147</th>\n<td>118.0</td>\n<td>70.5</td>\n\
+    <td>117.5</td>\n<td>124.5</td>\n<td>125.5</td>\n</tr>\n<tr>\n<th>148</th>\n<td>97.5</td>\n\
+    <td>120.5</td>\n<td>121.5</td>\n<td>140.5</td>\n<td>125.5</td>\n</tr>\n<tr>\n\
+    <th>149</th>\n<td>82.0</td>\n<td>70.5</td>\n<td>112.5</td>\n<td>110.5</td>\n<td>125.5</td>\n\
+    </tr>\n</tbody>\n</table>\n<p>150 rows \xD7 5 columns</p>\n</div>\n<button class=\"\
+    colab-df-convert\" onclick=\"convertToInteractive('df-947fcfd3-247e-423a-9d52-96b1d42f124a')\"\
+    \ style=\"display:none;\" title=\"Convert this dataframe to an interactive table.\"\
+    >\n<svg height=\"24px\" viewbox=\"0 0 24 24\" width=\"24px\" xmlns=\"http://www.w3.org/2000/svg\"\
+    >\n<path d=\"M0 0h24v24H0V0z\" fill=\"none\"></path>\n<path d=\"M18.56 5.44l.94\
+    \ 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06\
+    \ 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94\
+    \ 2.06-2.06.94z\"></path><path d=\"M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52\
+    \ 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59\
+    \ 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41\
+    \ 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z\"></path>\n</svg>\n</button>\n<style>\n\
+    \    .colab-df-container {\n      display:flex;\n      flex-wrap:wrap;\n     \
+    \ gap: 12px;\n    }\n\n    .colab-df-convert {\n      background-color: #E8F0FE;\n\
+    \      border: none;\n      border-radius: 50%;\n      cursor: pointer;\n    \
+    \  display: none;\n      fill: #1967D2;\n      height: 32px;\n      padding: 0\
+    \ 0 0 0;\n      width: 32px;\n    }\n\n    .colab-df-convert:hover {\n      background-color:\
+    \ #E2EBFA;\n      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px\
+    \ rgba(60, 64, 67, 0.15);\n      fill: #174EA6;\n    }\n\n    [theme=dark] .colab-df-convert\
+    \ {\n      background-color: #3B4455;\n      fill: #D2E3FC;\n    }\n\n    [theme=dark]\
+    \ .colab-df-convert:hover {\n      background-color: #434B5C;\n      box-shadow:\
+    \ 0px 1px 3px 1px rgba(0, 0, 0, 0.15);\n      filter: drop-shadow(0px 1px 2px\
+    \ rgba(0, 0, 0, 0.3));\n      fill: #FFFFFF;\n    }\n  </style>\n<script>\n  \
+    \      const buttonEl =\n          document.querySelector('#df-947fcfd3-247e-423a-9d52-96b1d42f124a\
+    \ button.colab-df-convert');\n        buttonEl.style.display =\n          google.colab.kernel.accessAllowed\
+    \ ? 'block' : 'none';\n\n        async function convertToInteractive(key) {\n\
+    \          const element = document.querySelector('#df-947fcfd3-247e-423a-9d52-96b1d42f124a');\n\
+    \          const dataTable =\n            await google.colab.kernel.invokeFunction('convertToInteractive',\n\
+    \                                                     [key], {});\n          if\
+    \ (!dataTable) return;\n\n          const docLinkHtml = 'Like what you see? Visit\
+    \ the ' +\n            '<a target=\"_blank\" href=https://colab.research.google.com/notebooks/data_table.ipynb>data\
+    \ table notebook</a>'\n            + ' to learn more about interactive tables.';\n\
+    \          element.innerHTML = '';\n          dataTable['output_type'] = 'display_data';\n\
+    \          await google.colab.output.renderOutput(dataTable, element);\n     \
+    \     const docLink = document.createElement('div');\n          docLink.innerHTML\
+    \ = docLinkHtml;\n          element.appendChild(docLink);\n        }\n      </script>\n\
+    </div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+    \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
+    inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
+    >\n<p>select sepallength of first five samples</p>\n</div>\n</div>\n</div>\n<div\
+    \ class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n\
+    <div class=\"prompt input_prompt\">In\_[9]:</div>\n<div class=\"inner_cell\">\n\
+    <div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span\
+    \ class=\"n\">dataframe</span><span class=\"p\">[</span><span class=\"s1\">'sepallength'</span><span\
+    \ class=\"p\">]</span><span class=\"o\">.</span><span class=\"n\">head</span><span\
+    \ class=\"p\">()</span>\n</pre></div>\n</div>\n</div>\n</div>\n<div class=\"output_wrapper\"\
+    >\n<div class=\"output\">\n<div class=\"output_area\">\n<div class=\"prompt output_prompt\"\
+    >Out[9]:</div>\n<div class=\"output_text output_subarea output_execute_result\"\
+    >\n<pre>0    5.1\n1    4.9\n2    4.7\n3    4.6\n4    5.0\nName: sepallength, dtype:\
+    \ float64</pre>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+    \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
+    inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
+    >\n<p>group by: get mean of each class using groupby function</p>\n</div>\n</div>\n\
+    </div>\n<div class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"\
+    input\">\n<div class=\"prompt input_prompt\">In\_[11]:</div>\n<div class=\"inner_cell\"\
+    >\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span\
+    \ class=\"n\">dataframe</span><span class=\"o\">.</span><span class=\"n\">groupby</span><span\
+    \ class=\"p\">([</span><span class=\"s1\">'class'</span><span class=\"p\">])</span><span\
+    \ class=\"o\">.</span><span class=\"n\">mean</span><span class=\"p\">()</span>\n\
+    </pre></div>\n</div>\n</div>\n</div>\n<div class=\"output_wrapper\">\n<div class=\"\
+    output\">\n<div class=\"output_area\">\n<div class=\"prompt output_prompt\">Out[11]:</div>\n\
+    <div class=\"output_html rendered_html output_subarea output_execute_result\"\
+    >\n<div id=\"df-0bff361f-bf47-498e-b400-2f29085fb6fd\">\n<div class=\"colab-df-container\"\
+    >\n<div>\n<style scoped=\"\">\n    .dataframe tbody tr th:only-of-type {\n   \
+    \     vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n       \
+    \ vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align:\
+    \ right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n<thead>\n\
+    <tr style=\"text-align: right;\">\n<th></th>\n<th>sepallength</th>\n<th>sepalwidth</th>\n\
+    <th>petallength</th>\n<th>petalwidth</th>\n</tr>\n<tr>\n<th>class</th>\n<th></th>\n\
+    <th></th>\n<th></th>\n<th></th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<th>Iris-setosa</th>\n\
+    <td>5.006</td>\n<td>3.418</td>\n<td>1.464</td>\n<td>0.244</td>\n</tr>\n<tr>\n\
+    <th>Iris-versicolor</th>\n<td>5.936</td>\n<td>2.770</td>\n<td>4.260</td>\n<td>1.326</td>\n\
+    </tr>\n<tr>\n<th>Iris-virginica</th>\n<td>6.588</td>\n<td>2.974</td>\n<td>5.552</td>\n\
+    <td>2.026</td>\n</tr>\n</tbody>\n</table>\n</div>\n<button class=\"colab-df-convert\"\
+    \ onclick=\"convertToInteractive('df-0bff361f-bf47-498e-b400-2f29085fb6fd')\"\
+    \ style=\"display:none;\" title=\"Convert this dataframe to an interactive table.\"\
+    >\n<svg height=\"24px\" viewbox=\"0 0 24 24\" width=\"24px\" xmlns=\"http://www.w3.org/2000/svg\"\
+    >\n<path d=\"M0 0h24v24H0V0z\" fill=\"none\"></path>\n<path d=\"M18.56 5.44l.94\
+    \ 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06\
+    \ 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94\
+    \ 2.06-2.06.94z\"></path><path d=\"M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52\
+    \ 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59\
+    \ 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41\
+    \ 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z\"></path>\n</svg>\n</button>\n<style>\n\
+    \    .colab-df-container {\n      display:flex;\n      flex-wrap:wrap;\n     \
+    \ gap: 12px;\n    }\n\n    .colab-df-convert {\n      background-color: #E8F0FE;\n\
+    \      border: none;\n      border-radius: 50%;\n      cursor: pointer;\n    \
+    \  display: none;\n      fill: #1967D2;\n      height: 32px;\n      padding: 0\
+    \ 0 0 0;\n      width: 32px;\n    }\n\n    .colab-df-convert:hover {\n      background-color:\
+    \ #E2EBFA;\n      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px\
+    \ rgba(60, 64, 67, 0.15);\n      fill: #174EA6;\n    }\n\n    [theme=dark] .colab-df-convert\
+    \ {\n      background-color: #3B4455;\n      fill: #D2E3FC;\n    }\n\n    [theme=dark]\
+    \ .colab-df-convert:hover {\n      background-color: #434B5C;\n      box-shadow:\
+    \ 0px 1px 3px 1px rgba(0, 0, 0, 0.15);\n      filter: drop-shadow(0px 1px 2px\
+    \ rgba(0, 0, 0, 0.3));\n      fill: #FFFFFF;\n    }\n  </style>\n<script>\n  \
+    \      const buttonEl =\n          document.querySelector('#df-0bff361f-bf47-498e-b400-2f29085fb6fd\
+    \ button.colab-df-convert');\n        buttonEl.style.display =\n          google.colab.kernel.accessAllowed\
+    \ ? 'block' : 'none';\n\n        async function convertToInteractive(key) {\n\
+    \          const element = document.querySelector('#df-0bff361f-bf47-498e-b400-2f29085fb6fd');\n\
+    \          const dataTable =\n            await google.colab.kernel.invokeFunction('convertToInteractive',\n\
+    \                                                     [key], {});\n          if\
+    \ (!dataTable) return;\n\n          const docLinkHtml = 'Like what you see? Visit\
+    \ the ' +\n            '<a target=\"_blank\" href=https://colab.research.google.com/notebooks/data_table.ipynb>data\
+    \ table notebook</a>'\n            + ' to learn more about interactive tables.';\n\
+    \          element.innerHTML = '';\n          dataTable['output_type'] = 'display_data';\n\
+    \          await google.colab.output.renderOutput(dataTable, element);\n     \
+    \     const docLink = document.createElement('div');\n          docLink.innerHTML\
+    \ = docLinkHtml;\n          element.appendChild(docLink);\n        }\n      </script>\n\
+    </div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+    \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
+    inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
+    >\n<p>save first ten rows to a csv file</p>\n</div>\n</div>\n</div>\n<div class=\"\
+    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[12]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span class=\"\
+    n\">dataframe</span><span class=\"o\">.</span><span class=\"n\">head</span><span\
+    \ class=\"p\">(</span><span class=\"mi\">10</span><span class=\"p\">)</span><span\
+    \ class=\"o\">.</span><span class=\"n\">to_csv</span><span class=\"p\">(</span><span\
+    \ class=\"s1\">'first_ten_rows.csv'</span><span class=\"p\">,</span><span class=\"\
+    n\">index</span><span class=\"o\">=</span><span class=\"kc\">False</span><span\
+    \ class=\"p\">)</span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"\
+    cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
+    >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
+    \ rendered_html\">\n<p>describe overview of dataset main details using describe\
+    \ function</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell\
+    \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
+    [13]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
+    highlight hl-python\"><pre><span></span><span class=\"n\">dataframe</span><span\
+    \ class=\"o\">.</span><span class=\"n\">describe</span><span class=\"p\">()</span>\n\
+    </pre></div>\n</div>\n</div>\n</div>\n<div class=\"output_wrapper\">\n<div class=\"\
+    output\">\n<div class=\"output_area\">\n<div class=\"prompt output_prompt\">Out[13]:</div>\n\
+    <div class=\"output_html rendered_html output_subarea output_execute_result\"\
+    >\n<div id=\"df-40399d88-423d-4785-b282-eef4ff522e7e\">\n<div class=\"colab-df-container\"\
+    >\n<div>\n<style scoped=\"\">\n    .dataframe tbody tr th:only-of-type {\n   \
+    \     vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n       \
+    \ vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align:\
+    \ right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n<thead>\n\
+    <tr style=\"text-align: right;\">\n<th></th>\n<th>sepallength</th>\n<th>sepalwidth</th>\n\
+    <th>petallength</th>\n<th>petalwidth</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<th>count</th>\n\
+    <td>150.000000</td>\n<td>150.000000</td>\n<td>150.000000</td>\n<td>150.000000</td>\n\
+    </tr>\n<tr>\n<th>mean</th>\n<td>5.843333</td>\n<td>3.054000</td>\n<td>3.758667</td>\n\
+    <td>1.198667</td>\n</tr>\n<tr>\n<th>std</th>\n<td>0.828066</td>\n<td>0.433594</td>\n\
+    <td>1.764420</td>\n<td>0.763161</td>\n</tr>\n<tr>\n<th>min</th>\n<td>4.300000</td>\n\
+    <td>2.000000</td>\n<td>1.000000</td>\n<td>0.100000</td>\n</tr>\n<tr>\n<th>25%</th>\n\
+    <td>5.100000</td>\n<td>2.800000</td>\n<td>1.600000</td>\n<td>0.300000</td>\n</tr>\n\
+    <tr>\n<th>50%</th>\n<td>5.800000</td>\n<td>3.000000</td>\n<td>4.350000</td>\n\
+    <td>1.300000</td>\n</tr>\n<tr>\n<th>75%</th>\n<td>6.400000</td>\n<td>3.300000</td>\n\
+    <td>5.100000</td>\n<td>1.800000</td>\n</tr>\n<tr>\n<th>max</th>\n<td>7.900000</td>\n\
+    <td>4.400000</td>\n<td>6.900000</td>\n<td>2.500000</td>\n</tr>\n</tbody>\n</table>\n\
+    </div>\n<button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-40399d88-423d-4785-b282-eef4ff522e7e')\"\
+    \ style=\"display:none;\" title=\"Convert this dataframe to an interactive table.\"\
+    >\n<svg height=\"24px\" viewbox=\"0 0 24 24\" width=\"24px\" xmlns=\"http://www.w3.org/2000/svg\"\
+    >\n<path d=\"M0 0h24v24H0V0z\" fill=\"none\"></path>\n<path d=\"M18.56 5.44l.94\
+    \ 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06\
+    \ 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94\
+    \ 2.06-2.06.94z\"></path><path d=\"M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52\
+    \ 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59\
+    \ 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41\
+    \ 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z\"></path>\n</svg>\n</button>\n<style>\n\
+    \    .colab-df-container {\n      display:flex;\n      flex-wrap:wrap;\n     \
+    \ gap: 12px;\n    }\n\n    .colab-df-convert {\n      background-color: #E8F0FE;\n\
+    \      border: none;\n      border-radius: 50%;\n      cursor: pointer;\n    \
+    \  display: none;\n      fill: #1967D2;\n      height: 32px;\n      padding: 0\
+    \ 0 0 0;\n      width: 32px;\n    }\n\n    .colab-df-convert:hover {\n      background-color:\
+    \ #E2EBFA;\n      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px\
+    \ rgba(60, 64, 67, 0.15);\n      fill: #174EA6;\n    }\n\n    [theme=dark] .colab-df-convert\
+    \ {\n      background-color: #3B4455;\n      fill: #D2E3FC;\n    }\n\n    [theme=dark]\
+    \ .colab-df-convert:hover {\n      background-color: #434B5C;\n      box-shadow:\
+    \ 0px 1px 3px 1px rgba(0, 0, 0, 0.15);\n      filter: drop-shadow(0px 1px 2px\
+    \ rgba(0, 0, 0, 0.3));\n      fill: #FFFFFF;\n    }\n  </style>\n<script>\n  \
+    \      const buttonEl =\n          document.querySelector('#df-40399d88-423d-4785-b282-eef4ff522e7e\
+    \ button.colab-df-convert');\n        buttonEl.style.display =\n          google.colab.kernel.accessAllowed\
+    \ ? 'block' : 'none';\n\n        async function convertToInteractive(key) {\n\
+    \          const element = document.querySelector('#df-40399d88-423d-4785-b282-eef4ff522e7e');\n\
+    \          const dataTable =\n            await google.colab.kernel.invokeFunction('convertToInteractive',\n\
+    \                                                     [key], {});\n          if\
+    \ (!dataTable) return;\n\n          const docLinkHtml = 'Like what you see? Visit\
+    \ the ' +\n            '<a target=\"_blank\" href=https://colab.research.google.com/notebooks/data_table.ipynb>data\
+    \ table notebook</a>'\n            + ' to learn more about interactive tables.';\n\
+    \          element.innerHTML = '';\n          dataTable['output_type'] = 'display_data';\n\
+    \          await google.colab.output.renderOutput(dataTable, element);\n     \
+    \     const docLink = document.createElement('div');\n          docLink.innerHTML\
+    \ = docLinkHtml;\n          element.appendChild(docLink);\n        }\n      </script>\n\
+    </div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+    \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
+    inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
+    >\n<p>find memory usage of each column</p>\n</div>\n</div>\n</div>\n<div class=\"\
+    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[15]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span class=\"\
+    n\">dataframe</span><span class=\"o\">.</span><span class=\"n\">memory_usage</span><span\
+    \ class=\"p\">()</span>\n</pre></div>\n</div>\n</div>\n</div>\n<div class=\"output_wrapper\"\
+    >\n<div class=\"output\">\n<div class=\"output_area\">\n<div class=\"prompt output_prompt\"\
+    >Out[15]:</div>\n<div class=\"output_text output_subarea output_execute_result\"\
+    >\n<pre>Index           128\nsepallength    1200\nsepalwidth     1200\npetallength\
+    \    1200\npetalwidth     1200\nclass          1200\ndtype: int64</pre>\n</div>\n\
+    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
+    \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
+    >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<p>convert\
+    \ type of sepalwidth to int</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+    \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
+    >In\_[16]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
+    \ class=\"highlight hl-python\"><pre><span></span><span class=\"n\">dataframe</span><span\
+    \ class=\"p\">[</span><span class=\"s1\">'sepalwidth'</span><span class=\"p\"\
+    >]</span> <span class=\"o\">=</span> <span class=\"n\">dataframe</span><span class=\"\
+    o\">.</span><span class=\"n\">sepalwidth</span><span class=\"o\">.</span><span\
+    \ class=\"n\">astype</span><span class=\"p\">(</span><span class=\"nb\">int</span><span\
+    \ class=\"p\">)</span>\n<span class=\"n\">dataframe</span><span class=\"o\">.</span><span\
+    \ class=\"n\">head</span><span class=\"p\">()</span>\n</pre></div>\n</div>\n</div>\n\
+    </div>\n<div class=\"output_wrapper\">\n<div class=\"output\">\n<div class=\"\
+    output_area\">\n<div class=\"prompt output_prompt\">Out[16]:</div>\n<div class=\"\
+    output_html rendered_html output_subarea output_execute_result\">\n<div id=\"\
+    df-4326b991-89d4-4b84-a228-587c50efe5e8\">\n<div class=\"colab-df-container\"\
+    >\n<div>\n<style scoped=\"\">\n    .dataframe tbody tr th:only-of-type {\n   \
+    \     vertical-align: middle;\n    }\n\n    .dataframe tbody tr th {\n       \
+    \ vertical-align: top;\n    }\n\n    .dataframe thead th {\n        text-align:\
+    \ right;\n    }\n</style>\n<table border=\"1\" class=\"dataframe\">\n<thead>\n\
+    <tr style=\"text-align: right;\">\n<th></th>\n<th>sepallength</th>\n<th>sepalwidth</th>\n\
+    <th>petallength</th>\n<th>petalwidth</th>\n<th>class</th>\n</tr>\n</thead>\n<tbody>\n\
+    <tr>\n<th>0</th>\n<td>5.1</td>\n<td>3</td>\n<td>1.4</td>\n<td>0.2</td>\n<td>Iris-setosa</td>\n\
+    </tr>\n<tr>\n<th>1</th>\n<td>4.9</td>\n<td>3</td>\n<td>1.4</td>\n<td>0.2</td>\n\
+    <td>Iris-setosa</td>\n</tr>\n<tr>\n<th>2</th>\n<td>4.7</td>\n<td>3</td>\n<td>1.3</td>\n\
+    <td>0.2</td>\n<td>Iris-setosa</td>\n</tr>\n<tr>\n<th>3</th>\n<td>4.6</td>\n<td>3</td>\n\
+    <td>1.5</td>\n<td>0.2</td>\n<td>Iris-setosa</td>\n</tr>\n<tr>\n<th>4</th>\n<td>5.0</td>\n\
+    <td>3</td>\n<td>1.4</td>\n<td>0.2</td>\n<td>Iris-setosa</td>\n</tr>\n</tbody>\n\
+    </table>\n</div>\n<button class=\"colab-df-convert\" onclick=\"convertToInteractive('df-4326b991-89d4-4b84-a228-587c50efe5e8')\"\
+    \ style=\"display:none;\" title=\"Convert this dataframe to an interactive table.\"\
+    >\n<svg height=\"24px\" viewbox=\"0 0 24 24\" width=\"24px\" xmlns=\"http://www.w3.org/2000/svg\"\
+    >\n<path d=\"M0 0h24v24H0V0z\" fill=\"none\"></path>\n<path d=\"M18.56 5.44l.94\
+    \ 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94 2.06-2.06.94zm-11 1L8.5 8.5l.94-2.06\
+    \ 2.06-.94-2.06-.94L8.5 2.5l-.94 2.06-2.06.94zm10 10l.94 2.06.94-2.06 2.06-.94-2.06-.94-.94-2.06-.94\
+    \ 2.06-2.06.94z\"></path><path d=\"M17.41 7.96l-1.37-1.37c-.4-.4-.92-.59-1.43-.59-.52\
+    \ 0-1.04.2-1.43.59L10.3 9.45l-7.72 7.72c-.78.78-.78 2.05 0 2.83L4 21.41c.39.39.9.59\
+    \ 1.41.59.51 0 1.02-.2 1.41-.59l7.78-7.78 2.81-2.81c.8-.78.8-2.07 0-2.86zM5.41\
+    \ 20L4 18.59l7.72-7.72 1.47 1.35L5.41 20z\"></path>\n</svg>\n</button>\n<style>\n\
+    \    .colab-df-container {\n      display:flex;\n      flex-wrap:wrap;\n     \
+    \ gap: 12px;\n    }\n\n    .colab-df-convert {\n      background-color: #E8F0FE;\n\
+    \      border: none;\n      border-radius: 50%;\n      cursor: pointer;\n    \
+    \  display: none;\n      fill: #1967D2;\n      height: 32px;\n      padding: 0\
+    \ 0 0 0;\n      width: 32px;\n    }\n\n    .colab-df-convert:hover {\n      background-color:\
+    \ #E2EBFA;\n      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px\
+    \ rgba(60, 64, 67, 0.15);\n      fill: #174EA6;\n    }\n\n    [theme=dark] .colab-df-convert\
+    \ {\n      background-color: #3B4455;\n      fill: #D2E3FC;\n    }\n\n    [theme=dark]\
+    \ .colab-df-convert:hover {\n      background-color: #434B5C;\n      box-shadow:\
+    \ 0px 1px 3px 1px rgba(0, 0, 0, 0.15);\n      filter: drop-shadow(0px 1px 2px\
+    \ rgba(0, 0, 0, 0.3));\n      fill: #FFFFFF;\n    }\n  </style>\n<script>\n  \
+    \      const buttonEl =\n          document.querySelector('#df-4326b991-89d4-4b84-a228-587c50efe5e8\
+    \ button.colab-df-convert');\n        buttonEl.style.display =\n          google.colab.kernel.accessAllowed\
+    \ ? 'block' : 'none';\n\n        async function convertToInteractive(key) {\n\
+    \          const element = document.querySelector('#df-4326b991-89d4-4b84-a228-587c50efe5e8');\n\
+    \          const dataTable =\n            await google.colab.kernel.invokeFunction('convertToInteractive',\n\
+    \                                                     [key], {});\n          if\
+    \ (!dataTable) return;\n\n          const docLinkHtml = 'Like what you see? Visit\
+    \ the ' +\n            '<a target=\"_blank\" href=https://colab.research.google.com/notebooks/data_table.ipynb>data\
+    \ table notebook</a>'\n            + ' to learn more about interactive tables.';\n\
+    \          element.innerHTML = '';\n          dataTable['output_type'] = 'display_data';\n\
+    \          await google.colab.output.renderOutput(dataTable, element);\n     \
+    \     const docLink = document.createElement('div');\n          docLink.innerHTML\
+    \ = docLinkHtml;\n          element.appendChild(docLink);\n        }\n      </script>\n\
+    </div>\n</div>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+    \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
+    inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
+    >\n<p>count values of petalwidth</p>\n</div>\n</div>\n</div>\n<div class=\"cell\
+    \ border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[19]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span class=\"\
+    n\">dataframe</span><span class=\"p\">[</span><span class=\"s1\">'petalwidth'</span><span\
+    \ class=\"p\">]</span><span class=\"o\">.</span><span class=\"n\">value_counts</span><span\
+    \ class=\"p\">()</span>\n</pre></div>\n</div>\n</div>\n</div>\n<div class=\"output_wrapper\"\
+    >\n<div class=\"output\">\n<div class=\"output_area\">\n<div class=\"prompt output_prompt\"\
+    >Out[19]:</div>\n<div class=\"output_text output_subarea output_execute_result\"\
+    >\n<pre>0.2    28\n1.3    13\n1.8    12\n1.5    12\n1.4     8\n2.3     8\n1.0\
+    \     7\n0.4     7\n0.3     7\n0.1     6\n2.1     6\n2.0     6\n1.2     5\n1.9\
+    \     5\n1.6     4\n2.5     3\n2.2     3\n2.4     3\n1.1     3\n1.7     2\n0.6\
+    \     1\n0.5     1\nName: petalwidth, dtype: int64</pre>\n</div>\n</div>\n</div>\n\
+    </div>\n</div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div\
+    \ class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"\
+    text_cell_render border-box-sizing rendered_html\">\n<p>merge two dataframes outer\
+    \ join</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell\
+    \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
+    [42]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
+    highlight hl-python\"><pre><span></span><span class=\"kn\">import</span> <span\
+    \ class=\"nn\">random</span>\n<span class=\"n\">data1</span> <span class=\"o\"\
+    >=</span> <span class=\"p\">[[</span><span class=\"n\">i</span> <span class=\"\
+    p\">,</span><span class=\"n\">random</span><span class=\"o\">.</span><span class=\"\
+    n\">randint</span><span class=\"p\">(</span><span class=\"mi\">0</span><span class=\"\
+    p\">,</span><span class=\"mi\">20</span><span class=\"p\">)]</span> <span class=\"\
+    k\">for</span> <span class=\"n\">i</span> <span class=\"ow\">in</span> <span class=\"\
+    nb\">range</span><span class=\"p\">(</span><span class=\"mi\">100</span><span\
+    \ class=\"p\">)]</span>\n<span class=\"n\">data2</span> <span class=\"o\">=</span>\
+    \ <span class=\"p\">[[</span><span class=\"n\">random</span><span class=\"o\"\
+    >.</span><span class=\"n\">randint</span><span class=\"p\">(</span><span class=\"\
+    mi\">0</span><span class=\"p\">,</span><span class=\"mi\">20</span><span class=\"\
+    p\">)</span> <span class=\"p\">,</span> <span class=\"n\">i</span><span class=\"\
+    p\">]</span> <span class=\"k\">for</span> <span class=\"n\">i</span> <span class=\"\
+    ow\">in</span> <span class=\"nb\">range</span><span class=\"p\">(</span><span\
+    \ class=\"mi\">40</span><span class=\"p\">,</span><span class=\"mi\">140</span><span\
+    \ class=\"p\">)]</span>\n\n<span class=\"n\">dataframe1</span> <span class=\"\
+    o\">=</span> <span class=\"n\">pd</span><span class=\"o\">.</span><span class=\"\
+    n\">DataFrame</span><span class=\"p\">(</span><span class=\"n\">data1</span> <span\
+    \ class=\"p\">,</span> <span class=\"n\">columns</span><span class=\"o\">=</span><span\
+    \ class=\"p\">[</span><span class=\"s1\">'id1'</span><span class=\"p\">,</span><span\
+    \ class=\"s1\">'code1'</span><span class=\"p\">])</span>\n<span class=\"n\">dataframe2</span>\
+    \ <span class=\"o\">=</span> <span class=\"n\">pd</span><span class=\"o\">.</span><span\
+    \ class=\"n\">DataFrame</span><span class=\"p\">(</span><span class=\"n\">data2</span>\
+    \ <span class=\"p\">,</span> <span class=\"n\">columns</span><span class=\"o\"\
+    >=</span><span class=\"p\">[</span><span class=\"s1\">'code2'</span><span class=\"\
+    p\">,</span><span class=\"s1\">'id2'</span><span class=\"p\">])</span>\n<span\
+    \ class=\"n\">merged</span> <span class=\"o\">=</span> <span class=\"n\">dataframe1</span><span\
+    \ class=\"o\">.</span><span class=\"n\">merge</span><span class=\"p\">(</span><span\
+    \ class=\"n\">dataframe2</span><span class=\"p\">,</span><span class=\"n\">left_on</span><span\
+    \ class=\"o\">=</span><span class=\"s1\">'id1'</span><span class=\"p\">,</span>\
+    \ <span class=\"n\">right_on</span><span class=\"o\">=</span><span class=\"s1\"\
+    >'id2'</span><span class=\"p\">,</span> <span class=\"n\">suffixes</span><span\
+    \ class=\"o\">=</span><span class=\"p\">(</span><span class=\"s1\">'_left'</span><span\
+    \ class=\"p\">,</span> <span class=\"s1\">'_right'</span><span class=\"p\">),</span><span\
+    \ class=\"n\">how</span><span class=\"o\">=</span><span class=\"s1\">'outer'</span><span\
+    \ class=\"p\">)</span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n"
+  description: 'Main preprocessing techniques for pandas package
+
+    '
+  title: Basic and tricky pandas functions
+  url: notebooks/basics/solutions/pandas/pandas_solutions.html
 notebooks/learning-tasks/1_mnist_classification_fc/index:
   category: Content
-  content: "<p>Classification with Fully Connected Neural Networks</p> <p>MNIST classification\
-    \ with a fully connected model with pytorch.</p> \n<div class=\"cell border-box-sizing\
-    \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
-    inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
-    >\n<p>In this task, you should train a fully-connected model with pytorch to classify\
-    \ MNIST dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
-    \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
-    inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
-    >\n<h1 id=\"Load-the-dataset\">Load the dataset<a class=\"anchor-link\" href=\"\
-    #Load-the-dataset\">\xB6</a></h1><p>Load the MNIST dataset bellow. You can use\
-    \ either <code>torchvision.datasets.MNIST</code> or <code>sklearn.datasets.fetch_openml()</code>\
+  content: "\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
+    prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
+    \ border-box-sizing rendered_html\">\n<p>In this task, you should train a fully-connected\
+    \ model with pytorch to classify MNIST dataset.</p>\n</div>\n</div>\n</div>\n\
+    <div class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
+    >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
+    \ rendered_html\">\n<h1 id=\"Load-the-dataset\">Load the dataset<a class=\"anchor-link\"\
+    \ href=\"#Load-the-dataset\">\xB6</a></h1><p>Load the MNIST dataset bellow. You\
+    \ can use either <code>torchvision.datasets.MNIST</code> or <code>sklearn.datasets.fetch_openml()</code>\
     \ or any other way to load the dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"\
     cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
     prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
@@ -782,7 +1370,8 @@ notebooks/learning-tasks/1_mnist_classification_fc/index:
     >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
     <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
     \ hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
-    \ Ahmad Salimi"
+    \ <p>Classification with Fully Connected Neural Networks</p> Ahmad Salimi <p>MNIST\
+    \ classification with a fully connected model with pytorch.</p>"
   description: 'MNIST classification with a fully connected model with pytorch.
 
     '
@@ -862,48 +1451,48 @@ notebooks/learning-tasks/2_cifar10_classification_cnn/index:
 notebooks/learning-tasks/3_transfer_learning/index:
   category: Content
   content: "<p>CIFAR10 classification with transfer learning on Inception V3.</p>\
-    \ <p>Classification with Transfer Learning</p> \n<div class=\"cell border-box-sizing\
-    \ text_cell rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"\
-    inner_cell\">\n<div class=\"text_cell_render border-box-sizing rendered_html\"\
-    >\n<p>In this task, you should train Inception V3 with pytorch using transfer\
-    \ learning to classify CIFAR10 dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"\
-    cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
-    >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
-    \ rendered_html\">\n<h1 id=\"Load-the-dataset\">Load the dataset<a class=\"anchor-link\"\
-    \ href=\"#Load-the-dataset\">\xB6</a></h1><p>Load the CIFAR10 dataset bellow.\
-    \ You can use either <code>torchvision.datasets.CIFAR10</code> or <code>sklearn.datasets.fetch_openml()</code>\
-    \ or any other way to load the dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"\
-    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
-    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
-    input_area\">\n<div class=\"highlight hl-ipython3\"><pre><span></span> \n</pre></div>\n\
-    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
+    \ Ahmad Salimi \n<div class=\"cell border-box-sizing text_cell rendered\"><div\
+    \ class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"\
+    text_cell_render border-box-sizing rendered_html\">\n<p>In this task, you should\
+    \ train Inception V3 with pytorch using transfer learning to classify CIFAR10\
+    \ dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
     \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
     >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"\
-    Get-Inception-V3\">Get Inception V3<a class=\"anchor-link\" href=\"#Get-Inception-V3\"\
-    >\xB6</a></h1><p>Instantiate Inception V3 model (pretrained on imagenet) from\
-    \ <code>torchvision</code>'s model zoo.</p>\n</div>\n</div>\n</div>\n<div class=\"\
-    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
-    prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
-    input_area\">\n<div class=\"highlight hl-ipython3\"><pre><span></span> \n</pre></div>\n\
-    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
-    \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
-    >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"\
-    Modify-for-CIFAR10\">Modify for CIFAR10<a class=\"anchor-link\" href=\"#Modify-for-CIFAR10\"\
-    >\xB6</a></h1><p>Imagenet has 1000 classes, but CIFAR10 has 10. So, the decider\
-    \ layers of the model must be changed so that we can use the model for CIFAR10.\
-    \ Therefore, adapt <code>net.fc</code> and <code>net.AuxLogits.fc</code> with\
-    \ CIFAR10.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell\
+    Load-the-dataset\">Load the dataset<a class=\"anchor-link\" href=\"#Load-the-dataset\"\
+    >\xB6</a></h1><p>Load the CIFAR10 dataset bellow. You can use either <code>torchvision.datasets.CIFAR10</code>\
+    \ or <code>sklearn.datasets.fetch_openml()</code> or any other way to load the\
+    \ dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell\
     \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
     [\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
     highlight hl-ipython3\"><pre><span></span> \n</pre></div>\n</div>\n</div>\n</div>\n\
     </div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
     prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
-    \ border-box-sizing rendered_html\">\n<h1 id=\"Freeze-the-convolutional-part\"\
-    >Freeze the convolutional part<a class=\"anchor-link\" href=\"#Freeze-the-convolutional-part\"\
-    >\xB6</a></h1><p>In order to apply transfer learning, freeze all layers except\
-    \ the deciders. Freezing consist of disabling optimization by disabling grad calculation.\
-    \ Also in batch normalization layers, updating mooving average and variance must\
-    \ be disabled. Note that you must later filter out the frozen parameter for optimizer.</p>\n\
+    \ border-box-sizing rendered_html\">\n<h1 id=\"Get-Inception-V3\">Get Inception\
+    \ V3<a class=\"anchor-link\" href=\"#Get-Inception-V3\">\xB6</a></h1><p>Instantiate\
+    \ Inception V3 model (pretrained on imagenet) from <code>torchvision</code>'s\
+    \ model zoo.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+    \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
+    >In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
+    \ class=\"highlight hl-ipython3\"><pre><span></span> \n</pre></div>\n</div>\n\
+    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell rendered\"\
+    ><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"\
+    text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"Modify-for-CIFAR10\"\
+    >Modify for CIFAR10<a class=\"anchor-link\" href=\"#Modify-for-CIFAR10\">\xB6\
+    </a></h1><p>Imagenet has 1000 classes, but CIFAR10 has 10. So, the decider layers\
+    \ of the model must be changed so that we can use the model for CIFAR10. Therefore,\
+    \ adapt <code>net.fc</code> and <code>net.AuxLogits.fc</code> with CIFAR10.</p>\n\
+    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
+    >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
+    <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
+    \ hl-ipython3\"><pre><span></span> \n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
+    <div class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
+    >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
+    \ rendered_html\">\n<h1 id=\"Freeze-the-convolutional-part\">Freeze the convolutional\
+    \ part<a class=\"anchor-link\" href=\"#Freeze-the-convolutional-part\">\xB6</a></h1><p>In\
+    \ order to apply transfer learning, freeze all layers except the deciders. Freezing\
+    \ consist of disabling optimization by disabling grad calculation. Also in batch\
+    \ normalization layers, updating mooving average and variance must be disabled.\
+    \ Note that you must later filter out the frozen parameter for optimizer.</p>\n\
     </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
     >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
     <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
@@ -954,7 +1543,7 @@ notebooks/learning-tasks/3_transfer_learning/index:
     >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
     <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
     \ hl-ipython3\"><pre><span></span> \n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
-    \ Ahmad Salimi"
+    \ <p>Classification with Transfer Learning</p>"
   description: 'CIFAR10 classification with transfer learning on Inception V3.
 
     '
@@ -962,19 +1551,19 @@ notebooks/learning-tasks/3_transfer_learning/index:
   url: notebooks/learning-tasks/3_transfer_learning/index.html
 notebooks/learning-tasks/solutions/1_mnist_classification_fc/index:
   category: Content
-  content: "Ahmad Salimi \n<div class=\"cell border-box-sizing text_cell rendered\"\
-    ><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"\
-    text_cell_render border-box-sizing rendered_html\">\n<p>In this task, you should\
-    \ train a fully-connected model with pytorch to classify MNIST dataset.</p>\n\
-    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
-    >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n\
-    <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
-    \ hl-python\"><pre><span></span><span class=\"kn\">from</span> <span class=\"\
-    nn\">typing</span> <span class=\"kn\">import</span> <span class=\"n\">Tuple</span><span\
-    \ class=\"p\">,</span> <span class=\"n\">Iterable</span>\n<span class=\"kn\">from</span>\
-    \ <span class=\"nn\">tqdm</span> <span class=\"kn\">import</span> <span class=\"\
-    n\">tqdm</span>\n<span class=\"kn\">from</span> <span class=\"nn\">multiprocessing</span>\
-    \ <span class=\"kn\">import</span> <span class=\"n\">cpu_count</span>\n<span class=\"\
+  content: "\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
+    prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
+    \ border-box-sizing rendered_html\">\n<p>In this task, you should train a fully-connected\
+    \ model with pytorch to classify MNIST dataset.</p>\n</div>\n</div>\n</div>\n\
+    <div class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"input\"\
+    >\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\"\
+    >\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span\
+    \ class=\"kn\">from</span> <span class=\"nn\">typing</span> <span class=\"kn\"\
+    >import</span> <span class=\"n\">Tuple</span><span class=\"p\">,</span> <span\
+    \ class=\"n\">Iterable</span>\n<span class=\"kn\">from</span> <span class=\"nn\"\
+    >tqdm</span> <span class=\"kn\">import</span> <span class=\"n\">tqdm</span>\n\
+    <span class=\"kn\">from</span> <span class=\"nn\">multiprocessing</span> <span\
+    \ class=\"kn\">import</span> <span class=\"n\">cpu_count</span>\n<span class=\"\
     kn\">from</span> <span class=\"nn\">time</span> <span class=\"kn\">import</span>\
     \ <span class=\"n\">time</span>\n\n<span class=\"kn\">import</span> <span class=\"\
     nn\">torchvision</span>\n<span class=\"kn\">from</span> <span class=\"nn\">torchvision</span>\
@@ -2051,7 +2640,7 @@ notebooks/learning-tasks/solutions/1_mnist_classification_fc/index:
     >In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
     \ class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n\
     </div>\n</div>\n <p>MNIST classification with a fully connected model with pytorch.</p>\
-    \ <p>Classification with Fully Connected Neural Networks: A solution</p>"
+    \ Ahmad Salimi <p>Classification with Fully Connected Neural Networks: A solution</p>"
   description: 'MNIST classification with a fully connected model with pytorch.
 
     '
@@ -2059,190 +2648,190 @@ notebooks/learning-tasks/solutions/1_mnist_classification_fc/index:
   url: notebooks/learning-tasks/solutions/1_mnist_classification_fc/index.html
 notebooks/learning-tasks/solutions/2_cifar10_classification_cnn/index:
   category: Content
-  content: "<p>Classification with Convolutional Neural Networks: A solution</p> <p>CIFAR10\
-    \ classification with a convolutional model with pytorch.</p> \n<div class=\"\
-    cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
-    >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
-    \ rendered_html\">\n<p>In this task, you should train a CNN model with pytorch\
-    \ to classify CIFAR10 dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"cell\
-    \ border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
-    prompt input_prompt\">In\_[1]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
-    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span class=\"\
-    kn\">from</span> <span class=\"nn\">typing</span> <span class=\"kn\">import</span>\
-    \ <span class=\"n\">Tuple</span><span class=\"p\">,</span> <span class=\"n\">Iterable</span>\n\
-    <span class=\"kn\">from</span> <span class=\"nn\">tqdm</span> <span class=\"kn\"\
-    >import</span> <span class=\"n\">tqdm</span>\n<span class=\"kn\">from</span> <span\
-    \ class=\"nn\">time</span> <span class=\"kn\">import</span> <span class=\"n\"\
-    >time</span>\n\n<span class=\"kn\">import</span> <span class=\"nn\">torchvision</span>\n\
-    <span class=\"kn\">from</span> <span class=\"nn\">torchvision</span> <span class=\"\
-    kn\">import</span> <span class=\"n\">datasets</span><span class=\"p\">,</span>\
-    \ <span class=\"n\">transforms</span>\n<span class=\"kn\">import</span> <span\
-    \ class=\"nn\">torch</span>\n<span class=\"kn\">from</span> <span class=\"nn\"\
-    >torch</span> <span class=\"kn\">import</span> <span class=\"n\">nn</span>\n<span\
-    \ class=\"kn\">from</span> <span class=\"nn\">torch.utils.data</span> <span class=\"\
-    kn\">import</span> <span class=\"n\">DataLoader</span>\n<span class=\"kn\">import</span>\
-    \ <span class=\"nn\">torch.nn.functional</span> <span class=\"k\">as</span> <span\
-    \ class=\"nn\">F</span>\n<span class=\"kn\">import</span> <span class=\"nn\">numpy</span>\
-    \ <span class=\"k\">as</span> <span class=\"nn\">np</span>\n<span class=\"kn\"\
-    >import</span> <span class=\"nn\">matplotlib.pyplot</span> <span class=\"k\">as</span>\
-    \ <span class=\"nn\">plt</span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n\
+  content: "<p>CIFAR10 classification with a convolutional model with pytorch.</p>\
+    \ \n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"prompt\
+    \ input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
+    \ border-box-sizing rendered_html\">\n<p>In this task, you should train a CNN\
+    \ model with pytorch to classify CIFAR10 dataset.</p>\n</div>\n</div>\n</div>\n\
     <div class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"input\"\
-    >\n<div class=\"prompt input_prompt\">In\_[2]:</div>\n<div class=\"inner_cell\"\
+    >\n<div class=\"prompt input_prompt\">In\_[1]:</div>\n<div class=\"inner_cell\"\
     >\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span\
-    \ class=\"n\">device</span> <span class=\"o\">=</span> <span class=\"n\">torch</span><span\
-    \ class=\"o\">.</span><span class=\"n\">device</span><span class=\"p\">(</span><span\
-    \ class=\"s1\">'cuda'</span> <span class=\"k\">if</span> <span class=\"n\">torch</span><span\
+    \ class=\"kn\">from</span> <span class=\"nn\">typing</span> <span class=\"kn\"\
+    >import</span> <span class=\"n\">Tuple</span><span class=\"p\">,</span> <span\
+    \ class=\"n\">Iterable</span>\n<span class=\"kn\">from</span> <span class=\"nn\"\
+    >tqdm</span> <span class=\"kn\">import</span> <span class=\"n\">tqdm</span>\n\
+    <span class=\"kn\">from</span> <span class=\"nn\">time</span> <span class=\"kn\"\
+    >import</span> <span class=\"n\">time</span>\n\n<span class=\"kn\">import</span>\
+    \ <span class=\"nn\">torchvision</span>\n<span class=\"kn\">from</span> <span\
+    \ class=\"nn\">torchvision</span> <span class=\"kn\">import</span> <span class=\"\
+    n\">datasets</span><span class=\"p\">,</span> <span class=\"n\">transforms</span>\n\
+    <span class=\"kn\">import</span> <span class=\"nn\">torch</span>\n<span class=\"\
+    kn\">from</span> <span class=\"nn\">torch</span> <span class=\"kn\">import</span>\
+    \ <span class=\"n\">nn</span>\n<span class=\"kn\">from</span> <span class=\"nn\"\
+    >torch.utils.data</span> <span class=\"kn\">import</span> <span class=\"n\">DataLoader</span>\n\
+    <span class=\"kn\">import</span> <span class=\"nn\">torch.nn.functional</span>\
+    \ <span class=\"k\">as</span> <span class=\"nn\">F</span>\n<span class=\"kn\"\
+    >import</span> <span class=\"nn\">numpy</span> <span class=\"k\">as</span> <span\
+    \ class=\"nn\">np</span>\n<span class=\"kn\">import</span> <span class=\"nn\"\
+    >matplotlib.pyplot</span> <span class=\"k\">as</span> <span class=\"nn\">plt</span>\n\
+    </pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing\
+    \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
+    >In\_[2]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
+    \ class=\"highlight hl-python\"><pre><span></span><span class=\"n\">device</span>\
+    \ <span class=\"o\">=</span> <span class=\"n\">torch</span><span class=\"o\">.</span><span\
+    \ class=\"n\">device</span><span class=\"p\">(</span><span class=\"s1\">'cuda'</span>\
+    \ <span class=\"k\">if</span> <span class=\"n\">torch</span><span class=\"o\"\
+    >.</span><span class=\"n\">cuda</span><span class=\"o\">.</span><span class=\"\
+    n\">is_available</span><span class=\"p\">()</span> <span class=\"k\">else</span>\
+    \ <span class=\"s1\">'cpu'</span><span class=\"p\">)</span>\n<span class=\"n\"\
+    >device</span>\n</pre></div>\n</div>\n</div>\n</div>\n<div class=\"output_wrapper\"\
+    >\n<div class=\"output\">\n<div class=\"output_area\">\n<div class=\"prompt output_prompt\"\
+    >Out[2]:</div>\n<div class=\"output_text output_subarea output_execute_result\"\
+    >\n<pre>device(type='cuda')</pre>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div\
+    \ class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n\
+    <div class=\"prompt input_prompt\">In\_[3]:</div>\n<div class=\"inner_cell\">\n\
+    <div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span\
+    \ class=\"n\">SEED</span> <span class=\"o\">=</span> <span class=\"mi\">51</span>\n\
+    <span class=\"n\">torch</span><span class=\"o\">.</span><span class=\"n\">random</span><span\
+    \ class=\"o\">.</span><span class=\"n\">manual_seed</span><span class=\"p\">(</span><span\
+    \ class=\"n\">SEED</span><span class=\"p\">)</span>\n<span class=\"n\">torch</span><span\
     \ class=\"o\">.</span><span class=\"n\">cuda</span><span class=\"o\">.</span><span\
-    \ class=\"n\">is_available</span><span class=\"p\">()</span> <span class=\"k\"\
-    >else</span> <span class=\"s1\">'cpu'</span><span class=\"p\">)</span>\n<span\
-    \ class=\"n\">device</span>\n</pre></div>\n</div>\n</div>\n</div>\n<div class=\"\
-    output_wrapper\">\n<div class=\"output\">\n<div class=\"output_area\">\n<div class=\"\
-    prompt output_prompt\">Out[2]:</div>\n<div class=\"output_text output_subarea\
-    \ output_execute_result\">\n<pre>device(type='cuda')</pre>\n</div>\n</div>\n</div>\n\
-    </div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\">\n<div\
-    \ class=\"input\">\n<div class=\"prompt input_prompt\">In\_[3]:</div>\n<div class=\"\
-    inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"\
-    ><pre><span></span><span class=\"n\">SEED</span> <span class=\"o\">=</span> <span\
-    \ class=\"mi\">51</span>\n<span class=\"n\">torch</span><span class=\"o\">.</span><span\
-    \ class=\"n\">random</span><span class=\"o\">.</span><span class=\"n\">manual_seed</span><span\
-    \ class=\"p\">(</span><span class=\"n\">SEED</span><span class=\"p\">)</span>\n\
-    <span class=\"n\">torch</span><span class=\"o\">.</span><span class=\"n\">cuda</span><span\
-    \ class=\"o\">.</span><span class=\"n\">manual_seed_all</span><span class=\"p\"\
-    >(</span><span class=\"n\">SEED</span><span class=\"p\">)</span>\n<span class=\"\
-    n\">np</span><span class=\"o\">.</span><span class=\"n\">random</span><span class=\"\
-    o\">.</span><span class=\"n\">seed</span><span class=\"p\">(</span><span class=\"\
-    n\">SEED</span><span class=\"p\">)</span>\n</pre></div>\n</div>\n</div>\n</div>\n\
-    </div>\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
-    prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
-    \ border-box-sizing rendered_html\">\n<h1 id=\"Load-the-dataset\">Load the dataset<a\
-    \ class=\"anchor-link\" href=\"#Load-the-dataset\">\xB6</a></h1><p>Load the CIFAR10\
-    \ dataset bellow. You can use either <code>torchvision.datasets.CIFAR10</code>\
-    \ or <code>sklearn.datasets.fetch_openml()</code> or any other way to load the\
-    \ dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell\
-    \ rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_\
-    [4]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"\
-    highlight hl-python\"><pre><span></span><span class=\"n\">cifar_root</span> <span\
-    \ class=\"o\">=</span> <span class=\"s1\">'cifir10'</span>\n<span class=\"n\"\
-    >transform</span> <span class=\"o\">=</span> <span class=\"n\">transforms</span><span\
-    \ class=\"o\">.</span><span class=\"n\">Compose</span><span class=\"p\">([</span>\n\
-    \    <span class=\"n\">transforms</span><span class=\"o\">.</span><span class=\"\
-    n\">ToTensor</span><span class=\"p\">(),</span>\n    <span class=\"n\">transforms</span><span\
-    \ class=\"o\">.</span><span class=\"n\">Normalize</span><span class=\"p\">((</span><span\
+    \ class=\"n\">manual_seed_all</span><span class=\"p\">(</span><span class=\"n\"\
+    >SEED</span><span class=\"p\">)</span>\n<span class=\"n\">np</span><span class=\"\
+    o\">.</span><span class=\"n\">random</span><span class=\"o\">.</span><span class=\"\
+    n\">seed</span><span class=\"p\">(</span><span class=\"n\">SEED</span><span class=\"\
+    p\">)</span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell\
+    \ border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\">\n\
+    </div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
+    \ rendered_html\">\n<h1 id=\"Load-the-dataset\">Load the dataset<a class=\"anchor-link\"\
+    \ href=\"#Load-the-dataset\">\xB6</a></h1><p>Load the CIFAR10 dataset bellow.\
+    \ You can use either <code>torchvision.datasets.CIFAR10</code> or <code>sklearn.datasets.fetch_openml()</code>\
+    \ or any other way to load the dataset.</p>\n</div>\n</div>\n</div>\n<div class=\"\
+    cell border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[4]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span class=\"\
+    n\">cifar_root</span> <span class=\"o\">=</span> <span class=\"s1\">'cifir10'</span>\n\
+    <span class=\"n\">transform</span> <span class=\"o\">=</span> <span class=\"n\"\
+    >transforms</span><span class=\"o\">.</span><span class=\"n\">Compose</span><span\
+    \ class=\"p\">([</span>\n    <span class=\"n\">transforms</span><span class=\"\
+    o\">.</span><span class=\"n\">ToTensor</span><span class=\"p\">(),</span>\n  \
+    \  <span class=\"n\">transforms</span><span class=\"o\">.</span><span class=\"\
+    n\">Normalize</span><span class=\"p\">((</span><span class=\"mf\">0.5</span><span\
+    \ class=\"p\">,</span> <span class=\"mf\">0.5</span><span class=\"p\">,</span>\
+    \ <span class=\"mf\">0.5</span><span class=\"p\">),</span> <span class=\"p\">(</span><span\
     \ class=\"mf\">0.5</span><span class=\"p\">,</span> <span class=\"mf\">0.5</span><span\
-    \ class=\"p\">,</span> <span class=\"mf\">0.5</span><span class=\"p\">),</span>\
-    \ <span class=\"p\">(</span><span class=\"mf\">0.5</span><span class=\"p\">,</span>\
-    \ <span class=\"mf\">0.5</span><span class=\"p\">,</span> <span class=\"mf\">0.5</span><span\
-    \ class=\"p\">)),</span>\n<span class=\"p\">])</span>\n<span class=\"n\">trainset</span>\
-    \ <span class=\"o\">=</span> <span class=\"n\">torchvision</span><span class=\"\
-    o\">.</span><span class=\"n\">datasets</span><span class=\"o\">.</span><span class=\"\
-    n\">CIFAR10</span><span class=\"p\">(</span><span class=\"n\">cifar_root</span><span\
-    \ class=\"p\">,</span> <span class=\"n\">train</span><span class=\"o\">=</span><span\
-    \ class=\"kc\">True</span><span class=\"p\">,</span> <span class=\"n\">download</span><span\
-    \ class=\"o\">=</span><span class=\"kc\">True</span><span class=\"p\">,</span>\
-    \ <span class=\"n\">transform</span><span class=\"o\">=</span><span class=\"n\"\
-    >transform</span><span class=\"p\">)</span>\n<span class=\"n\">trainsize</span>\
-    \ <span class=\"o\">=</span> <span class=\"nb\">int</span><span class=\"p\">(</span><span\
-    \ class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">trainset</span><span\
-    \ class=\"p\">)</span> <span class=\"o\">*</span> <span class=\"mf\">0.9</span><span\
-    \ class=\"p\">)</span>\n<span class=\"n\">valsize</span> <span class=\"o\">=</span>\
-    \ <span class=\"nb\">len</span><span class=\"p\">(</span><span class=\"n\">trainset</span><span\
-    \ class=\"p\">)</span> <span class=\"o\">-</span> <span class=\"n\">trainsize</span>\n\
-    <span class=\"n\">trainset</span><span class=\"p\">,</span> <span class=\"n\"\
-    >valset</span> <span class=\"o\">=</span> <span class=\"n\">torch</span><span\
-    \ class=\"o\">.</span><span class=\"n\">utils</span><span class=\"o\">.</span><span\
-    \ class=\"n\">data</span><span class=\"o\">.</span><span class=\"n\">random_split</span><span\
-    \ class=\"p\">(</span><span class=\"n\">trainset</span><span class=\"p\">,</span>\
-    \ <span class=\"p\">[</span><span class=\"n\">trainsize</span><span class=\"p\"\
-    >,</span> <span class=\"n\">valsize</span><span class=\"p\">])</span>\n<span class=\"\
-    n\">testset</span> <span class=\"o\">=</span> <span class=\"n\">torchvision</span><span\
-    \ class=\"o\">.</span><span class=\"n\">datasets</span><span class=\"o\">.</span><span\
-    \ class=\"n\">CIFAR10</span><span class=\"p\">(</span><span class=\"n\">cifar_root</span><span\
-    \ class=\"p\">,</span> <span class=\"n\">train</span><span class=\"o\">=</span><span\
-    \ class=\"kc\">False</span><span class=\"p\">,</span> <span class=\"n\">download</span><span\
-    \ class=\"o\">=</span><span class=\"kc\">True</span><span class=\"p\">,</span>\
-    \ <span class=\"n\">transform</span><span class=\"o\">=</span><span class=\"n\"\
-    >transform</span><span class=\"p\">)</span>\n</pre></div>\n</div>\n</div>\n</div>\n\
-    <div class=\"output_wrapper\">\n<div class=\"output\">\n<div class=\"output_area\"\
-    >\n<div class=\"prompt\"></div>\n<div class=\"output_subarea output_stream output_stdout\
-    \ output_text\">\n<pre>Files already downloaded and verified\nFiles already downloaded\
-    \ and verified\n</pre>\n</div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"\
-    cell border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\"\
-    >\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
-    \ rendered_html\">\n<h1 id=\"Design-your-model\">Design your model<a class=\"\
-    anchor-link\" href=\"#Design-your-model\">\xB6</a></h1><p>Write your CNN model\
-    \ below using <code>torch.nn</code> modules. Feel free to add extra cells.</p>\n\
-    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\"\
-    >\n<div class=\"input\">\n<div class=\"prompt input_prompt\">In\_[5]:</div>\n\
-    <div class=\"inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight\
-    \ hl-python\"><pre><span></span><span class=\"k\">class</span> <span class=\"\
-    nc\">Net</span><span class=\"p\">(</span><span class=\"n\">nn</span><span class=\"\
-    o\">.</span><span class=\"n\">Module</span><span class=\"p\">):</span>\n    <span\
-    \ class=\"k\">def</span> <span class=\"fm\">__init__</span><span class=\"p\">(</span><span\
-    \ class=\"bp\">self</span><span class=\"p\">):</span>\n        <span class=\"\
-    nb\">super</span><span class=\"p\">()</span><span class=\"o\">.</span><span class=\"\
-    fm\">__init__</span><span class=\"p\">()</span>\n        <span class=\"bp\">self</span><span\
-    \ class=\"o\">.</span><span class=\"n\">conv</span> <span class=\"o\">=</span>\
-    \ <span class=\"n\">nn</span><span class=\"o\">.</span><span class=\"n\">Sequential</span><span\
-    \ class=\"p\">(</span>              <span class=\"c1\"># B 3   32  32</span>\n\
+    \ class=\"p\">,</span> <span class=\"mf\">0.5</span><span class=\"p\">)),</span>\n\
+    <span class=\"p\">])</span>\n<span class=\"n\">trainset</span> <span class=\"\
+    o\">=</span> <span class=\"n\">torchvision</span><span class=\"o\">.</span><span\
+    \ class=\"n\">datasets</span><span class=\"o\">.</span><span class=\"n\">CIFAR10</span><span\
+    \ class=\"p\">(</span><span class=\"n\">cifar_root</span><span class=\"p\">,</span>\
+    \ <span class=\"n\">train</span><span class=\"o\">=</span><span class=\"kc\">True</span><span\
+    \ class=\"p\">,</span> <span class=\"n\">download</span><span class=\"o\">=</span><span\
+    \ class=\"kc\">True</span><span class=\"p\">,</span> <span class=\"n\">transform</span><span\
+    \ class=\"o\">=</span><span class=\"n\">transform</span><span class=\"p\">)</span>\n\
+    <span class=\"n\">trainsize</span> <span class=\"o\">=</span> <span class=\"nb\"\
+    >int</span><span class=\"p\">(</span><span class=\"nb\">len</span><span class=\"\
+    p\">(</span><span class=\"n\">trainset</span><span class=\"p\">)</span> <span\
+    \ class=\"o\">*</span> <span class=\"mf\">0.9</span><span class=\"p\">)</span>\n\
+    <span class=\"n\">valsize</span> <span class=\"o\">=</span> <span class=\"nb\"\
+    >len</span><span class=\"p\">(</span><span class=\"n\">trainset</span><span class=\"\
+    p\">)</span> <span class=\"o\">-</span> <span class=\"n\">trainsize</span>\n<span\
+    \ class=\"n\">trainset</span><span class=\"p\">,</span> <span class=\"n\">valset</span>\
+    \ <span class=\"o\">=</span> <span class=\"n\">torch</span><span class=\"o\">.</span><span\
+    \ class=\"n\">utils</span><span class=\"o\">.</span><span class=\"n\">data</span><span\
+    \ class=\"o\">.</span><span class=\"n\">random_split</span><span class=\"p\">(</span><span\
+    \ class=\"n\">trainset</span><span class=\"p\">,</span> <span class=\"p\">[</span><span\
+    \ class=\"n\">trainsize</span><span class=\"p\">,</span> <span class=\"n\">valsize</span><span\
+    \ class=\"p\">])</span>\n<span class=\"n\">testset</span> <span class=\"o\">=</span>\
+    \ <span class=\"n\">torchvision</span><span class=\"o\">.</span><span class=\"\
+    n\">datasets</span><span class=\"o\">.</span><span class=\"n\">CIFAR10</span><span\
+    \ class=\"p\">(</span><span class=\"n\">cifar_root</span><span class=\"p\">,</span>\
+    \ <span class=\"n\">train</span><span class=\"o\">=</span><span class=\"kc\">False</span><span\
+    \ class=\"p\">,</span> <span class=\"n\">download</span><span class=\"o\">=</span><span\
+    \ class=\"kc\">True</span><span class=\"p\">,</span> <span class=\"n\">transform</span><span\
+    \ class=\"o\">=</span><span class=\"n\">transform</span><span class=\"p\">)</span>\n\
+    </pre></div>\n</div>\n</div>\n</div>\n<div class=\"output_wrapper\">\n<div class=\"\
+    output\">\n<div class=\"output_area\">\n<div class=\"prompt\"></div>\n<div class=\"\
+    output_subarea output_stream output_stdout output_text\">\n<pre>Files already\
+    \ downloaded and verified\nFiles already downloaded and verified\n</pre>\n</div>\n\
+    </div>\n</div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell\
+    \ rendered\"><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\"\
+    >\n<div class=\"text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"\
+    Design-your-model\">Design your model<a class=\"anchor-link\" href=\"#Design-your-model\"\
+    >\xB6</a></h1><p>Write your CNN model below using <code>torch.nn</code> modules.\
+    \ Feel free to add extra cells.</p>\n</div>\n</div>\n</div>\n<div class=\"cell\
+    \ border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[5]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span class=\"\
+    k\">class</span> <span class=\"nc\">Net</span><span class=\"p\">(</span><span\
+    \ class=\"n\">nn</span><span class=\"o\">.</span><span class=\"n\">Module</span><span\
+    \ class=\"p\">):</span>\n    <span class=\"k\">def</span> <span class=\"fm\">__init__</span><span\
+    \ class=\"p\">(</span><span class=\"bp\">self</span><span class=\"p\">):</span>\n\
+    \        <span class=\"nb\">super</span><span class=\"p\">()</span><span class=\"\
+    o\">.</span><span class=\"fm\">__init__</span><span class=\"p\">()</span>\n  \
+    \      <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"\
+    n\">conv</span> <span class=\"o\">=</span> <span class=\"n\">nn</span><span class=\"\
+    o\">.</span><span class=\"n\">Sequential</span><span class=\"p\">(</span>    \
+    \          <span class=\"c1\"># B 3   32  32</span>\n            <span class=\"\
+    n\">nn</span><span class=\"o\">.</span><span class=\"n\">Conv2d</span><span class=\"\
+    p\">(</span><span class=\"mi\">3</span><span class=\"p\">,</span> <span class=\"\
+    mi\">16</span><span class=\"p\">,</span> <span class=\"mi\">3</span><span class=\"\
+    p\">,</span> <span class=\"n\">padding</span><span class=\"o\">=</span><span class=\"\
+    mi\">1</span><span class=\"p\">),</span>     <span class=\"c1\"># B 16  32  32</span>\n\
     \            <span class=\"n\">nn</span><span class=\"o\">.</span><span class=\"\
-    n\">Conv2d</span><span class=\"p\">(</span><span class=\"mi\">3</span><span class=\"\
-    p\">,</span> <span class=\"mi\">16</span><span class=\"p\">,</span> <span class=\"\
-    mi\">3</span><span class=\"p\">,</span> <span class=\"n\">padding</span><span\
-    \ class=\"o\">=</span><span class=\"mi\">1</span><span class=\"p\">),</span> \
-    \    <span class=\"c1\"># B 16  32  32</span>\n            <span class=\"n\">nn</span><span\
-    \ class=\"o\">.</span><span class=\"n\">ReLU</span><span class=\"p\">(),</span>\n\
+    n\">ReLU</span><span class=\"p\">(),</span>\n            <span class=\"n\">nn</span><span\
+    \ class=\"o\">.</span><span class=\"n\">Conv2d</span><span class=\"p\">(</span><span\
+    \ class=\"mi\">16</span><span class=\"p\">,</span> <span class=\"mi\">16</span><span\
+    \ class=\"p\">,</span> <span class=\"mi\">3</span><span class=\"p\">,</span> <span\
+    \ class=\"n\">padding</span><span class=\"o\">=</span><span class=\"mi\">1</span><span\
+    \ class=\"p\">),</span>    <span class=\"c1\"># B 16  32  32</span>\n        \
+    \    <span class=\"n\">nn</span><span class=\"o\">.</span><span class=\"n\">ReLU</span><span\
+    \ class=\"p\">(),</span>\n            <span class=\"n\">nn</span><span class=\"\
+    o\">.</span><span class=\"n\">MaxPool2d</span><span class=\"p\">(</span><span\
+    \ class=\"mi\">2</span><span class=\"p\">,</span> <span class=\"mi\">2</span><span\
+    \ class=\"p\">),</span>                 <span class=\"c1\"># B 16  16  16</span>\n\
     \            <span class=\"n\">nn</span><span class=\"o\">.</span><span class=\"\
-    n\">Conv2d</span><span class=\"p\">(</span><span class=\"mi\">16</span><span class=\"\
-    p\">,</span> <span class=\"mi\">16</span><span class=\"p\">,</span> <span class=\"\
-    mi\">3</span><span class=\"p\">,</span> <span class=\"n\">padding</span><span\
-    \ class=\"o\">=</span><span class=\"mi\">1</span><span class=\"p\">),</span> \
-    \   <span class=\"c1\"># B 16  32  32</span>\n            <span class=\"n\">nn</span><span\
-    \ class=\"o\">.</span><span class=\"n\">ReLU</span><span class=\"p\">(),</span>\n\
+    n\">Dropout2d</span><span class=\"p\">(</span><span class=\"n\">p</span><span\
+    \ class=\"o\">=</span><span class=\"mf\">0.2</span><span class=\"p\">),</span>\n\
     \            <span class=\"n\">nn</span><span class=\"o\">.</span><span class=\"\
-    n\">MaxPool2d</span><span class=\"p\">(</span><span class=\"mi\">2</span><span\
-    \ class=\"p\">,</span> <span class=\"mi\">2</span><span class=\"p\">),</span>\
-    \                 <span class=\"c1\"># B 16  16  16</span>\n            <span\
-    \ class=\"n\">nn</span><span class=\"o\">.</span><span class=\"n\">Dropout2d</span><span\
-    \ class=\"p\">(</span><span class=\"n\">p</span><span class=\"o\">=</span><span\
-    \ class=\"mf\">0.2</span><span class=\"p\">),</span>\n            <span class=\"\
-    n\">nn</span><span class=\"o\">.</span><span class=\"n\">BatchNorm2d</span><span\
-    \ class=\"p\">(</span><span class=\"mi\">16</span><span class=\"p\">),</span>\n\
-    \        <span class=\"p\">)</span>\n        <span class=\"bp\">self</span><span\
-    \ class=\"o\">.</span><span class=\"n\">fc</span> <span class=\"o\">=</span> <span\
-    \ class=\"n\">nn</span><span class=\"o\">.</span><span class=\"n\">Sequential</span><span\
-    \ class=\"p\">(</span>\n            <span class=\"n\">nn</span><span class=\"\
-    o\">.</span><span class=\"n\">Flatten</span><span class=\"p\">(),</span>     \
-    \                  <span class=\"c1\"># B 4096</span>\n            <span class=\"\
-    n\">nn</span><span class=\"o\">.</span><span class=\"n\">Linear</span><span class=\"\
-    p\">(</span><span class=\"mi\">4096</span><span class=\"p\">,</span> <span class=\"\
-    mi\">10</span><span class=\"p\">),</span>                <span class=\"c1\">#\
-    \ B 10</span>\n        <span class=\"p\">)</span>\n\n    <span class=\"k\">def</span>\
-    \ <span class=\"nf\">forward</span><span class=\"p\">(</span><span class=\"bp\"\
-    >self</span><span class=\"p\">,</span> <span class=\"n\">x</span><span class=\"\
-    p\">:</span> <span class=\"n\">torch</span><span class=\"o\">.</span><span class=\"\
-    n\">Tensor</span><span class=\"p\">)</span> <span class=\"o\">-&gt;</span> <span\
-    \ class=\"n\">torch</span><span class=\"o\">.</span><span class=\"n\">Tensor</span><span\
-    \ class=\"p\">:</span>\n        <span class=\"n\">x</span> <span class=\"o\">=</span>\
-    \ <span class=\"bp\">self</span><span class=\"o\">.</span><span class=\"n\">conv</span><span\
-    \ class=\"p\">(</span><span class=\"n\">x</span><span class=\"p\">)</span>\n \
-    \       <span class=\"n\">x</span> <span class=\"o\">=</span> <span class=\"bp\"\
-    >self</span><span class=\"o\">.</span><span class=\"n\">fc</span><span class=\"\
-    p\">(</span><span class=\"n\">x</span><span class=\"p\">)</span>\n        <span\
-    \ class=\"k\">return</span> <span class=\"n\">x</span>\n</pre></div>\n</div>\n\
-    </div>\n</div>\n</div>\n<div class=\"cell border-box-sizing text_cell rendered\"\
-    ><div class=\"prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"\
-    text_cell_render border-box-sizing rendered_html\">\n<h1 id=\"Train-your-model\"\
-    >Train your model<a class=\"anchor-link\" href=\"#Train-your-model\">\xB6</a></h1><p>Write\
-    \ the training process below. Instantiate your model, Create an optimizer function\
-    \ such as Adam or SGD, and write your train/validation loop. Then train your model\
-    \ until it converges. Feel free to add extra cells.</p>\n</div>\n</div>\n</div>\n\
-    <div class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"input\"\
-    >\n<div class=\"prompt input_prompt\">In\_[6]:</div>\n<div class=\"inner_cell\"\
-    >\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span\
-    \ class=\"k\">class</span> <span class=\"nc\">Trainer</span><span class=\"p\"\
-    >:</span>\n    <span class=\"n\">CHECKPOINT</span> <span class=\"o\">=</span>\
-    \ <span class=\"s1\">'cifar-cnn.pth'</span>\n    <span class=\"n\">CLASSES</span>\
-    \ <span class=\"o\">=</span> <span class=\"p\">(</span><span class=\"s1\">'plane'</span><span\
+    n\">BatchNorm2d</span><span class=\"p\">(</span><span class=\"mi\">16</span><span\
+    \ class=\"p\">),</span>\n        <span class=\"p\">)</span>\n        <span class=\"\
+    bp\">self</span><span class=\"o\">.</span><span class=\"n\">fc</span> <span class=\"\
+    o\">=</span> <span class=\"n\">nn</span><span class=\"o\">.</span><span class=\"\
+    n\">Sequential</span><span class=\"p\">(</span>\n            <span class=\"n\"\
+    >nn</span><span class=\"o\">.</span><span class=\"n\">Flatten</span><span class=\"\
+    p\">(),</span>                       <span class=\"c1\"># B 4096</span>\n    \
+    \        <span class=\"n\">nn</span><span class=\"o\">.</span><span class=\"n\"\
+    >Linear</span><span class=\"p\">(</span><span class=\"mi\">4096</span><span class=\"\
+    p\">,</span> <span class=\"mi\">10</span><span class=\"p\">),</span>         \
+    \       <span class=\"c1\"># B 10</span>\n        <span class=\"p\">)</span>\n\
+    \n    <span class=\"k\">def</span> <span class=\"nf\">forward</span><span class=\"\
+    p\">(</span><span class=\"bp\">self</span><span class=\"p\">,</span> <span class=\"\
+    n\">x</span><span class=\"p\">:</span> <span class=\"n\">torch</span><span class=\"\
+    o\">.</span><span class=\"n\">Tensor</span><span class=\"p\">)</span> <span class=\"\
+    o\">-&gt;</span> <span class=\"n\">torch</span><span class=\"o\">.</span><span\
+    \ class=\"n\">Tensor</span><span class=\"p\">:</span>\n        <span class=\"\
+    n\">x</span> <span class=\"o\">=</span> <span class=\"bp\">self</span><span class=\"\
+    o\">.</span><span class=\"n\">conv</span><span class=\"p\">(</span><span class=\"\
+    n\">x</span><span class=\"p\">)</span>\n        <span class=\"n\">x</span> <span\
+    \ class=\"o\">=</span> <span class=\"bp\">self</span><span class=\"o\">.</span><span\
+    \ class=\"n\">fc</span><span class=\"p\">(</span><span class=\"n\">x</span><span\
+    \ class=\"p\">)</span>\n        <span class=\"k\">return</span> <span class=\"\
+    n\">x</span>\n</pre></div>\n</div>\n</div>\n</div>\n</div>\n<div class=\"cell\
+    \ border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\">\n\
+    </div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
+    \ rendered_html\">\n<h1 id=\"Train-your-model\">Train your model<a class=\"anchor-link\"\
+    \ href=\"#Train-your-model\">\xB6</a></h1><p>Write the training process below.\
+    \ Instantiate your model, Create an optimizer function such as Adam or SGD, and\
+    \ write your train/validation loop. Then train your model until it converges.\
+    \ Feel free to add extra cells.</p>\n</div>\n</div>\n</div>\n<div class=\"cell\
+    \ border-box-sizing code_cell rendered\">\n<div class=\"input\">\n<div class=\"\
+    prompt input_prompt\">In\_[6]:</div>\n<div class=\"inner_cell\">\n<div class=\"\
+    input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span class=\"\
+    k\">class</span> <span class=\"nc\">Trainer</span><span class=\"p\">:</span>\n\
+    \    <span class=\"n\">CHECKPOINT</span> <span class=\"o\">=</span> <span class=\"\
+    s1\">'cifar-cnn.pth'</span>\n    <span class=\"n\">CLASSES</span> <span class=\"\
+    o\">=</span> <span class=\"p\">(</span><span class=\"s1\">'plane'</span><span\
     \ class=\"p\">,</span> <span class=\"s1\">'car'</span><span class=\"p\">,</span>\
     \ <span class=\"s1\">'bird'</span><span class=\"p\">,</span> <span class=\"s1\"\
     >'cat'</span><span class=\"p\">,</span> \n               <span class=\"s1\">'deer'</span><span\
@@ -3699,7 +4288,8 @@ notebooks/learning-tasks/solutions/2_cifar10_classification_cnn/index:
     \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
     >In\_[11]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
     \ class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n\
-    </div>\n</div>\n Ahmad Salimi"
+    </div>\n</div>\n Ahmad Salimi <p>Classification with Convolutional Neural Networks:\
+    \ A solution</p>"
   description: 'CIFAR10 classification with a convolutional model with pytorch.
 
     '
@@ -3707,24 +4297,22 @@ notebooks/learning-tasks/solutions/2_cifar10_classification_cnn/index:
   url: notebooks/learning-tasks/solutions/2_cifar10_classification_cnn/index.html
 notebooks/learning-tasks/solutions/3_transfer_learning/index:
   category: Content
-  content: "<p>CIFAR10 classification with transfer learning on Inception V3.</p>\
-    \ <p>Classification with Transfer Learning: A solution</p> \n<div class=\"cell\
-    \ border-box-sizing text_cell rendered\"><div class=\"prompt input_prompt\">\n\
-    </div><div class=\"inner_cell\">\n<div class=\"text_cell_render border-box-sizing\
-    \ rendered_html\">\n<p>In this task, you should train Inception V3 with pytorch\
-    \ using transfer learning to classify CIFAR10 dataset.</p>\n</div>\n</div>\n</div>\n\
-    <div class=\"cell border-box-sizing code_cell rendered\">\n<div class=\"input\"\
-    >\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n<div class=\"inner_cell\"\
-    >\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"><pre><span></span><span\
-    \ class=\"kn\">from</span> <span class=\"nn\">typing</span> <span class=\"kn\"\
-    >import</span> <span class=\"n\">Tuple</span><span class=\"p\">,</span> <span\
-    \ class=\"n\">Iterable</span><span class=\"p\">,</span> <span class=\"n\">List</span>\n\
-    <span class=\"kn\">from</span> <span class=\"nn\">tqdm</span> <span class=\"kn\"\
-    >import</span> <span class=\"n\">tqdm</span>\n<span class=\"kn\">from</span> <span\
-    \ class=\"nn\">time</span> <span class=\"kn\">import</span> <span class=\"n\"\
-    >time</span>\n<span class=\"kn\">import</span> <span class=\"nn\">re</span>\n\n\
-    <span class=\"kn\">import</span> <span class=\"nn\">torchvision</span>\n<span\
-    \ class=\"kn\">from</span> <span class=\"nn\">torchvision</span> <span class=\"\
+  content: "\n<div class=\"cell border-box-sizing text_cell rendered\"><div class=\"\
+    prompt input_prompt\">\n</div><div class=\"inner_cell\">\n<div class=\"text_cell_render\
+    \ border-box-sizing rendered_html\">\n<p>In this task, you should train Inception\
+    \ V3 with pytorch using transfer learning to classify CIFAR10 dataset.</p>\n</div>\n\
+    </div>\n</div>\n<div class=\"cell border-box-sizing code_cell rendered\">\n<div\
+    \ class=\"input\">\n<div class=\"prompt input_prompt\">In\_[\_]:</div>\n<div class=\"\
+    inner_cell\">\n<div class=\"input_area\">\n<div class=\"highlight hl-python\"\
+    ><pre><span></span><span class=\"kn\">from</span> <span class=\"nn\">typing</span>\
+    \ <span class=\"kn\">import</span> <span class=\"n\">Tuple</span><span class=\"\
+    p\">,</span> <span class=\"n\">Iterable</span><span class=\"p\">,</span> <span\
+    \ class=\"n\">List</span>\n<span class=\"kn\">from</span> <span class=\"nn\">tqdm</span>\
+    \ <span class=\"kn\">import</span> <span class=\"n\">tqdm</span>\n<span class=\"\
+    kn\">from</span> <span class=\"nn\">time</span> <span class=\"kn\">import</span>\
+    \ <span class=\"n\">time</span>\n<span class=\"kn\">import</span> <span class=\"\
+    nn\">re</span>\n\n<span class=\"kn\">import</span> <span class=\"nn\">torchvision</span>\n\
+    <span class=\"kn\">from</span> <span class=\"nn\">torchvision</span> <span class=\"\
     kn\">import</span> <span class=\"n\">datasets</span><span class=\"p\">,</span>\
     \ <span class=\"n\">transforms</span><span class=\"p\">,</span> <span class=\"\
     n\">models</span>\n<span class=\"kn\">import</span> <span class=\"nn\">torch</span>\n\
@@ -3820,9 +4408,9 @@ notebooks/learning-tasks/solutions/3_transfer_learning/index:
     >\n<div class=\"prompt\"></div>\n<div class=\"output_subarea output_stream output_stdout\
     \ output_text\">\n<pre>Downloading https://www.cs.toronto.edu/~kriz/cifar-10-python.tar.gz\
     \ to cifir10/cifar-10-python.tar.gz\n</pre>\n</div>\n</div>\n<div class=\"output_area\"\
-    >\n<div class=\"prompt\"></div>\n<div id=\"bd9cc35b-4fd2-43f3-8177-4266e61b5a41\"\
+    >\n<div class=\"prompt\"></div>\n<div id=\"2b6fd6b2-332d-4493-b839-0fb1817e47f3\"\
     ></div>\n<div class=\"output_subarea output_widget_view\">\n<script type=\"text/javascript\"\
-    >\nvar element = $('#bd9cc35b-4fd2-43f3-8177-4266e61b5a41');\n</script>\n<script\
+    >\nvar element = $('#2b6fd6b2-332d-4493-b839-0fb1817e47f3');\n</script>\n<script\
     \ type=\"application/vnd.jupyter.widget-view+json\">\n{\"model_id\": \"580bb0a57f5c4248955c4706c0bbef37\"\
     , \"version_minor\": 0, \"version_major\": 2}\n</script>\n</div>\n</div>\n<div\
     \ class=\"output_area\">\n<div class=\"prompt\"></div>\n<div class=\"output_subarea\
@@ -3848,8 +4436,8 @@ notebooks/learning-tasks/solutions/3_transfer_learning/index:
     >\n<pre>Downloading: \"https://download.pytorch.org/models/inception_v3_google-0cc3c7bd.pth\"\
     \ to /root/.cache/torch/hub/checkpoints/inception_v3_google-0cc3c7bd.pth\n</pre>\n\
     </div>\n</div>\n<div class=\"output_area\">\n<div class=\"prompt\"></div>\n<div\
-    \ id=\"c62624e3-7bcc-4815-8b89-e54be8272e82\"></div>\n<div class=\"output_subarea\
-    \ output_widget_view\">\n<script type=\"text/javascript\">\nvar element = $('#c62624e3-7bcc-4815-8b89-e54be8272e82');\n\
+    \ id=\"040642d2-4fe5-49e8-bf21-6d29932e85d4\"></div>\n<div class=\"output_subarea\
+    \ output_widget_view\">\n<script type=\"text/javascript\">\nvar element = $('#040642d2-4fe5-49e8-bf21-6d29932e85d4');\n\
     </script>\n<script type=\"application/vnd.jupyter.widget-view+json\">\n{\"model_id\"\
     : \"b2020f9c8c8f4c96b4437b02641ae31f\", \"version_minor\": 0, \"version_major\"\
     : 2}\n</script>\n</div>\n</div>\n<div class=\"output_area\">\n<div class=\"prompt\
@@ -5282,7 +5870,8 @@ notebooks/learning-tasks/solutions/3_transfer_learning/index:
     \ code_cell rendered\">\n<div class=\"input\">\n<div class=\"prompt input_prompt\"\
     >In\_[\_]:</div>\n<div class=\"inner_cell\">\n<div class=\"input_area\">\n<div\
     \ class=\"highlight hl-python\"><pre><span></span>\n</pre></div>\n</div>\n</div>\n\
-    </div>\n</div>\n Ahmad Salimi"
+    </div>\n</div>\n <p>CIFAR10 classification with transfer learning on Inception\
+    \ V3.</p> Ahmad Salimi <p>Classification with Transfer Learning: A solution</p>"
   description: 'CIFAR10 classification with transfer learning on Inception V3.
 
     '

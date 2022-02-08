@@ -36,6 +36,11 @@ basics:
     kind: Notebook Exercise
     description: <p>numpy excersices</p>
     link: /edu-content/notebooks/basics/numpy/numpy.html
+  - notebook: notebooks/basics/pandas/pandas.ipynb
+    text: 2. Pandas basics
+    kind: Notebook Exercise
+    description: <p>pandas excersices</p>
+    link: /edu-content/notebooks/basics/pandas/pandas.html
 learning-tasks:
   label:
     text: Learning Tasks
