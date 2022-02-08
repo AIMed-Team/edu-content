@@ -9,15 +9,15 @@ basics:
       kind: Notebook Exercise
       description: numpy excersices
 
-    - notebook: notebooks/basics/pandas/pandas.ipynb
-      text: 2. Pandas basics
-      kind: Notebook Exercise
-      description: pandas excersices
-
     # - notebook: notebooks/basics/matplotlib/matplotlib.ipynb
     #   text: ''
     #   kind: Notebook Exercise
     #   description: matplotlib excersices
+
+    # - notebook: notebooks/basics/pandas/pandas.ipynb
+    #   text: ''
+    #   kind: Notebook Exercise
+    #   description: pandas excersices
 
     # - notebook: notebooks/basics/linear_algebra_and_statistics/linear_algebra_and_statistics.ipynb
     #   text: ''

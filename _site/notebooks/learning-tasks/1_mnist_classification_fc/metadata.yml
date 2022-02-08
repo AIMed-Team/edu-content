@@ -1,0 +1,41 @@
+title: Classification with Fully Connected Neural Networks
+
+meta:
+  - name: keywords
+    content: Artificial Intelligence, Deep Learning, Fully Connected Neural Network, Classification, MNIST
+    
+header:
+  title: Classification with Fully Connected Neural Networks
+  description: |
+    MNIST classification with a fully connected model with pytorch.
+  background: images/header.png
+
+solution:
+  label: 
+    text: A solution
+    position: top
+  content:
+    - notebook: notebooks/learning-tasks/solutions/1_mnist_classification_fc
+      text: 'Classification with Fully Connected Neural Networks: A Solution'
+      kind: ''
+      description: 'Please see this after you have done it yourself.'
+
+authors:
+  label:
+    position: top
+    text: Authors
+  kind: people
+  content:
+    - name: Ahmad Salimi
+      role: Author
+      contact:
+        - link: https://github.com/ahmadsalimi
+          icon: fab fa-github
+        - link: https://www.linkedin.com/in/ahmadsalimi/
+          icon: fab fa-linkedin
+        - link: mailto://ahsalimi@ce.sharif.edu
+          icon: fas fa-envelope
+
+# comments:
+#   label: false
+#   kind: comments
