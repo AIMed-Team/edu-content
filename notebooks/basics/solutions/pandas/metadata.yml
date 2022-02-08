@@ -1,0 +1,39 @@
+title: Basic pandas excersices
+
+meta:
+  - name: keywords
+    content: Pandas basics , tricky Pandas
+    
+header:
+  title: Basic and tricky pandas functions
+  description: |
+    Main preprocessing techniques for pandas package
+  background: images/pandas.png
+
+solution:
+  label: 
+    text: A solution
+    position: top
+  content:
+    - notebook: notebooks/basics/solutions/pandas/pandas_solutions.ipynb
+      text: 'Main preprocessing techniques for Pandas package'
+      kind: ''
+      description: 'Please see this after you have done it yourself.'
+
+authors:
+  label:
+    position: top
+    text: Authors
+  kind: people
+  content:
+    - name: Amin Rezaee
+      role: Author
+      contact:
+        - link: https://github.com/aminrezaee
+          icon: fab fa-github
+        - link: mailto://rezaeea73@gmail.com
+          icon: fas fa-envelope
+
+# comments:
+#   label: false
+#   kind: comments
