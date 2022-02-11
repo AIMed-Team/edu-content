@@ -9,14 +9,14 @@ header:
   description: |
     Tricky actions numpy could provide
 
-solution:
+blank:
   label: 
-    text: A solution
+    text: The blank notebook
     position: top
   content:
     - notebook: notebooks/basics/numpy_tricky/main.ipynb
       text: Tricks in numpy
-      kind: ''
+      kind: Notebook Exercise
       description: Tricky actions numpy could provide
 
 authors:
