@@ -1,13 +1,13 @@
-title: Basic numpy excersices
+title: Basic Image processing excersices
 
 meta:
   - name: keywords
-    content: Numpy basics , tricky numpy
+    content: Image processing basics
     
 header:
-  title: Basic and tricky numpy functions
+  title: Basic Image processing functions
   description: |
-    Main preprocessing techniques for Numpy package
+    Basic image processing techniques
   background: images/header.png
 
 solution:
@@ -15,8 +15,8 @@ solution:
     text: A solution
     position: top
   content:
-    - notebook: notebooks/basics/solutions/numpy/numpy_solutions.ipynb
-      text: 'Main preprocessing techniques for Numpy package'
+    - notebook: notebooks/basics/solutions/image_processing/image_processing_solutions.ipynb
+      text: 'Basic Image preprocessing techniques'
       kind: ''
       description: 'Please see this after you have done it yourself.'
 

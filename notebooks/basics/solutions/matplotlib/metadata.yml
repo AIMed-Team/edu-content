@@ -1,22 +1,22 @@
-title: Basic numpy excersices
+title: Basic Matplotlib excersices
 
 meta:
   - name: keywords
-    content: Numpy basics , tricky numpy
-    
+    content: matplotlib basics
+
 header:
-  title: Basic and tricky numpy functions
+  title: Basic matplotlib functions
   description: |
-    Main preprocessing techniques for Numpy package
+    Basic matplotlib functionality
   background: images/header.png
 
 solution:
-  label: 
+  label:
     text: A solution
     position: top
   content:
-    - notebook: notebooks/basics/solutions/numpy/numpy_solutions.ipynb
-      text: 'Main preprocessing techniques for Numpy package'
+    - notebook: notebooks/basics/solutions/matplotlib/matplotlib_solutions.ipynb
+      text: 'Basic matplotlib techniques'
       kind: ''
       description: 'Please see this after you have done it yourself.'
 

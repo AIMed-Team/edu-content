@@ -1,13 +1,13 @@
-title: Basic numpy excersices
+title: Basic Statistics excersices
 
 meta:
   - name: keywords
-    content: Numpy basics , tricky numpy
+    content: Statistics basics
     
 header:
-  title: Basic and tricky numpy functions
+  title: Basic statistics functions
   description: |
-    Main preprocessing techniques for Numpy package
+    Basic statistics techniques
   background: images/header.png
 
 solution:
@@ -15,8 +15,8 @@ solution:
     text: A solution
     position: top
   content:
-    - notebook: notebooks/basics/solutions/numpy/numpy_solutions.ipynb
-      text: 'Main preprocessing techniques for Numpy package'
+    - notebook: notebooks/basics/solutions/statistics/statistics_solutions.ipynb
+      text: 'Basic statistics techniques'
       kind: ''
       description: 'Please see this after you have done it yourself.'
 

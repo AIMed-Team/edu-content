@@ -8,7 +8,7 @@ header:
   title: Basic and tricky Pandas functions
   description: |
     Main preprocessing techniques for pandas package
-  background: images/pandas.png
+  background: images/header.png
 
 solution:
   label: 

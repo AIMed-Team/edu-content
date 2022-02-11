@@ -1,13 +1,13 @@
-title: Basic numpy and linear algebra excersices
+title: Basic Image processing excersices
 
 meta:
   - name: keywords
-    content: Numpy basics , tricky numpy and linear algebra
+    content: Image processing basics
 
 header:
-  title: Basic and tricky numpy and linear algebra functions
+  title: Basic Image processing functions
   description: |
-    Main preprocessing techniques for Numpy package
+    Basic preprocessing techniques
   background: images/header.png
 
 blank:
@@ -15,10 +15,10 @@ blank:
     text: The blank notebook
     position: top
   content:
-    - notebook: notebooks/basics/numpy/numpy.ipynb
-      text: Main preprocessing techniques for Numpy package
+    - notebook: notebooks/basics/image_processing/image_processing.ipynb
+      text:  'Basic Image preprocessing techniques'
       kind: Notebook Exercise
-      description: Basic and tricky numpy functions
+      description: Basic image processing functions
 
 authors:
   label:
