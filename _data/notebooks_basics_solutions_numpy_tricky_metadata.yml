@@ -5,14 +5,14 @@ meta:
 header:
   title: '<p>Tricks in numpy: solution</p>'
   description: <p>Tricky actions numpy could provide</p>
-solution:
+blank:
   label:
-    text: A solution
+    text: The blank notebook
     position: top
   content:
   - notebook: notebooks/basics/numpy_tricky/main.ipynb
     text: Tricks in numpy
-    kind: ''
+    kind: Notebook Exercise
     description: <p>Tricky actions numpy could provide</p>
     link: /edu-content/notebooks/basics/numpy_tricky/main.html
 authors:
