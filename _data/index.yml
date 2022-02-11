@@ -56,6 +56,11 @@ basics:
     kind: Notebook Exercise
     description: <p>Image processing excersices</p>
     link: /edu-content/notebooks/basics/image_processing/image_processing.html
+  - notebook: notebooks/basics/numpy_tricky/main.ipynb
+    text: 6. Tricks in Numpy
+    kind: Notebook Exercise
+    description: <p>Tricky actions numpy could provide</p>
+    link: /edu-content/notebooks/basics/numpy_tricky/main.html
 learning-tasks:
   label:
     text: Learning Tasks
