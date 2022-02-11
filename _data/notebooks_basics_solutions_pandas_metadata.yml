@@ -5,7 +5,7 @@ meta:
 header:
   title: <p>Basic and tricky pandas functions</p>
   description: <p>Main preprocessing techniques for pandas package</p>
-  background: /edu-content/assets/images/pandas.png
+  background: /edu-content/assets/images/header.png
 solution:
   label:
     text: A solution

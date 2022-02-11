@@ -32,15 +32,30 @@ basics:
   background: /edu-content/assets/images/bg.jpeg
   content:
   - notebook: notebooks/basics/numpy/numpy.ipynb
-    text: 1. Numpy basics
+    text: 1. Numpy and linear algebra
     kind: Notebook Exercise
     description: <p>numpy excersices</p>
     link: /edu-content/notebooks/basics/numpy/numpy.html
   - notebook: notebooks/basics/pandas/pandas.ipynb
-    text: 2. Pandas basics
+    text: 2. Pandas
     kind: Notebook Exercise
     description: <p>pandas excersices</p>
     link: /edu-content/notebooks/basics/pandas/pandas.html
+  - notebook: notebooks/basics/matplotlib/matplotlib.ipynb
+    text: 3. Matplotlib
+    kind: Notebook Exercise
+    description: <p>matplotlib excersices</p>
+    link: /edu-content/notebooks/basics/matplotlib/matplotlib.html
+  - notebook: notebooks/basics/statistics/statistics.ipynb
+    text: 4. Statistics
+    kind: Notebook Exercise
+    description: <p>statistics excersices</p>
+    link: /edu-content/notebooks/basics/statistics/statistics.html
+  - notebook: notebooks/basics/image_processing/image_processing.ipynb
+    text: 5. Image processing
+    kind: Notebook Exercise
+    description: <p>Image processing excersices</p>
+    link: /edu-content/notebooks/basics/image_processing/image_processing.html
 learning-tasks:
   label:
     text: Learning Tasks

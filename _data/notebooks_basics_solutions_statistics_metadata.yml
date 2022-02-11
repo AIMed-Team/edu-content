@@ -1,0 +1,37 @@
+title: Basic Statistics excersices
+meta:
+- name: keywords
+  content: Statistics basics
+header:
+  title: <p>Basic statistics functions</p>
+  description: <p>Basic knowledge for statistics</p>
+  background: /edu-content/assets/images/header.png
+solution:
+  label:
+    text: A solution
+    position: top
+  content:
+  - notebook: notebooks/basics/solutions/statistics/statistics_solutions.ipynb
+    text: Basic statistics techniques
+    kind: ''
+    description: <p>Please see this after you have done it yourself.</p>
+    link: /edu-content/notebooks/basics/solutions/statistics/statistics_solutions.html
+authors:
+  label:
+    position: top
+    text: Authors
+  kind: people
+  content:
+  - name: Amin Rezaee
+    role: Author
+    contact:
+    - link: https://github.com/aminrezaee
+      icon: fab fa-github
+    - link: mailto://rezaeea73@gmail.com
+      icon: fas fa-envelope
+    kind: person
+    image: https://github.com/aminrezaee.png
+kind: Content
+search:
+  content: true
+  links: false
