@@ -34,6 +34,10 @@ basics:
       kind: Notebook Exercise
       description: Tricky actions numpy could provide
 
+    - notebook: notebooks/basics/pytorch_intro/main.ipynb
+      text: 7. Introduction to Pytorch
+      kind: Notebook Exercise
+      description: an Introduction of how to use Pytorch
 learning-tasks:
   label: 
     text: Learning Tasks

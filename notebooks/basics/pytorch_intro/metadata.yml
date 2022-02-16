@@ -1,0 +1,40 @@
+title: Introduction to Pytorch
+
+meta:
+  - name: keywords
+    content: Artificial Intelligence, Deep Learning, Machine Learning, Pytorch
+    
+header:
+  title: Introduction to Pytorch
+  description: |
+    an Introduction of how to use Pytorch
+
+solution:
+  label: 
+    text: A solution
+    position: top
+  content:
+    - notebook: notebooks/basics/solutions/pytorch_intro/main.ipynb
+      text: 'Introduction to Pytorch: solution'
+      kind: ''
+      description: an Introduction of how to use Pytorch
+
+authors:
+  label:
+    position: top
+    text: Authors
+  kind: people
+  content:
+    - name: Alireza Dizaji
+      role: Author
+      contact:
+        - link: https://github.com/alirezadizaji
+          icon: fab fa-github
+        - link: https://www.linkedin.com/in/alireza-dizaji-43a634194/
+          icon: fab fa-linkedin
+        - link: mailto://alirezadizaji@ce.sharif.edu
+          icon: fas fa-envelope
+
+# comments:
+#   label: false
+#   kind: comments
