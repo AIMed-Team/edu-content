@@ -100,7 +100,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <li>learning weights and network layers used by model are defined within <code>__init__()</code>.</li>
 <li>forwarding procedure of model are developed within <code>forward()</code>.</li>
 </ol>
-<p>let's create a multi-classification model (five label) with this schema: <code>Conv</code> -&gt; <code>ReLU</code> -&gt; <code>Batchnorm</code> -&gt; <code>Conv</code> -&gt; <code>ReLU</code> -&gt; <code>Batchnorm</code> -&gt; <code>Adaptive average pooling</code> -&gt; <code>dropout</code> -&gt; <code>fully connected</code>. suppose input has one channel and <code>forward()</code> will only return output of the model</p>
+<p>let's create a multi-classification model (with ten ground-truth labels) whose layers are: <code>Conv</code> -&gt; <code>ReLU</code> -&gt; <code>Batchnorm</code> -&gt; <code>Conv</code> -&gt; <code>ReLU</code> -&gt; <code>Batchnorm</code> -&gt; <code>Adaptive average pooling</code> -&gt; <code>dropout</code> -&gt; <code>fully connected</code>. suppose input has one channel and <code>forward()</code> will only return output of the model.</p>
 </div>
 </div>
 </div>
@@ -147,8 +147,8 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Model-phases">Model phases<a class="anchor-link" href="#Model-phases">¶</a></h4><p>there are two states for a model: <code>.train()</code> and <code>.eval()</code>. models are by default at <code>.train()</code> phase, however the difference between these two is that in <code>eval()</code> phase, some layers change their behavior during inference; for instance dropout will be deactivated and batch normalization will not update estimated mean and variance during evaluation and they will be used only for normalization.
-during validation and test phases, besides <code>model.eval()</code> we should assure that back propagation is temporarily deactivated and this is possible by <code>torch.no_grad()</code>. this actually enables us to use bigger batch sizes during evaluation as it speeds up the computation and reduces memory usage by disabling gradient calculation (setting <code>requires_grad</code> attributes to <code>False</code>).</p>
+<h4 id="Model-phases">Model phases<a class="anchor-link" href="#Model-phases">¶</a></h4><p>there are two states for a model: <code>.train()</code> and <code>.eval()</code>. models are by default at <code>.train()</code> phase, however the difference between these two is that in <code>eval()</code> phase, some layers change their behavior during inference; for instance dropout will be deactivated and batch normalization will not update estimated mean and variance and they will be used only for normalization.
+during validation and test phases, besides <code>model.eval()</code> we should assure that back propagation is temporarily deactivated and this is possible by <code>torch.no_grad()</code>. indeed disabling the gradient calculation enables us to use bigger batch sizes as it speeds up the computation and reduces memory usage.</p>
 </div>
 </div>
 </div>
@@ -238,7 +238,8 @@ during validation and test phases, besides <code>model.eval()</code> we should a
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span><span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">model</span><span class="o">.</span><span class="n">parameters</span><span class="p">(),</span> <span class="n">lr</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">)</span>
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># your code here</span>
+<span class="n">optimizer</span> <span class="o">=</span> <span class="kc">None</span>
 </pre></div>
 </div>
 </div>
