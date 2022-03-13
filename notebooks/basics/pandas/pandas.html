@@ -37,6 +37,24 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p>save dataframe as tsv file ( tab separated)</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-python"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <p>sort based on petalwidth and petallength</p>
 </div>
 </div>
@@ -47,24 +65,6 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-python"><pre><span></span><span class="c1"># sort by petalwidth and petal length</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>convert data to ranks of each value</p>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-python"><pre><span></span>
 </pre></div>
 </div>
 </div>
@@ -208,7 +208,13 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-python"><pre><span></span>
+<div class="highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">random</span>
+<span class="n">data1</span> <span class="o">=</span> <span class="p">[[</span><span class="n">i</span> <span class="p">,</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">)]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100</span><span class="p">)]</span>
+<span class="n">data2</span> <span class="o">=</span> <span class="p">[[</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">20</span><span class="p">)</span> <span class="p">,</span> <span class="n">i</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span><span class="mi">140</span><span class="p">)]</span>
+
+<span class="n">dataframe1</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data1</span> <span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'id1'</span><span class="p">,</span><span class="s1">'code1'</span><span class="p">])</span>
+<span class="n">dataframe2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data2</span> <span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">'code2'</span><span class="p">,</span><span class="s1">'id2'</span><span class="p">])</span>
+<span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>

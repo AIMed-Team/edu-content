@@ -6,7 +6,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [1]:</div>
+<div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-python"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -43,7 +43,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>stack an array to matrix vertically and horizontally using hstack and vstack functions</p>
+<p>stack an array to matrix vertically and horizontally</p>
 </div>
 </div>
 </div>
@@ -301,52 +301,19 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>numpy broadcasting</p>
+<p>numpy broadcasting . we have two arrays with shape [a] and [b]. we want to compute distance between each two elements using broadcasting</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [3]:</div>
+<div class="prompt input_prompt">In [22]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
-<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span>
-<span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">)</span>
+<div class="highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">))</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">[:,</span><span class="kc">None</span><span class="p">])</span>
 </pre></div>
-</div>
-</div>
-</div>
-<div class="output_wrapper">
-<div class="output">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>[[ 10 -35  14 -40   7 -36  26 -10   1 -63]
- [ 24 -21 -39 -34 -18  59 -19  40  40  13]
- [-46 -19 -34 -42 -56 -54  -9 -36 -33  13]
- [-61 -46 -30 -16 -90 -65 -31  -5 -92 -31]
- [-12  21  11  -6  25  15  40  39  52  72]
- [  1  64  80  11  28  52   2   2   4  93]
- [-10 -25  10  -8  24  55  21  45  10 -20]
- [  1   1 -35  -1 -17 -12   1  -5 -54 -43]
- [ -5  13   0  -7  47  16  -9  -6  44 -12]
- [ 80  72  83  71  42  38  74   2  94  30]]
-[[81 54 34 77 11 72 30 85 46 64]
- [88 35 47 71 73 66 15 31 42 95]
- [65 47 23 37 49 65  4 20 -1 24]
- [47 69  7  2 90 27 24 86 17 61]
- [87 97 11 69 41 21 36 30 60 79]
- [40 60 -2 24 20 49  9 48 51 74]
- [75 22 35 45 76 72 94 36 82 87]
- [73 67 63  2 48 51 17 76 48 50]
- [82 18 40 36 11 -1 93  5 41 75]
- [ 2 20  5 40 37 33 32 31 28 69]]
-</pre>
-</div>
 </div>
 </div>
 </div>
@@ -360,7 +327,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [5]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
@@ -443,7 +410,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [6]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
@@ -478,13 +445,13 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>check array similarity using allclose function</p>
+<p>check array equality</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [25]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
@@ -534,7 +501,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 </div>
 </div>
 <div class="output_area">
-<div class="prompt output_prompt">Out[25]:</div>
+<div class="prompt output_prompt">Out[ ]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>True</pre>
 </div>
@@ -551,7 +518,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [26]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-python"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">))</span>
@@ -569,12 +536,12 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>(6, 10)
-[[25288 27321 29446 14511 20307 14473 20466 27719 21975 21413]
- [17599 17883 20935 14212 16275  8450 13598 20114 13882 11368]
- [32829 36242 36163 19929 31769 23285 26771 37599 25288 30227]
- [22708 26322 23890 11625 21578 17268 19588 25626 16443 23737]
- [16523 18736 18315  9807 15515 11387 13486 17895 12104 16508]
- [27075 26769 30413 17316 21743 19047 20645 28790 25230 20812]]
+[[27198 23758 26631 29236 30024 25866 28988 32381 27548 32317]
+ [21822 16812 22564 19234 19868 19804 21421 22619 22236 24522]
+ [17532 16197 21448 17042 15852 17436 17364 20786 19006 24099]
+ [20293 17073 21748 21726 22578 20436 22478 25206 22143 24774]
+ [19366 17936 18270 23051 22347 20072 19989 25219 22209 27155]
+ [15235 10493 10283 16152 16106 14536 17147 15988 11755 14822]]
 </pre>
 </div>
 </div>
@@ -600,6 +567,17 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 </div>
 </div>
 </div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>6
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -620,6 +598,17 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 </div>
 </div>
 </div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>382.5637201826645
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
@@ -637,6 +626,32 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <span class="n">inverse</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linalg</span><span class="o">.</span><span class="n">inv</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">inverse</span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[[ 1.17937680e-01  4.61561894e-02  3.94586052e-02 -6.70461534e-02
+   1.11310578e-01  3.39641258e-03 -1.66527139e-01 -8.22527452e-02]
+ [-5.19643711e-03 -8.01532694e-03 -3.35553931e-03  8.23834292e-04
+   9.71575917e-03  5.32460250e-03  2.01551128e-03  4.06441426e-03]
+ [-1.15504960e-01 -3.26333886e-02 -4.09521147e-02  5.70758726e-02
+  -1.11930120e-01  3.09269453e-03  1.67429570e-01  7.60452759e-02]
+ [-6.76965668e-02 -2.05573832e-02 -3.12952065e-02  3.96597215e-02
+  -7.73702766e-02 -9.24532065e-03  1.07045983e-01  5.90432445e-02]
+ [ 2.21267104e-03  4.33261913e-04  1.10425880e-02 -9.89101802e-03
+  -3.67313797e-03  6.25130637e-03  9.50929210e-03 -1.48468858e-02]
+ [-1.06658330e-02  2.03784586e-03  9.96814673e-04  9.26019771e-03
+  -8.41063714e-03 -6.19393811e-03  1.68735677e-02 -2.97425966e-05]
+ [-3.72946188e-02 -2.24650922e-02 -9.48245832e-03  2.44323063e-02
+  -2.75577904e-02  2.30789345e-03  3.47559697e-02  3.82561038e-02]
+ [ 6.89952844e-02  1.76330443e-02  1.93416236e-02 -2.43030104e-02
+   5.75984243e-02  9.40999135e-04 -9.55941929e-02 -4.20581579e-02]]
+</pre>
+</div>
 </div>
 </div>
 </div>
