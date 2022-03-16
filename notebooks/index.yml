@@ -38,6 +38,11 @@ basics:
       text: 7. Introduction to Pytorch
       kind: Notebook Exercise
       description: an Introduction of how to use Pytorch
+      
+      - notebook: notebooks/basics/theoretical_basis/theoretical_basis.ipynb
+      text: 8. ML Theoretical Basics
+      kind: Notebook Exercise
+      description: Linear Regression, Logistic Regression, Backpropagation, CNNs, RNNs, Generative Models
 learning-tasks:
   label: 
     text: Learning Tasks
