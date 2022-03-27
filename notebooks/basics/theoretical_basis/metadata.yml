@@ -1,0 +1,30 @@
+title: ML Basics
+
+meta:
+  - name: keywords
+    content: Linear Regression, Logistic Regression, Backpropagation, CNNs, RNNs, Generative Models
+
+header:
+  title: ML Basics
+  description: |
+    Basic Theory of ML modules
+
+authors:
+  label:
+    position: top
+    text: Authors
+  kind: people
+  content:
+    - name: Mahdi Ghaznavi
+      role: Author
+      contact:
+        - link: https://github.com/mahdighaznavi
+          icon: fab fa-github
+        - link: https://www.linkedin.com/in/mahdi-ghaznavi-4521311a6/
+          icon: fab fa-linkedin
+        - link: mailto://ghaznavi.mahdi@gmail.com
+          icon: fas fa-envelope
+
+# comments:
+#   label: false
+#   kind: comments
