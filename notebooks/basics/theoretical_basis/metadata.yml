@@ -9,16 +9,6 @@ header:
   description: |
     Basic Theory of ML modules
 
-solution:
-  label:
-    text: A solution
-    position: top
-  content:
-    - notebook:
-      text: ''
-      kind: ''
-      description:
-
 authors:
   label:
     position: top
