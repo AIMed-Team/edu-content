@@ -95,12 +95,13 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Build-model">Build model<a class="anchor-link" href="#Build-model">¶</a></h2><p>pytorch models are defined as python classes inherited from <code>torch.nn.Module</code>. two functions are essential for model creation:</p>
+<h2 id="Build-a-CNN-model">Build a CNN model<a class="anchor-link" href="#Build-a-CNN-model">¶</a></h2><p>from now on, you will learn how to build and train a CNN model.</p>
+<p>pytorch models are defined as python classes inherited from <code>torch.nn.Module</code>. two functions are essential for model creation:</p>
 <ol>
-<li>learning weights and network layers used by model are defined within <code>__init__()</code>.</li>
-<li>forwarding procedure of model are developed within <code>forward()</code>.</li>
+<li>learning weights (parameters) and network layers are defined within <code>__init__()</code>.</li>
+<li>forwarding procedure of the model is developed within <code>forward()</code>.</li>
 </ol>
-<p>let's create a multi-classification model (with ten ground-truth labels) whose layers are: <code>Conv</code> -&gt; <code>ReLU</code> -&gt; <code>Batchnorm</code> -&gt; <code>Conv</code> -&gt; <code>ReLU</code> -&gt; <code>Batchnorm</code> -&gt; <code>Adaptive average pooling</code> -&gt; <code>dropout</code> -&gt; <code>fully connected</code>. suppose input has one channel and <code>forward()</code> will only return output of the model.</p>
+<p>so let's create a multi-classification CNN model (with ten ground-truth labels) containing the following layers: <code>Conv</code> -&gt; <code>ReLU</code> -&gt; <code>Batchnorm</code> -&gt; <code>Conv</code> -&gt; <code>ReLU</code> -&gt; <code>Batchnorm</code> -&gt; <code>Adaptive average pooling</code> -&gt; <code>dropout</code> -&gt; <code>fully connected</code>. suppose the input has only one channel and <code>forward()</code> will only return output of the model.</p>
 </div>
 </div>
 </div>
@@ -127,7 +128,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="set-model-device">set model device<a class="anchor-link" href="#set-model-device">¶</a></h4><p>in order to explicitly transfer model (or tensors) to another device, pytorch provides <code>.to(device)</code></p>
+<h4 id="set-model-device">set model device<a class="anchor-link" href="#set-model-device">¶</a></h4><p>Previously, we have determined which device (GPU or CPU) is going to be used, although it has not been allocated yet to parameters of the model. Pytorch <code>.to(device)</code> Api provides this for us.</p>
 </div>
 </div>
 </div>
@@ -147,15 +148,14 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Model-phases">Model phases<a class="anchor-link" href="#Model-phases">¶</a></h4><p>there are two states for a model: <code>.train()</code> and <code>.eval()</code>. models are by default at <code>.train()</code> phase, however the difference between these two is that in <code>eval()</code> phase, some layers change their behavior during inference; for instance dropout will be deactivated and batch normalization will not update estimated mean and variance and they will be used only for normalization.
-during validation and test phases, besides <code>model.eval()</code> we should assure that back propagation is temporarily deactivated and this is possible by <code>torch.no_grad()</code>. indeed disabling the gradient calculation enables us to use bigger batch sizes as it speeds up the computation and reduces memory usage.</p>
+<h4 id="Model-phases">Model phases<a class="anchor-link" href="#Model-phases">¶</a></h4><p>there are two phases for a Pytorch model: <code>.train()</code> and <code>.eval()</code>. models are by default at <code>.train()</code> phase, however the difference between these two is that in <code>eval()</code> phase, some layers change their behavior during inference; for instance dropout will be deactivated and batch normalization will not update estimated mean and variance and they will be used only for normalization, hence please note <strong><code>.eval()</code> will not block parameters to be updated</strong>. therefore during evaluation, besides <code>model.eval()</code> we should assure that back propagation is temporarily deactivated and this is possible by <code>torch.no_grad()</code>. indeed disabling the gradient calculation enables us to use bigger batch sizes as it speeds up the computation and reduces memory usage.</p>
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Data-processing">Data processing<a class="anchor-link" href="#Data-processing">¶</a></h2>
+<h2 id="Data-processing">Data processing<a class="anchor-link" href="#Data-processing">¶</a></h2><p>Before training, we need to prepare and process our dataset which is MNIST here.</p>
 </div>
 </div>
 </div>
@@ -182,7 +182,7 @@ during validation and test phases, besides <code>model.eval()</code> we should a
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="Download-data">Download data<a class="anchor-link" href="#Download-data">¶</a></h4><p>evaluation is not purpose of this notebook therefore you only need to load <strong>train</strong> set of MNIST dataset using <code>torchvision.datasets.MNIST</code>.</p>
+<h4 id="Download-data">Download data<a class="anchor-link" href="#Download-data">¶</a></h4><p>as evaluation is not purpose of this notebook, you only need to load <strong>train</strong> set of MNIST dataset using <code>torchvision.datasets.MNIST</code>.</p>
 </div>
 </div>
 </div>
@@ -222,7 +222,7 @@ during validation and test phases, besides <code>model.eval()</code> we should a
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Training">Training<a class="anchor-link" href="#Training">¶</a></h2><p>here we are going to develop training process of MNIST classification</p>
+<h2 id="Training">Training<a class="anchor-link" href="#Training">¶</a></h2><p>here we are going to develop training process of MNIST classification.</p>
 </div>
 </div>
 </div>
