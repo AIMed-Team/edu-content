@@ -13,7 +13,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In [1]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-python"><pre><span></span><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Tuple</span><span class="p">,</span> <span class="n">Iterable</span>
@@ -29,6 +29,8 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">confusion_matrix</span>
 </pre></div>
 </div>
 </div>
@@ -36,7 +38,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In [2]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-python"><pre><span></span><span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">'cuda'</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s1">'cpu'</span><span class="p">)</span>
@@ -48,7 +50,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[ ]:</div>
+<div class="prompt output_prompt">Out[2]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>device(type='cuda')</pre>
 </div>
@@ -58,7 +60,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In [3]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-python"><pre><span></span><span class="n">SEED</span> <span class="o">=</span> <span class="mi">51</span>
@@ -79,7 +81,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In [4]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-python"><pre><span></span><span class="n">mnist_root</span> <span class="o">=</span> <span class="s1">'mnist'</span>
@@ -106,7 +108,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In [5]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-python"><pre><span></span><span class="k">class</span> <span class="nc">Net</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
@@ -144,7 +146,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In [6]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-python"><pre><span></span><span class="k">class</span> <span class="nc">Trainer</span><span class="p">:</span>
@@ -306,6 +308,12 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
         <span class="n">cax</span><span class="o">.</span><span class="n">get_xaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
         <span class="n">cax</span><span class="o">.</span><span class="n">get_yaxis</span><span class="p">()</span><span class="o">.</span><span class="n">set_visible</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
         <span class="n">cax</span><span class="o">.</span><span class="n">set_frame_on</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">plot_cm</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">y_true</span> <span class="o">=</span> <span class="p">[</span><span class="n">label</span> <span class="k">for</span> <span class="n">_</span><span class="p">,</span> <span class="n">label</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">__testloader</span><span class="o">.</span><span class="n">dataset</span><span class="p">]</span>
+        <span class="n">y_pred</span> <span class="o">=</span> <span class="p">[</span><span class="nb">int</span><span class="p">(</span><span class="n">label</span><span class="p">)</span> <span class="k">for</span> <span class="n">label</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">predict</span><span class="p">()]</span>
+        <span class="n">cm</span> <span class="o">=</span> <span class="n">confusion_matrix</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">)</span>
+        <span class="n">sns</span><span class="o">.</span><span class="n">heatmap</span><span class="p">(</span><span class="n">cm</span><span class="p">,</span> <span class="n">annot</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">fmt</span><span class="o">=</span><span class="s1">'d'</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -313,7 +321,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In [7]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-python"><pre><span></span><span class="n">B</span> <span class="o">=</span> <span class="mi">512</span>
@@ -332,7 +340,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[ ]:</div>
+<div class="prompt output_prompt">Out[7]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>Net(
   (fc): Sequential(
@@ -354,7 +362,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In [8]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-python"><pre><span></span><span class="n">trainer</span><span class="o">.</span><span class="n">train</span><span class="p">(</span><span class="mi">40</span><span class="p">)</span>
@@ -367,31 +375,31 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>train loss: 6.740e-01 - accuracy: 83.36%: 100%|██████████| 106/106 [00:21&lt;00:00,  4.91it/s]
-val loss: 3.225e-01 - accuracy: 93.38%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.27it/s]</pre>
+<pre>train loss: 6.740e-01 - accuracy: 83.36%: 100%|██████████| 106/106 [00:18&lt;00:00,  5.82it/s]
+val loss: 3.225e-01 - accuracy: 93.38%: 100%|██████████| 6/6 [00:01&lt;00:00,  3.01it/s]
+</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Saving checkpoint.
-Epoch 1 finished in 23.24s. Train [loss: 6.740e-01, acc: 83.36%] - Val [loss: 3.225e-01, acc: 93.38%]
+Epoch 1 finished in 20.49s. Train [loss: 6.740e-01, acc: 83.36%] - Val [loss: 3.225e-01, acc: 93.38%]
 </pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>
-train loss: 2.902e-01 - accuracy: 93.72%: 100%|██████████| 106/106 [00:12&lt;00:00,  8.16it/s]
-val loss: 2.109e-01 - accuracy: 95.23%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.20it/s]</pre>
+<pre>train loss: 2.902e-01 - accuracy: 93.72%: 100%|██████████| 106/106 [00:10&lt;00:00,  9.97it/s]
+val loss: 2.109e-01 - accuracy: 95.23%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.63it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Saving checkpoint.
-Epoch 2 finished in 14.60s. Train [loss: 2.902e-01, acc: 93.72%] - Val [loss: 2.109e-01, acc: 95.23%]
+Epoch 2 finished in 11.94s. Train [loss: 2.902e-01, acc: 93.72%] - Val [loss: 2.109e-01, acc: 95.23%]
 </pre>
 </div>
 </div>
@@ -399,15 +407,15 @@ Epoch 2 finished in 14.60s. Train [loss: 2.902e-01, acc: 93.72%] - Val [loss: 2.
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 2.015e-01 - accuracy: 95.55%: 100%|██████████| 106/106 [00:13&lt;00:00,  8.02it/s]
-val loss: 1.564e-01 - accuracy: 96.37%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.16it/s]</pre>
+train loss: 2.015e-01 - accuracy: 95.55%: 100%|██████████| 106/106 [00:09&lt;00:00, 11.01it/s]
+val loss: 1.564e-01 - accuracy: 96.37%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.79it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Saving checkpoint.
-Epoch 3 finished in 14.84s. Train [loss: 2.015e-01, acc: 95.55%] - Val [loss: 1.564e-01, acc: 96.37%]
+Epoch 3 finished in 10.84s. Train [loss: 2.015e-01, acc: 95.55%] - Val [loss: 1.564e-01, acc: 96.37%]
 </pre>
 </div>
 </div>
@@ -415,15 +423,15 @@ Epoch 3 finished in 14.84s. Train [loss: 2.015e-01, acc: 95.55%] - Val [loss: 1.
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 1.514e-01 - accuracy: 96.64%: 100%|██████████| 106/106 [00:12&lt;00:00,  8.16it/s]
-val loss: 1.250e-01 - accuracy: 96.87%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.30it/s]</pre>
+train loss: 1.514e-01 - accuracy: 96.64%: 100%|██████████| 106/106 [00:09&lt;00:00, 11.00it/s]
+val loss: 1.250e-01 - accuracy: 96.87%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.80it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Saving checkpoint.
-Epoch 4 finished in 14.57s. Train [loss: 1.514e-01, acc: 96.64%] - Val [loss: 1.250e-01, acc: 96.87%]
+Epoch 4 finished in 10.85s. Train [loss: 1.514e-01, acc: 96.64%] - Val [loss: 1.250e-01, acc: 96.87%]
 </pre>
 </div>
 </div>
@@ -431,15 +439,15 @@ Epoch 4 finished in 14.57s. Train [loss: 1.514e-01, acc: 96.64%] - Val [loss: 1.
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 1.181e-01 - accuracy: 97.31%: 100%|██████████| 106/106 [00:13&lt;00:00,  8.07it/s]
-val loss: 1.050e-01 - accuracy: 97.50%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.26it/s]</pre>
+train loss: 1.181e-01 - accuracy: 97.31%: 100%|██████████| 106/106 [00:09&lt;00:00, 11.09it/s]
+val loss: 1.050e-01 - accuracy: 97.50%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.88it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Saving checkpoint.
-Epoch 5 finished in 14.72s. Train [loss: 1.181e-01, acc: 97.31%] - Val [loss: 1.050e-01, acc: 97.50%]
+Epoch 5 finished in 10.76s. Train [loss: 1.181e-01, acc: 97.31%] - Val [loss: 1.050e-01, acc: 97.50%]
 </pre>
 </div>
 </div>
@@ -447,15 +455,15 @@ Epoch 5 finished in 14.72s. Train [loss: 1.181e-01, acc: 97.31%] - Val [loss: 1.
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 9.496e-02 - accuracy: 97.84%: 100%|██████████| 106/106 [00:13&lt;00:00,  8.14it/s]
-val loss: 9.136e-02 - accuracy: 97.72%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.31it/s]</pre>
+train loss: 9.496e-02 - accuracy: 97.84%: 100%|██████████| 106/106 [00:09&lt;00:00, 11.02it/s]
+val loss: 9.136e-02 - accuracy: 97.72%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.77it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Saving checkpoint.
-Epoch 6 finished in 14.60s. Train [loss: 9.496e-02, acc: 97.84%] - Val [loss: 9.136e-02, acc: 97.72%]
+Epoch 6 finished in 10.83s. Train [loss: 9.496e-02, acc: 97.84%] - Val [loss: 9.136e-02, acc: 97.72%]
 </pre>
 </div>
 </div>
@@ -463,15 +471,15 @@ Epoch 6 finished in 14.60s. Train [loss: 9.496e-02, acc: 97.84%] - Val [loss: 9.
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 7.644e-02 - accuracy: 98.36%: 100%|██████████| 106/106 [00:13&lt;00:00,  8.09it/s]
-val loss: 7.992e-02 - accuracy: 98.00%: 100%|██████████| 6/6 [00:01&lt;00:00,  3.33it/s]</pre>
+train loss: 7.644e-02 - accuracy: 98.36%: 100%|██████████| 106/106 [00:09&lt;00:00, 10.91it/s]
+val loss: 7.992e-02 - accuracy: 98.00%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.64it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Saving checkpoint.
-Epoch 7 finished in 15.09s. Train [loss: 7.644e-02, acc: 98.36%] - Val [loss: 7.992e-02, acc: 98.00%]
+Epoch 7 finished in 10.96s. Train [loss: 7.644e-02, acc: 98.36%] - Val [loss: 7.992e-02, acc: 98.00%]
 </pre>
 </div>
 </div>
@@ -479,15 +487,15 @@ Epoch 7 finished in 15.09s. Train [loss: 7.644e-02, acc: 98.36%] - Val [loss: 7.
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 6.261e-02 - accuracy: 98.64%: 100%|██████████| 106/106 [00:13&lt;00:00,  8.10it/s]
-val loss: 7.301e-02 - accuracy: 98.03%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.34it/s]</pre>
+train loss: 6.261e-02 - accuracy: 98.64%: 100%|██████████| 106/106 [00:09&lt;00:00, 10.98it/s]
+val loss: 7.301e-02 - accuracy: 98.03%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.82it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Saving checkpoint.
-Epoch 8 finished in 14.65s. Train [loss: 6.261e-02, acc: 98.64%] - Val [loss: 7.301e-02, acc: 98.03%]
+Epoch 8 finished in 10.86s. Train [loss: 6.261e-02, acc: 98.64%] - Val [loss: 7.301e-02, acc: 98.03%]
 </pre>
 </div>
 </div>
@@ -495,15 +503,15 @@ Epoch 8 finished in 14.65s. Train [loss: 6.261e-02, acc: 98.64%] - Val [loss: 7.
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 5.233e-02 - accuracy: 98.90%: 100%|██████████| 106/106 [00:13&lt;00:00,  7.66it/s]
-val loss: 6.871e-02 - accuracy: 98.05%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.20it/s]</pre>
+train loss: 5.233e-02 - accuracy: 98.90%: 100%|██████████| 106/106 [00:09&lt;00:00, 11.12it/s]
+val loss: 6.871e-02 - accuracy: 98.05%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.80it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Saving checkpoint.
-Epoch 9 finished in 15.46s. Train [loss: 5.233e-02, acc: 98.90%] - Val [loss: 6.871e-02, acc: 98.05%]
+Epoch 9 finished in 10.74s. Train [loss: 5.233e-02, acc: 98.90%] - Val [loss: 6.871e-02, acc: 98.05%]
 </pre>
 </div>
 </div>
@@ -511,15 +519,15 @@ Epoch 9 finished in 15.46s. Train [loss: 5.233e-02, acc: 98.90%] - Val [loss: 6.
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 4.411e-02 - accuracy: 99.09%: 100%|██████████| 106/106 [00:13&lt;00:00,  8.03it/s]
-val loss: 6.368e-02 - accuracy: 98.20%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.11it/s]</pre>
+train loss: 4.411e-02 - accuracy: 99.09%: 100%|██████████| 106/106 [00:09&lt;00:00, 10.96it/s]
+val loss: 6.368e-02 - accuracy: 98.20%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.73it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Saving checkpoint.
-Epoch 10 finished in 14.86s. Train [loss: 4.411e-02, acc: 99.09%] - Val [loss: 6.368e-02, acc: 98.20%]
+Epoch 10 finished in 10.89s. Train [loss: 4.411e-02, acc: 99.09%] - Val [loss: 6.368e-02, acc: 98.20%]
 </pre>
 </div>
 </div>
@@ -527,15 +535,15 @@ Epoch 10 finished in 14.86s. Train [loss: 4.411e-02, acc: 99.09%] - Val [loss: 6
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 3.635e-02 - accuracy: 99.33%: 100%|██████████| 106/106 [00:13&lt;00:00,  8.04it/s]
-val loss: 5.869e-02 - accuracy: 98.33%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.21it/s]</pre>
+train loss: 3.635e-02 - accuracy: 99.33%: 100%|██████████| 106/106 [00:10&lt;00:00,  9.64it/s]
+val loss: 5.869e-02 - accuracy: 98.33%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.57it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Saving checkpoint.
-Epoch 11 finished in 14.81s. Train [loss: 3.635e-02, acc: 99.33%] - Val [loss: 5.869e-02, acc: 98.33%]
+Epoch 11 finished in 12.24s. Train [loss: 3.635e-02, acc: 99.33%] - Val [loss: 5.869e-02, acc: 98.33%]
 </pre>
 </div>
 </div>
@@ -543,14 +551,14 @@ Epoch 11 finished in 14.81s. Train [loss: 3.635e-02, acc: 99.33%] - Val [loss: 5
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 3.092e-02 - accuracy: 99.46%: 100%|██████████| 106/106 [00:13&lt;00:00,  7.96it/s]
-val loss: 5.783e-02 - accuracy: 98.30%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.09it/s]</pre>
+train loss: 3.092e-02 - accuracy: 99.46%: 100%|██████████| 106/106 [00:10&lt;00:00, 10.33it/s]
+val loss: 5.783e-02 - accuracy: 98.30%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.61it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch 12 finished in 14.98s. Train [loss: 3.092e-02, acc: 99.46%] - Val [loss: 5.783e-02, acc: 98.30%]
+<pre>Epoch 12 finished in 11.51s. Train [loss: 3.092e-02, acc: 99.46%] - Val [loss: 5.783e-02, acc: 98.30%]
 </pre>
 </div>
 </div>
@@ -558,31 +566,15 @@ val loss: 5.783e-02 - accuracy: 98.30%: 100%|██████████| 6/6
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 2.618e-02 - accuracy: 99.57%: 100%|██████████| 106/106 [00:13&lt;00:00,  7.96it/s]
-val loss: 5.512e-02 - accuracy: 98.37%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.23it/s]</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Saving checkpoint.
-Epoch 13 finished in 14.93s. Train [loss: 2.618e-02, acc: 99.57%] - Val [loss: 5.512e-02, acc: 98.37%]
-</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>
-train loss: 2.288e-02 - accuracy: 99.63%: 100%|██████████| 106/106 [00:13&lt;00:00,  7.98it/s]
-val loss: 5.588e-02 - accuracy: 98.40%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.18it/s]</pre>
+train loss: 2.618e-02 - accuracy: 99.57%: 100%|██████████| 106/106 [00:09&lt;00:00, 10.83it/s]
+val loss: 5.512e-02 - accuracy: 98.37%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.63it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Saving checkpoint.
-Epoch 14 finished in 14.92s. Train [loss: 2.288e-02, acc: 99.63%] - Val [loss: 5.588e-02, acc: 98.40%]
+Epoch 13 finished in 11.05s. Train [loss: 2.618e-02, acc: 99.57%] - Val [loss: 5.512e-02, acc: 98.37%]
 </pre>
 </div>
 </div>
@@ -590,15 +582,15 @@ Epoch 14 finished in 14.92s. Train [loss: 2.288e-02, acc: 99.63%] - Val [loss: 5
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 1.893e-02 - accuracy: 99.77%: 100%|██████████| 106/106 [00:13&lt;00:00,  7.97it/s]
-val loss: 5.341e-02 - accuracy: 98.42%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.17it/s]</pre>
+train loss: 2.288e-02 - accuracy: 99.63%: 100%|██████████| 106/106 [00:09&lt;00:00, 11.00it/s]
+val loss: 5.588e-02 - accuracy: 98.40%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.81it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Saving checkpoint.
-Epoch 15 finished in 14.93s. Train [loss: 1.893e-02, acc: 99.77%] - Val [loss: 5.341e-02, acc: 98.42%]
+Epoch 14 finished in 10.84s. Train [loss: 2.288e-02, acc: 99.63%] - Val [loss: 5.588e-02, acc: 98.40%]
 </pre>
 </div>
 </div>
@@ -606,90 +598,15 @@ Epoch 15 finished in 14.93s. Train [loss: 1.893e-02, acc: 99.77%] - Val [loss: 5
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 1.733e-02 - accuracy: 99.76%: 100%|██████████| 106/106 [00:13&lt;00:00,  8.00it/s]
-val loss: 5.236e-02 - accuracy: 98.42%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.22it/s]</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch 16 finished in 14.86s. Train [loss: 1.733e-02, acc: 99.76%] - Val [loss: 5.236e-02, acc: 98.42%]
-</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>
-train loss: 1.494e-02 - accuracy: 99.82%: 100%|██████████| 106/106 [00:13&lt;00:00,  8.05it/s]
-val loss: 5.278e-02 - accuracy: 98.37%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.11it/s]</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch 17 finished in 14.81s. Train [loss: 1.494e-02, acc: 99.82%] - Val [loss: 5.278e-02, acc: 98.37%]
-</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>
-train loss: 1.347e-02 - accuracy: 99.83%: 100%|██████████| 106/106 [00:13&lt;00:00,  7.97it/s]
-val loss: 5.316e-02 - accuracy: 98.35%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.13it/s]</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch 18 finished in 14.94s. Train [loss: 1.347e-02, acc: 99.83%] - Val [loss: 5.316e-02, acc: 98.35%]
-</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>
-train loss: 1.216e-02 - accuracy: 99.84%: 100%|██████████| 106/106 [00:13&lt;00:00,  7.92it/s]
-val loss: 5.003e-02 - accuracy: 98.40%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.17it/s]</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch 19 finished in 15.01s. Train [loss: 1.216e-02, acc: 99.84%] - Val [loss: 5.003e-02, acc: 98.40%]
-</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>
-train loss: 1.050e-02 - accuracy: 99.89%: 100%|██████████| 106/106 [00:13&lt;00:00,  8.07it/s]
-val loss: 5.135e-02 - accuracy: 98.40%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.17it/s]</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch 20 finished in 14.77s. Train [loss: 1.050e-02, acc: 99.89%] - Val [loss: 5.135e-02, acc: 98.40%]
-</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>
-train loss: 9.082e-03 - accuracy: 99.90%: 100%|██████████| 106/106 [00:13&lt;00:00,  8.02it/s]
-val loss: 4.998e-02 - accuracy: 98.45%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.25it/s]</pre>
+train loss: 1.893e-02 - accuracy: 99.77%: 100%|██████████| 106/106 [00:09&lt;00:00, 11.08it/s]
+val loss: 5.341e-02 - accuracy: 98.42%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.66it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Saving checkpoint.
-Epoch 21 finished in 14.80s. Train [loss: 9.082e-03, acc: 99.90%] - Val [loss: 4.998e-02, acc: 98.45%]
+Epoch 15 finished in 10.82s. Train [loss: 1.893e-02, acc: 99.77%] - Val [loss: 5.341e-02, acc: 98.42%]
 </pre>
 </div>
 </div>
@@ -697,14 +614,14 @@ Epoch 21 finished in 14.80s. Train [loss: 9.082e-03, acc: 99.90%] - Val [loss: 4
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 8.208e-03 - accuracy: 99.91%: 100%|██████████| 106/106 [00:13&lt;00:00,  8.08it/s]
-val loss: 5.170e-02 - accuracy: 98.37%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.20it/s]</pre>
+train loss: 1.733e-02 - accuracy: 99.76%: 100%|██████████| 106/106 [00:09&lt;00:00, 11.03it/s]
+val loss: 5.236e-02 - accuracy: 98.42%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.60it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch 22 finished in 14.73s. Train [loss: 8.208e-03, acc: 99.91%] - Val [loss: 5.170e-02, acc: 98.37%]
+<pre>Epoch 16 finished in 10.85s. Train [loss: 1.733e-02, acc: 99.76%] - Val [loss: 5.236e-02, acc: 98.42%]
 </pre>
 </div>
 </div>
@@ -712,14 +629,14 @@ val loss: 5.170e-02 - accuracy: 98.37%: 100%|██████████| 6/6
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 8.226e-03 - accuracy: 99.89%: 100%|██████████| 106/106 [00:13&lt;00:00,  7.98it/s]
-val loss: 5.246e-02 - accuracy: 98.37%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.16it/s]</pre>
+train loss: 1.494e-02 - accuracy: 99.82%: 100%|██████████| 106/106 [00:09&lt;00:00, 11.09it/s]
+val loss: 5.278e-02 - accuracy: 98.37%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.70it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch 23 finished in 14.90s. Train [loss: 8.226e-03, acc: 99.89%] - Val [loss: 5.246e-02, acc: 98.37%]
+<pre>Epoch 17 finished in 10.80s. Train [loss: 1.494e-02, acc: 99.82%] - Val [loss: 5.278e-02, acc: 98.37%]
 </pre>
 </div>
 </div>
@@ -727,15 +644,14 @@ val loss: 5.246e-02 - accuracy: 98.37%: 100%|██████████| 6/6
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 6.986e-03 - accuracy: 99.95%: 100%|██████████| 106/106 [00:13&lt;00:00,  8.07it/s]
-val loss: 5.178e-02 - accuracy: 98.50%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.09it/s]</pre>
+train loss: 1.347e-02 - accuracy: 99.83%: 100%|██████████| 106/106 [00:09&lt;00:00, 11.16it/s]
+val loss: 5.316e-02 - accuracy: 98.35%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.77it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Saving checkpoint.
-Epoch 24 finished in 14.80s. Train [loss: 6.986e-03, acc: 99.95%] - Val [loss: 5.178e-02, acc: 98.50%]
+<pre>Epoch 18 finished in 10.72s. Train [loss: 1.347e-02, acc: 99.83%] - Val [loss: 5.316e-02, acc: 98.35%]
 </pre>
 </div>
 </div>
@@ -743,14 +659,14 @@ Epoch 24 finished in 14.80s. Train [loss: 6.986e-03, acc: 99.95%] - Val [loss: 5
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 6.222e-03 - accuracy: 99.95%: 100%|██████████| 106/106 [00:13&lt;00:00,  7.96it/s]
-val loss: 5.205e-02 - accuracy: 98.47%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.23it/s]</pre>
+train loss: 1.216e-02 - accuracy: 99.84%: 100%|██████████| 106/106 [00:09&lt;00:00, 11.27it/s]
+val loss: 5.003e-02 - accuracy: 98.40%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.68it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch 25 finished in 14.92s. Train [loss: 6.222e-03, acc: 99.95%] - Val [loss: 5.205e-02, acc: 98.47%]
+<pre>Epoch 19 finished in 10.63s. Train [loss: 1.216e-02, acc: 99.84%] - Val [loss: 5.003e-02, acc: 98.40%]
 </pre>
 </div>
 </div>
@@ -758,14 +674,14 @@ val loss: 5.205e-02 - accuracy: 98.47%: 100%|██████████| 6/6
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 5.960e-03 - accuracy: 99.95%: 100%|██████████| 106/106 [00:13&lt;00:00,  8.02it/s]
-val loss: 5.184e-02 - accuracy: 98.48%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.20it/s]</pre>
+train loss: 1.050e-02 - accuracy: 99.89%: 100%|██████████| 106/106 [00:09&lt;00:00, 11.08it/s]
+val loss: 5.135e-02 - accuracy: 98.40%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.71it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch 26 finished in 14.82s. Train [loss: 5.960e-03, acc: 99.95%] - Val [loss: 5.184e-02, acc: 98.48%]
+<pre>Epoch 20 finished in 10.80s. Train [loss: 1.050e-02, acc: 99.89%] - Val [loss: 5.135e-02, acc: 98.40%]
 </pre>
 </div>
 </div>
@@ -773,30 +689,15 @@ val loss: 5.184e-02 - accuracy: 98.48%: 100%|██████████| 6/6
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 5.355e-03 - accuracy: 99.95%: 100%|██████████| 106/106 [00:13&lt;00:00,  7.94it/s]
-val loss: 5.145e-02 - accuracy: 98.47%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.23it/s]</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch 27 finished in 14.96s. Train [loss: 5.355e-03, acc: 99.95%] - Val [loss: 5.145e-02, acc: 98.47%]
-</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>
-train loss: 4.620e-03 - accuracy: 99.97%: 100%|██████████| 106/106 [00:13&lt;00:00,  8.09it/s]
-val loss: 5.180e-02 - accuracy: 98.55%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.14it/s]</pre>
+train loss: 9.082e-03 - accuracy: 99.90%: 100%|██████████| 106/106 [00:09&lt;00:00, 10.94it/s]
+val loss: 4.998e-02 - accuracy: 98.45%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.69it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Saving checkpoint.
-Epoch 28 finished in 14.73s. Train [loss: 4.620e-03, acc: 99.97%] - Val [loss: 5.180e-02, acc: 98.55%]
+Epoch 21 finished in 10.91s. Train [loss: 9.082e-03, acc: 99.90%] - Val [loss: 4.998e-02, acc: 98.45%]
 </pre>
 </div>
 </div>
@@ -804,14 +705,14 @@ Epoch 28 finished in 14.73s. Train [loss: 4.620e-03, acc: 99.97%] - Val [loss: 5
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 4.518e-03 - accuracy: 99.95%: 100%|██████████| 106/106 [00:13&lt;00:00,  7.98it/s]
-val loss: 5.055e-02 - accuracy: 98.52%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.20it/s]</pre>
+train loss: 8.208e-03 - accuracy: 99.91%: 100%|██████████| 106/106 [00:09&lt;00:00, 11.05it/s]
+val loss: 5.170e-02 - accuracy: 98.37%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.64it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch 29 finished in 14.90s. Train [loss: 4.518e-03, acc: 99.95%] - Val [loss: 5.055e-02, acc: 98.52%]
+<pre>Epoch 22 finished in 10.84s. Train [loss: 8.208e-03, acc: 99.91%] - Val [loss: 5.170e-02, acc: 98.37%]
 </pre>
 </div>
 </div>
@@ -819,14 +720,14 @@ val loss: 5.055e-02 - accuracy: 98.52%: 100%|██████████| 6/6
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 3.974e-03 - accuracy: 99.98%: 100%|██████████| 106/106 [00:13&lt;00:00,  7.97it/s]
-val loss: 5.067e-02 - accuracy: 98.55%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.22it/s]</pre>
+train loss: 8.226e-03 - accuracy: 99.89%: 100%|██████████| 106/106 [00:09&lt;00:00, 10.95it/s]
+val loss: 5.246e-02 - accuracy: 98.37%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.57it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch 30 finished in 14.92s. Train [loss: 3.974e-03, acc: 99.98%] - Val [loss: 5.067e-02, acc: 98.55%]
+<pre>Epoch 23 finished in 10.93s. Train [loss: 8.226e-03, acc: 99.89%] - Val [loss: 5.246e-02, acc: 98.37%]
 </pre>
 </div>
 </div>
@@ -834,75 +735,15 @@ val loss: 5.067e-02 - accuracy: 98.55%: 100%|██████████| 6/6
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 4.411e-03 - accuracy: 99.95%: 100%|██████████| 106/106 [00:13&lt;00:00,  7.87it/s]
-val loss: 5.098e-02 - accuracy: 98.53%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.08it/s]</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch 31 finished in 15.11s. Train [loss: 4.411e-03, acc: 99.95%] - Val [loss: 5.098e-02, acc: 98.53%]
-</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>
-train loss: 4.313e-03 - accuracy: 99.94%: 100%|██████████| 106/106 [00:13&lt;00:00,  7.88it/s]
-val loss: 5.203e-02 - accuracy: 98.53%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.15it/s]</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch 32 finished in 15.08s. Train [loss: 4.313e-03, acc: 99.94%] - Val [loss: 5.203e-02, acc: 98.53%]
-</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>
-train loss: 3.748e-03 - accuracy: 99.97%: 100%|██████████| 106/106 [00:13&lt;00:00,  8.03it/s]
-val loss: 5.314e-02 - accuracy: 98.42%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.08it/s]</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch 33 finished in 14.86s. Train [loss: 3.748e-03, acc: 99.97%] - Val [loss: 5.314e-02, acc: 98.42%]
-</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>
-train loss: 3.337e-03 - accuracy: 99.97%: 100%|██████████| 106/106 [00:13&lt;00:00,  7.99it/s]
-val loss: 5.140e-02 - accuracy: 98.55%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.19it/s]</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch 34 finished in 14.87s. Train [loss: 3.337e-03, acc: 99.97%] - Val [loss: 5.140e-02, acc: 98.55%]
-</pre>
-</div>
-</div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>
-train loss: 3.278e-03 - accuracy: 99.96%: 100%|██████████| 106/106 [00:13&lt;00:00,  8.05it/s]
-val loss: 5.121e-02 - accuracy: 98.57%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.13it/s]</pre>
+train loss: 6.986e-03 - accuracy: 99.95%: 100%|██████████| 106/106 [00:09&lt;00:00, 10.87it/s]
+val loss: 5.178e-02 - accuracy: 98.50%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.71it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Saving checkpoint.
-Epoch 35 finished in 14.79s. Train [loss: 3.278e-03, acc: 99.96%] - Val [loss: 5.121e-02, acc: 98.57%]
+Epoch 24 finished in 11.00s. Train [loss: 6.986e-03, acc: 99.95%] - Val [loss: 5.178e-02, acc: 98.50%]
 </pre>
 </div>
 </div>
@@ -910,14 +751,14 @@ Epoch 35 finished in 14.79s. Train [loss: 3.278e-03, acc: 99.96%] - Val [loss: 5
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 3.186e-03 - accuracy: 99.97%: 100%|██████████| 106/106 [00:13&lt;00:00,  7.94it/s]
-val loss: 5.251e-02 - accuracy: 98.52%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.17it/s]</pre>
+train loss: 6.222e-03 - accuracy: 99.95%: 100%|██████████| 106/106 [00:09&lt;00:00, 10.80it/s]
+val loss: 5.205e-02 - accuracy: 98.47%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.54it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch 36 finished in 14.97s. Train [loss: 3.186e-03, acc: 99.97%] - Val [loss: 5.251e-02, acc: 98.52%]
+<pre>Epoch 25 finished in 11.07s. Train [loss: 6.222e-03, acc: 99.95%] - Val [loss: 5.205e-02, acc: 98.47%]
 </pre>
 </div>
 </div>
@@ -925,15 +766,45 @@ val loss: 5.251e-02 - accuracy: 98.52%: 100%|██████████| 6/6
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 2.882e-03 - accuracy: 99.97%: 100%|██████████| 106/106 [00:13&lt;00:00,  7.97it/s]
-val loss: 5.167e-02 - accuracy: 98.63%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.22it/s]</pre>
+train loss: 5.960e-03 - accuracy: 99.95%: 100%|██████████| 106/106 [00:09&lt;00:00, 10.98it/s]
+val loss: 5.184e-02 - accuracy: 98.48%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.52it/s]</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Epoch 26 finished in 10.92s. Train [loss: 5.960e-03, acc: 99.95%] - Val [loss: 5.184e-02, acc: 98.48%]
+</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>
+train loss: 5.355e-03 - accuracy: 99.95%: 100%|██████████| 106/106 [00:09&lt;00:00, 10.95it/s]
+val loss: 5.145e-02 - accuracy: 98.47%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.71it/s]</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Epoch 27 finished in 10.91s. Train [loss: 5.355e-03, acc: 99.95%] - Val [loss: 5.145e-02, acc: 98.47%]
+</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>
+train loss: 4.620e-03 - accuracy: 99.97%: 100%|██████████| 106/106 [00:09&lt;00:00, 10.81it/s]
+val loss: 5.180e-02 - accuracy: 98.55%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.55it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Saving checkpoint.
-Epoch 37 finished in 14.90s. Train [loss: 2.882e-03, acc: 99.97%] - Val [loss: 5.167e-02, acc: 98.63%]
+Epoch 28 finished in 11.06s. Train [loss: 4.620e-03, acc: 99.97%] - Val [loss: 5.180e-02, acc: 98.55%]
 </pre>
 </div>
 </div>
@@ -941,14 +812,14 @@ Epoch 37 finished in 14.90s. Train [loss: 2.882e-03, acc: 99.97%] - Val [loss: 5
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 2.929e-03 - accuracy: 99.96%: 100%|██████████| 106/106 [00:13&lt;00:00,  8.05it/s]
-val loss: 5.785e-02 - accuracy: 98.40%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.10it/s]</pre>
+train loss: 4.518e-03 - accuracy: 99.95%: 100%|██████████| 106/106 [00:10&lt;00:00, 10.58it/s]
+val loss: 5.055e-02 - accuracy: 98.52%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.43it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch 38 finished in 14.81s. Train [loss: 2.929e-03, acc: 99.96%] - Val [loss: 5.785e-02, acc: 98.40%]
+<pre>Epoch 29 finished in 11.31s. Train [loss: 4.518e-03, acc: 99.95%] - Val [loss: 5.055e-02, acc: 98.52%]
 </pre>
 </div>
 </div>
@@ -956,14 +827,14 @@ val loss: 5.785e-02 - accuracy: 98.40%: 100%|██████████| 6/6
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 2.931e-03 - accuracy: 99.97%: 100%|██████████| 106/106 [00:13&lt;00:00,  8.00it/s]
-val loss: 5.954e-02 - accuracy: 98.37%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.22it/s]</pre>
+train loss: 3.974e-03 - accuracy: 99.98%: 100%|██████████| 106/106 [00:09&lt;00:00, 10.65it/s]
+val loss: 5.067e-02 - accuracy: 98.55%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.52it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch 39 finished in 14.87s. Train [loss: 2.931e-03, acc: 99.97%] - Val [loss: 5.954e-02, acc: 98.37%]
+<pre>Epoch 30 finished in 11.24s. Train [loss: 3.974e-03, acc: 99.98%] - Val [loss: 5.067e-02, acc: 98.55%]
 </pre>
 </div>
 </div>
@@ -971,14 +842,151 @@ val loss: 5.954e-02 - accuracy: 98.37%: 100%|██████████| 6/6
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>
-train loss: 3.086e-03 - accuracy: 99.96%: 100%|██████████| 106/106 [00:13&lt;00:00,  8.01it/s]
-val loss: 5.616e-02 - accuracy: 98.47%: 100%|██████████| 6/6 [00:01&lt;00:00,  4.18it/s]</pre>
+train loss: 4.411e-03 - accuracy: 99.95%: 100%|██████████| 106/106 [00:09&lt;00:00, 10.76it/s]
+val loss: 5.098e-02 - accuracy: 98.53%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.59it/s]</pre>
 </div>
 </div>
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch 40 finished in 14.85s. Train [loss: 3.086e-03, acc: 99.96%] - Val [loss: 5.616e-02, acc: 98.47%]
+<pre>Epoch 31 finished in 11.10s. Train [loss: 4.411e-03, acc: 99.95%] - Val [loss: 5.098e-02, acc: 98.53%]
+</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>
+train loss: 4.313e-03 - accuracy: 99.94%: 100%|██████████| 106/106 [00:10&lt;00:00, 10.58it/s]
+val loss: 5.203e-02 - accuracy: 98.53%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.43it/s]</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Epoch 32 finished in 11.30s. Train [loss: 4.313e-03, acc: 99.94%] - Val [loss: 5.203e-02, acc: 98.53%]
+</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>
+train loss: 3.748e-03 - accuracy: 99.97%: 100%|██████████| 106/106 [00:09&lt;00:00, 10.78it/s]
+val loss: 5.314e-02 - accuracy: 98.42%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.72it/s]</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Epoch 33 finished in 11.05s. Train [loss: 3.748e-03, acc: 99.97%] - Val [loss: 5.314e-02, acc: 98.42%]
+</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>
+train loss: 3.337e-03 - accuracy: 99.97%: 100%|██████████| 106/106 [00:09&lt;00:00, 10.99it/s]
+val loss: 5.140e-02 - accuracy: 98.55%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.72it/s]</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Epoch 34 finished in 10.85s. Train [loss: 3.337e-03, acc: 99.97%] - Val [loss: 5.140e-02, acc: 98.55%]
+</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>
+train loss: 3.278e-03 - accuracy: 99.96%: 100%|██████████| 106/106 [00:09&lt;00:00, 11.01it/s]
+val loss: 5.121e-02 - accuracy: 98.57%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.58it/s]</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Saving checkpoint.
+Epoch 35 finished in 10.87s. Train [loss: 3.278e-03, acc: 99.96%] - Val [loss: 5.121e-02, acc: 98.57%]
+</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>
+train loss: 3.186e-03 - accuracy: 99.97%: 100%|██████████| 106/106 [00:09&lt;00:00, 11.08it/s]
+val loss: 5.251e-02 - accuracy: 98.52%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.64it/s]</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Epoch 36 finished in 10.80s. Train [loss: 3.186e-03, acc: 99.97%] - Val [loss: 5.251e-02, acc: 98.52%]
+</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>
+train loss: 2.882e-03 - accuracy: 99.97%: 100%|██████████| 106/106 [00:09&lt;00:00, 10.91it/s]
+val loss: 5.167e-02 - accuracy: 98.63%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.50it/s]</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Saving checkpoint.
+Epoch 37 finished in 10.98s. Train [loss: 2.882e-03, acc: 99.97%] - Val [loss: 5.167e-02, acc: 98.63%]
+</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>
+train loss: 2.929e-03 - accuracy: 99.96%: 100%|██████████| 106/106 [00:09&lt;00:00, 11.08it/s]
+val loss: 5.785e-02 - accuracy: 98.40%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.61it/s]</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Epoch 38 finished in 10.80s. Train [loss: 2.929e-03, acc: 99.96%] - Val [loss: 5.785e-02, acc: 98.40%]
+</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>
+train loss: 2.931e-03 - accuracy: 99.97%: 100%|██████████| 106/106 [00:09&lt;00:00, 11.02it/s]
+val loss: 5.954e-02 - accuracy: 98.37%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.89it/s]</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Epoch 39 finished in 10.80s. Train [loss: 2.931e-03, acc: 99.97%] - Val [loss: 5.954e-02, acc: 98.37%]
+</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>
+train loss: 3.086e-03 - accuracy: 99.96%: 100%|██████████| 106/106 [00:09&lt;00:00, 10.96it/s]
+val loss: 5.616e-02 - accuracy: 98.47%: 100%|██████████| 6/6 [00:01&lt;00:00,  5.59it/s]</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Epoch 40 finished in 10.90s. Train [loss: 3.086e-03, acc: 99.96%] - Val [loss: 5.616e-02, acc: 98.47%]
 </pre>
 </div>
 </div>
@@ -1002,7 +1010,7 @@ ion, one showing loss of each epoch, and another showing accuracy of each epoch.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In [9]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-python"><pre><span></span><span class="n">trainer</span><span class="o">.</span><span class="n">plot_curves</span><span class="p">()</span>
@@ -1032,7 +1040,7 @@ ion, one showing loss of each epoch, and another showing accuracy of each epoch.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In [10]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-python"><pre><span></span><span class="n">trainer</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
@@ -1047,12 +1055,12 @@ ion, one showing loss of each epoch, and another showing accuracy of each epoch.
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>val loss: 5.879e-02 - accuracy: 98.32%: 100%|██████████| 10/10 [00:02&lt;00:00,  4.22it/s]
+<pre>val loss: 5.879e-02 - accuracy: 98.32%: 100%|██████████| 10/10 [00:01&lt;00:00,  6.08it/s]
 </pre>
 </div>
 </div>
 <div class="output_area">
-<div class="prompt output_prompt">Out[ ]:</div>
+<div class="prompt output_prompt">Out[10]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>98.32000000000001</pre>
 </div>
@@ -1069,10 +1077,11 @@ ion, one showing loss of each epoch, and another showing accuracy of each epoch.
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In [11]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-python"><pre><span></span><span class="n">trainer</span><span class="o">.</span><span class="n">draw_misclassified</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -1082,7 +1091,7 @@ ion, one showing loss of each epoch, and another showing accuracy of each epoch.
 <div class="output_area">
 <div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>100%|██████████| 10/10 [00:02&lt;00:00,  4.18it/s]
+<pre>100%|██████████| 10/10 [00:01&lt;00:00,  5.82it/s]
 </pre>
 </div>
 </div>
@@ -1096,13 +1105,39 @@ ion, one showing loss of each epoch, and another showing accuracy of each epoch.
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Plot-the-confusion-matrix">Plot the confusion matrix<a class="anchor-link" href="#Plot-the-confusion-matrix">¶</a></h1><p>Plot the confusion matrix for the test set.</p>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
+<div class="prompt input_prompt">In [12]:</div>
 <div class="inner_cell">
 <div class="input_area">
-<div class="highlight hl-python"><pre><span></span>
+<div class="highlight hl-python"><pre><span></span><span class="n">trainer</span><span class="o">.</span><span class="n">plot_cm</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
+</div>
+</div>
+</div>
+<div class="output_wrapper">
+<div class="output">
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>100%|██████████| 10/10 [00:02&lt;00:00,  4.70it/s]
+</pre>
+</div>
+</div>
+<div class="output_area">
+<div class="prompt"></div>
+<div class="output_png output_subarea">
+<img src="data:image/png;base64,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
+"/>
+</div>
 </div>
 </div>
 </div>
