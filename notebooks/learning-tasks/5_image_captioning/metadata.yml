@@ -1,0 +1,41 @@
+title: Image Captioning
+
+meta:
+  - name: keywords
+    content: Artificial Intelligence, Deep Learning, Convolutional Neural Networks, RNN, LSTM, AI
+
+header:
+  title: Image Captioning
+  description: |
+    Image captioning using CNNs for understanding the image, and LSTM for generating a caption.
+  background: images/header.png
+
+solution:
+  label: 
+    text: A solution
+    position: top
+  content:
+    - notebook: notebooks/learning-tasks/solutions/5_image_captioning
+      text: 'Image captioning using CNNs for understanding the image, and LSTM for generating a caption: A Solution'
+      kind: ''
+      description: Image captioning using CNNs for understanding the image, and LSTM for generating a caption.
+
+authors:
+  label:
+    position: top
+    text: Authors
+  kind: people
+  content:
+    - name: Mahdi Ghaznavi
+      role: Author
+      contact:
+        - link: https://github.com/mahdighaznavi
+          icon: fab fa-github
+        - link: https://www.linkedin.com/in/mahdi-ghaznavi-4521311a6/
+          icon: fab fa-linkedin
+        - link: mailto://ghaznavi.mahdi@gmail.com
+          icon: fas fa-envelope
+
+# comments:
+#   label: false
+#   kind: comments
