@@ -7,7 +7,7 @@ meta:
 header:
   title: Image Captioning
   description: |
-    Image captioning using CNNs for understanding the image, and LSTM for generating a caption.
+    Image captioning using CNNs for understanding the image, and LSTM for generating a caption
   background: images/header.png
 
 solution:
@@ -18,7 +18,7 @@ solution:
     - notebook: notebooks/learning-tasks/solutions/5_image_captioning
       text: 'Image Captioning: A Solution'
       kind: ''
-      description: Image captioning using CNNs for understanding the image, and LSTM for generating a caption.
+      description: Image captioning using CNNs for understanding the image, and LSTM for generating a caption
 
 authors:
   label:
