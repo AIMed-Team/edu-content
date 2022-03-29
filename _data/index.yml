@@ -98,6 +98,12 @@ learning-tasks:
     kind: Notebook Exercise
     description: <p>MNIST clustering using pretrained ResNet 18 and KMeans</p>
     link: /edu-content/notebooks/learning-tasks/4_clustering/
+  - notebook: notebooks/learning-tasks/5_image_captioning
+    text: 5. Image Captioning
+    kind: Notebook Exercise
+    description: <p>Image captioning using CNNs for understanding the image, and LSTM
+      for generating a caption</p>
+    link: /edu-content/notebooks/learning-tasks/5_image_captioning/
 kind: Index
 search:
   content: true

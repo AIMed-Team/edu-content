@@ -1,0 +1,333 @@
+---
+layout: content
+metadata: notebooks_learning-tasks_solutions_5_image_captioning_metadata
+colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/master/notebooks/learning-tasks/solutions/5_image_captioning/index.ipynb
+---
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In this notebook, you should implement an exciting task, write a caption for images with an intelligent agent!</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We use the <a href="https://cocodataset.org/">COCO dataset</a> for this purpose. COCO is a large-scale object detection, segmentation, and captioning dataset. Also, we use pycocotools library for some data related works. So, you should install it first. (Maybe it needs some dependencies that you have not on your PC. So, we recommend to run this notebook on Google colab).</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="o">!</span>pip install pycocotools
+<span class="o">!</span>pip install nltk
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
+
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="s1">'opt'</span> <span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">os</span><span class="o">.</span><span class="n">chdir</span><span class="p">(</span> <span class="s1">'opt'</span> <span class="p">)</span>
+<span class="o">!</span>git clone <span class="s1">'https://github.com/cocodataset/cocoapi.git'</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">data_related</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>You should build your network that consists of two parts, a CNN for understanding the image, and a LSTM for generating a related sentences.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Model">Model<a class="anchor-link" href="#Model">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
+<span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
+<span class="kn">import</span> <span class="nn">torchvision.models</span> <span class="k">as</span> <span class="nn">models</span>
+<span class="kn">import</span> <span class="nn">math</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Encoder</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">embed_size</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Encoder</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="c1"># todo: define a CNN with an extended fully-connected. your output should be of the shape Batch_Size x embed_size.</span>
+        <span class="c1"># make sure that your model is strong enough to encode the image properly.</span>
+        <span class="c1">#######################</span>
+        <span class="n">resnet</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">resnet50</span><span class="p">(</span><span class="n">pretrained</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">resnet</span><span class="o">.</span><span class="n">parameters</span><span class="p">():</span>
+            <span class="n">param</span><span class="o">.</span><span class="n">requires_grad_</span><span class="p">(</span><span class="kc">False</span><span class="p">)</span>
+        
+        <span class="n">modules</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">resnet</span><span class="o">.</span><span class="n">children</span><span class="p">())[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">resnet</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">(</span><span class="o">*</span><span class="n">modules</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">embed</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span><span class="n">resnet</span><span class="o">.</span><span class="n">fc</span><span class="o">.</span><span class="n">in_features</span><span class="p">,</span> <span class="n">embed_size</span><span class="p">)</span>
+        
+        <span class="c1">#######################</span>
+    
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">images</span><span class="p">):</span>
+        <span class="n">features</span> <span class="o">=</span> <span class="kc">None</span>
+        <span class="c1">#######################</span>
+        <span class="n">features</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">resnet</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>        
+        <span class="n">features</span> <span class="o">=</span> <span class="n">features</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="n">features</span><span class="o">.</span><span class="n">size</span><span class="p">(</span><span class="mi">0</span><span class="p">),</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>        
+        <span class="n">features</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed</span><span class="p">(</span><span class="n">features</span><span class="p">)</span>  
+
+        <span class="c1">#######################</span>
+        <span class="k">return</span> <span class="n">features</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Decoder</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">embed_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">,</span> <span class="n">num_layers</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Decoder</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">embed_size</span> <span class="o">=</span> <span class="n">embed_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hidden_size</span> <span class="o">=</span> <span class="n">hidden_size</span> 
+        <span class="bp">self</span><span class="o">.</span><span class="n">vocab_size</span> <span class="o">=</span> <span class="n">vocab_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_layers</span> <span class="o">=</span> <span class="n">num_layers</span>
+        <span class="c1"># todo: define an embedding layer to transform inputs from "vocab_size" dim to "embed size" dim.</span>
+        <span class="c1">#######################</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">word_embedding</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">vocab_size</span> <span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_size</span> <span class="p">)</span>
+        
+        
+        <span class="c1">#######################</span>
+        
+        <span class="c1"># todo: define an LSTM decoder with input size, hidden size, and num layers specified in the input. </span>
+        <span class="c1">#######################</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">lstm</span>  <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">LSTM</span><span class="p">(</span>    <span class="n">input_size</span>  <span class="o">=</span>  <span class="bp">self</span><span class="o">.</span><span class="n">embed_size</span> <span class="p">,</span> 
+                             <span class="n">hidden_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hidden_size</span><span class="p">,</span>
+                             <span class="n">num_layers</span>  <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_layers</span> <span class="p">,</span>
+                             <span class="n">batch_first</span> <span class="o">=</span> <span class="kc">True</span> 
+                             <span class="p">)</span>
+        
+        <span class="c1">#######################</span>
+        
+        <span class="c1"># todo: define a fully-connected layer to transform output hidden size of LSTM to a "vocab_size" dim vector.</span>
+        <span class="c1">#######################</span>
+        
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">fc</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Linear</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">hidden_size</span> <span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">vocab_size</span>  <span class="p">)</span>
+        <span class="c1">#######################</span>
+    <span class="k">def</span> <span class="nf">init_hidden</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_layers</span> <span class="p">,</span> <span class="n">batch_size</span> <span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hidden_size</span>  <span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">),</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_layers</span> <span class="p">,</span> <span class="n">batch_size</span> <span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hidden_size</span>  <span class="p">)</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span> <span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">forward</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">features</span><span class="p">,</span> <span class="n">captions</span><span class="p">):</span>            
+        <span class="n">captions</span> <span class="o">=</span> <span class="n">captions</span><span class="p">[:,</span>  <span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>      
+        <span class="bp">self</span><span class="o">.</span><span class="n">batch_size</span> <span class="o">=</span> <span class="n">features</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">hidden</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">init_hidden</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">batch_size</span> <span class="p">)</span>
+        <span class="n">outputs</span> <span class="o">=</span> <span class="kc">None</span>  
+        
+        <span class="c1"># todo: compute the output of the model.</span>
+        <span class="c1">#######################</span>
+        <span class="n">embeds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">word_embedding</span><span class="p">(</span> <span class="n">captions</span> <span class="p">)</span>
+        <span class="n">inputs</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">(</span> <span class="p">(</span> <span class="n">features</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="p">,</span> <span class="n">embeds</span> <span class="p">)</span> <span class="p">,</span> <span class="n">dim</span> <span class="o">=</span><span class="mi">1</span>  <span class="p">)</span>      
+        <span class="n">lstm_out</span> <span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hidden</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lstm</span><span class="p">(</span><span class="n">inputs</span> <span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">hidden</span><span class="p">)</span>      
+        <span class="n">outputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc</span><span class="p">(</span> <span class="n">lstm_out</span> <span class="p">)</span>
+        
+        
+        <span class="c1">#######################</span>
+        <span class="k">return</span> <span class="n">outputs</span>
+
+    <span class="k">def</span> <span class="nf">generate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">,</span> <span class="n">max_len</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
+        <span class="n">final_output</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="n">batch_size</span> <span class="o">=</span> <span class="n">inputs</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>         
+        <span class="n">hidden</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">init_hidden</span><span class="p">(</span><span class="n">batch_size</span><span class="p">)</span>
+        <span class="n">max_sent_length</span> <span class="o">=</span> <span class="mi">20</span>
+    
+        <span class="c1"># todo: you should pass hidden state and previous vocab to LSTM consequently, untill the length of the sentence exceed</span>
+        <span class="c1"># max_sent_length, or EOS token (end of snetences, index 1) occurs. Just return indexes in final_output.</span>
+        <span class="c1">#######################</span>
+        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+            <span class="n">lstm_out</span><span class="p">,</span> <span class="n">hidden</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lstm</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">hidden</span><span class="p">)</span> 
+            <span class="n">outputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc</span><span class="p">(</span><span class="n">lstm_out</span><span class="p">)</span>  
+            <span class="n">outputs</span> <span class="o">=</span> <span class="n">outputs</span><span class="o">.</span><span class="n">squeeze</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> 
+            <span class="n">_</span><span class="p">,</span> <span class="n">max_idx</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">outputs</span><span class="p">,</span> <span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> 
+            <span class="n">final_output</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">max_idx</span><span class="o">.</span><span class="n">cpu</span><span class="p">()</span><span class="o">.</span><span class="n">numpy</span><span class="p">()[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>             
+            <span class="k">if</span> <span class="p">(</span><span class="n">max_idx</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">or</span> <span class="nb">len</span><span class="p">(</span><span class="n">final_output</span><span class="p">)</span> <span class="o">&gt;=</span><span class="mi">20</span> <span class="p">):</span>
+                <span class="k">break</span>
+            
+            <span class="n">inputs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">word_embedding</span><span class="p">(</span><span class="n">max_idx</span><span class="p">)</span> 
+            <span class="n">inputs</span> <span class="o">=</span> <span class="n">inputs</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>  
+        
+        
+        
+        <span class="c1">#######################</span>
+        <span class="k">return</span> <span class="n">final_output</span>  
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Train">Train<a class="anchor-link" href="#Train">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">embed_size</span> <span class="o">=</span> <span class="mi">256</span>
+<span class="n">hidden_size</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="n">num_layers</span> <span class="o">=</span><span class="mi">1</span> 
+<span class="n">num_epochs</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">print_every</span> <span class="o">=</span> <span class="mi">150</span>
+<span class="n">save_every</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">vocab_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">data_related</span><span class="o">.</span><span class="n">data_loader_train</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">vocab</span><span class="p">)</span>
+<span class="n">total_step</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">data_related</span><span class="o">.</span><span class="n">data_loader_train</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">caption_lengths</span><span class="p">)</span> <span class="o">/</span> 
+                       <span class="n">data_related</span><span class="o">.</span><span class="n">data_loader_train</span><span class="o">.</span><span class="n">batch_sampler</span><span class="o">.</span><span class="n">batch_size</span><span class="p">)</span>
+<span class="n">lr</span> <span class="o">=</span> <span class="mf">0.001</span>
+<span class="n">device</span> <span class="o">=</span>  <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">'cuda'</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s1">'cpu'</span><span class="p">)</span>
+<span class="n">model_save_path</span> <span class="o">=</span> <span class="s1">'model_weights/'</span>
+<span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span> <span class="n">model_save_path</span> <span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="n">encoder</span> <span class="o">=</span> <span class="n">Encoder</span><span class="p">(</span><span class="n">embed_size</span><span class="p">)</span>
+<span class="n">decoder</span> <span class="o">=</span> <span class="n">Decoder</span><span class="p">(</span><span class="n">embed_size</span><span class="p">,</span> <span class="n">hidden_size</span><span class="p">,</span> <span class="n">vocab_size</span> <span class="p">,</span><span class="n">num_layers</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1"># todo: Define loss function and optimizer for encoder and decoder weights.</span>
+<span class="c1">#######################</span>
+<span class="n">criterion</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">CrossEntropyLoss</span><span class="p">()</span>
+<span class="n">all_params</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">decoder</span><span class="o">.</span><span class="n">parameters</span><span class="p">())</span>  <span class="o">+</span> <span class="nb">list</span><span class="p">(</span> <span class="n">encoder</span><span class="o">.</span><span class="n">embed</span><span class="o">.</span><span class="n">parameters</span><span class="p">()</span> <span class="p">)</span>
+<span class="n">optimizer</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">optim</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span> <span class="n">params</span>  <span class="o">=</span> <span class="n">all_params</span> <span class="p">,</span> <span class="n">lr</span> <span class="o">=</span> <span class="n">lr</span>  <span class="p">)</span>
+<span class="c1">#######################</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="n">encoder</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
+<span class="n">decoder</span><span class="o">.</span><span class="n">train</span><span class="p">()</span>
+<span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_epochs</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">step</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">total_step</span><span class="p">):</span>
+        <span class="n">indices</span> <span class="o">=</span> <span class="n">data_related</span><span class="o">.</span><span class="n">data_loader_train</span><span class="o">.</span><span class="n">dataset</span><span class="o">.</span><span class="n">get_train_indices</span><span class="p">()</span>
+        <span class="n">new_sampler</span> <span class="o">=</span> <span class="n">data_related</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">sampler</span><span class="o">.</span><span class="n">SubsetRandomSampler</span><span class="p">(</span><span class="n">indices</span><span class="p">)</span>
+        <span class="n">data_related</span><span class="o">.</span><span class="n">data_loader_train</span><span class="o">.</span><span class="n">batch_sampler</span><span class="o">.</span><span class="n">sampler</span> <span class="o">=</span> <span class="n">new_sampler</span>    
+        <span class="n">images</span><span class="p">,</span><span class="n">captions</span> <span class="o">=</span> <span class="nb">next</span><span class="p">(</span><span class="nb">iter</span><span class="p">(</span><span class="n">data_related</span><span class="o">.</span><span class="n">data_loader_train</span><span class="p">))</span>    
+        <span class="n">images</span> <span class="p">,</span> <span class="n">captions</span> <span class="o">=</span> <span class="n">images</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span> <span class="p">,</span> <span class="n">captions</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+        <span class="n">encoder</span> <span class="p">,</span> <span class="n">decoder</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span> <span class="p">,</span> <span class="n">decoder</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+        <span class="n">encoder</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>    
+        <span class="n">decoder</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
+        <span class="c1"># todo: compute output and loss</span>
+        <span class="c1">#######################</span>
+        <span class="n">features</span> <span class="o">=</span> <span class="n">encoder</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>
+        <span class="n">output</span> <span class="o">=</span> <span class="n">decoder</span><span class="p">(</span> <span class="n">features</span> <span class="p">,</span> <span class="n">captions</span> <span class="p">)</span>    
+        <span class="n">loss</span> <span class="o">=</span> <span class="n">criterion</span><span class="p">(</span> <span class="n">output</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">vocab_size</span><span class="p">)</span> <span class="p">,</span> <span class="n">captions</span><span class="o">.</span><span class="n">view</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+        <span class="c1">#######################</span>
+        <span class="n">loss</span><span class="o">.</span><span class="n">backward</span><span class="p">()</span>
+        <span class="n">optimizer</span><span class="o">.</span><span class="n">step</span><span class="p">()</span>
+        <span class="n">stat_vals</span> <span class="o">=</span> <span class="s1">'Epochs [</span><span class="si">%d</span><span class="s1">/</span><span class="si">%d</span><span class="s1">] Step [</span><span class="si">%d</span><span class="s1">/</span><span class="si">%d</span><span class="s1">] Loss [</span><span class="si">%.4f</span><span class="s1">] '</span> <span class="o">%</span><span class="p">(</span><span class="n">e</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_epochs</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">total_step</span><span class="p">,</span><span class="n">loss</span><span class="o">.</span><span class="n">item</span><span class="p">())</span>
+        <span class="k">if</span> <span class="n">step</span> <span class="o">%</span> <span class="n">print_every</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">stat_vals</span><span class="p">)</span>
+            <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+            <span class="n">torch</span><span class="o">.</span><span class="n">save</span><span class="p">(</span> <span class="n">encoder</span><span class="o">.</span><span class="n">state_dict</span><span class="p">()</span> <span class="p">,</span>  <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="n">model_save_path</span> <span class="p">,</span> <span class="s1">'encoderdata_</span><span class="si">{}</span><span class="s1">.pkl'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">e</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+            <span class="n">torch</span><span class="o">.</span><span class="n">save</span><span class="p">(</span> <span class="n">decoder</span><span class="o">.</span><span class="n">state_dict</span><span class="p">()</span> <span class="p">,</span>  <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="n">model_save_path</span> <span class="p">,</span> <span class="s1">'decoderdata_</span><span class="si">{}</span><span class="s1">.pkl'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">e</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+    <span class="k">if</span> <span class="n">e</span> <span class="o">%</span> <span class="n">save_every</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">save</span><span class="p">(</span> <span class="n">encoder</span><span class="o">.</span><span class="n">state_dict</span><span class="p">()</span> <span class="p">,</span>  <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="n">model_save_path</span> <span class="p">,</span> <span class="s1">'encoderdata_</span><span class="si">{}</span><span class="s1">.pkl'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">e</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+        <span class="n">torch</span><span class="o">.</span><span class="n">save</span><span class="p">(</span> <span class="n">decoder</span><span class="o">.</span><span class="n">state_dict</span><span class="p">()</span> <span class="p">,</span>  <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span> <span class="n">model_save_path</span> <span class="p">,</span> <span class="s1">'decoderdata_</span><span class="si">{}</span><span class="s1">.pkl'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">e</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span> <span class="p">)</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Test">Test<a class="anchor-link" href="#Test">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="n">encoder</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span> 
+<span class="n">decoder</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
+<span class="n">encoder</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+<span class="n">decoder</span><span class="o">.</span><span class="n">eval</span><span class="p">()</span>
+<span class="n">original_img</span> <span class="p">,</span> <span class="n">processed_img</span>  <span class="o">=</span> <span class="nb">next</span><span class="p">(</span> <span class="n">data_related</span><span class="o">.</span><span class="n">data_iter</span> <span class="p">)</span>
+
+<span class="n">features</span>  <span class="o">=</span> <span class="n">encoder</span><span class="p">(</span><span class="n">processed_img</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">))</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">final_output</span> <span class="o">=</span> <span class="n">decoder</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span> <span class="n">features</span>  <span class="p">,</span> <span class="n">max_len</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">data_related</span><span class="o">.</span><span class="n">get_sentences</span><span class="p">(</span><span class="n">original_img</span><span class="p">,</span> <span class="n">final_output</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+</div>
+</div>
+</div>
+</div>
