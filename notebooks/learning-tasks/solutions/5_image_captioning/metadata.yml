@@ -1,23 +1,23 @@
-title: Image Captioning
+title: 'Image Captioning: A Solution: A solution'
 
 meta:
   - name: keywords
     content: Artificial Intelligence, Deep Learning, Convolutional Neural Networks, RNN, LSTM, AI
 
 header:
-  title: Image Captioning
+  title: 'Image Captioning: A Solution: A solution'
   description: |
     Image captioning using CNNs for understanding the image, and LSTM for generating a caption.
   background: images/header.png
 
-solution:
+blank:
   label: 
-    text: A solution
+    text: The blank notebook
     position: top
   content:
-    - notebook: notebooks/learning-tasks/solutions/5_image_captioning
-      text: 'Image Captioning: A Solution'
-      kind: ''
+    - notebook: notebooks/learning-tasks/5_image_captioning
+      text: Image Captioning
+      kind: Notebook Exercise
       description: Image captioning using CNNs for understanding the image, and LSTM for generating a caption.
 
 authors:
