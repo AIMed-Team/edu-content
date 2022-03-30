@@ -69,3 +69,8 @@ learning-tasks:
       text: 4. Clustering using pretrained deep models
       kind: Notebook Exercise
       description: MNIST clustering using pretrained ResNet 18 and KMeans
+      
+    - notebook: notebooks/learning-tasks/5_image_captioning
+      text: 5. Image Captioning
+      kind: Notebook Exercise
+      description: Image captioning using CNNs for understanding the image, and LSTM for generating a caption
