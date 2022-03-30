@@ -14,7 +14,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We use the <a href="https://cocodataset.org/">COCO dataset</a> for this purpose. COCO is a large-scale object detection, segmentation, and captioning dataset. Also, we use pycocotools library for some data related works. So, you should install it first. (Maybe it needs some dependencies that you have not on your PC. So, we recommend to run this notebook on Google colab).</p>
+<p>We use the <a href="https://cocodataset.org/">COCO dataset</a> for this purpose. COCO is large-scale object detection, segmentation, and captioning dataset. Also, we use the pycocotools library for some data-related works. So, you should install it first. Maybe it needs some dependencies that you have not on your PC. So, we recommend running this notebook on Google collab. You should upload data_related.py in the content folder on Colab if you want to do so.</p>
 </div>
 </div>
 </div>
@@ -45,6 +45,13 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The following command imports some data-related functions, and it takes about 10 minutes for running.</p>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [ ]:</div>
@@ -59,7 +66,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>You should build your network that consists of two parts, a CNN for understanding the image, and a LSTM for generating a related sentences.</p>
+<p>Your network should have two parts, a CNN for understanding the image and an LSTM for generating related sentences.</p>
 </div>
 </div>
 </div>
@@ -92,8 +99,8 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Encoder</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Module</span><span class="p">):</span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">embed_size</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">(</span><span class="n">Encoder</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">()</span>
-        <span class="c1"># todo: define a CNN with an extended fully-connected. your output should be of the shape Batch_Size x embed_size.</span>
-        <span class="c1"># make sure that your model is strong enough to encode the image properly.</span>
+        <span class="c1"># todo: Define a CNN with an extended fully-connected. Your output should be of the shape Batch_Size x embed_size.</span>
+        <span class="c1"># Make sure that your model is strong enough to encode the image properly.</span>
         <span class="c1">#######################</span>
         <span class="n">resnet</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">resnet50</span><span class="p">(</span><span class="n">pretrained</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
         <span class="k">for</span> <span class="n">param</span> <span class="ow">in</span> <span class="n">resnet</span><span class="o">.</span><span class="n">parameters</span><span class="p">():</span>
@@ -131,14 +138,14 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
         <span class="bp">self</span><span class="o">.</span><span class="n">hidden_size</span> <span class="o">=</span> <span class="n">hidden_size</span> 
         <span class="bp">self</span><span class="o">.</span><span class="n">vocab_size</span> <span class="o">=</span> <span class="n">vocab_size</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">num_layers</span> <span class="o">=</span> <span class="n">num_layers</span>
-        <span class="c1"># todo: define an embedding layer to transform inputs from "vocab_size" dim to "embed size" dim.</span>
+        <span class="c1"># todo: Define an embedding layer to transform inputs from "vocab_size" dim to "embed size" dim.</span>
         <span class="c1">#######################</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">word_embedding</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">vocab_size</span> <span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">embed_size</span> <span class="p">)</span>
         
         
         <span class="c1">#######################</span>
         
-        <span class="c1"># todo: define an LSTM decoder with input size, hidden size, and num layers specified in the input. </span>
+        <span class="c1"># todo: Define an LSTM decoder with input size, hidden size, and num layers specified in the input.  </span>
         <span class="c1">#######################</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">lstm</span>  <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">LSTM</span><span class="p">(</span>    <span class="n">input_size</span>  <span class="o">=</span>  <span class="bp">self</span><span class="o">.</span><span class="n">embed_size</span> <span class="p">,</span> 
                              <span class="n">hidden_size</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">hidden_size</span><span class="p">,</span>
@@ -148,7 +155,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
         
         <span class="c1">#######################</span>
         
-        <span class="c1"># todo: define a fully-connected layer to transform output hidden size of LSTM to a "vocab_size" dim vector.</span>
+        <span class="c1"># todo: Define a fully-connected layer to transform the output hidden size of LSTM to a "vocab_size" dim vector.</span>
         <span class="c1">#######################</span>
         
         
@@ -164,7 +171,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
         <span class="bp">self</span><span class="o">.</span><span class="n">hidden</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">init_hidden</span><span class="p">(</span> <span class="bp">self</span><span class="o">.</span><span class="n">batch_size</span> <span class="p">)</span>
         <span class="n">outputs</span> <span class="o">=</span> <span class="kc">None</span>  
         
-        <span class="c1"># todo: compute the output of the model.</span>
+        <span class="c1"># todo: Compute the output of the model.</span>
         <span class="c1">#######################</span>
         <span class="n">embeds</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">word_embedding</span><span class="p">(</span> <span class="n">captions</span> <span class="p">)</span>
         <span class="n">inputs</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">cat</span><span class="p">(</span> <span class="p">(</span> <span class="n">features</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="n">dim</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="p">,</span> <span class="n">embeds</span> <span class="p">)</span> <span class="p">,</span> <span class="n">dim</span> <span class="o">=</span><span class="mi">1</span>  <span class="p">)</span>      
@@ -181,8 +188,9 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
         <span class="n">hidden</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">init_hidden</span><span class="p">(</span><span class="n">batch_size</span><span class="p">)</span>
         <span class="n">max_sent_length</span> <span class="o">=</span> <span class="mi">20</span>
     
-        <span class="c1"># todo: you should pass hidden state and previous vocab to LSTM consequently, untill the length of the sentence exceed</span>
-        <span class="c1"># max_sent_length, or EOS token (end of snetences, index 1) occurs. Just return indexes in final_output.</span>
+        <span class="c1"># todo: You should pass hidden state and previous vocab to LSTM successively, and stop generating when</span>
+        <span class="c1"># The length of the sentence exceeds max_sent_length, or EOS token (end of sentence, index 1) occurs.</span>
+        <span class="c1"># Just return indexes in final_output.</span>
         <span class="c1">#######################</span>
         <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
             <span class="n">lstm_out</span><span class="p">,</span> <span class="n">hidden</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">lstm</span><span class="p">(</span><span class="n">inputs</span><span class="p">,</span> <span class="n">hidden</span><span class="p">)</span> 
@@ -254,6 +262,13 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 </div>
 </div>
 </div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The training process may take up to 10 hours. Save the model frequently. If the training process stops for some reason, continue from the last saved model.</p>
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In [ ]:</div>
@@ -272,7 +287,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
         <span class="n">encoder</span> <span class="p">,</span> <span class="n">decoder</span> <span class="o">=</span> <span class="n">encoder</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span> <span class="p">,</span> <span class="n">decoder</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">)</span>
         <span class="n">encoder</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>    
         <span class="n">decoder</span><span class="o">.</span><span class="n">zero_grad</span><span class="p">()</span>
-        <span class="c1"># todo: compute output and loss</span>
+        <span class="c1"># todo: Compute output and loss.</span>
         <span class="c1">#######################</span>
         <span class="n">features</span> <span class="o">=</span> <span class="n">encoder</span><span class="p">(</span><span class="n">images</span><span class="p">)</span>
         <span class="n">output</span> <span class="o">=</span> <span class="n">decoder</span><span class="p">(</span> <span class="n">features</span> <span class="p">,</span> <span class="n">captions</span> <span class="p">)</span>    
@@ -315,17 +330,6 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <span class="n">features</span>  <span class="o">=</span> <span class="n">encoder</span><span class="p">(</span><span class="n">processed_img</span><span class="o">.</span><span class="n">to</span><span class="p">(</span><span class="n">device</span><span class="p">))</span><span class="o">.</span><span class="n">unsqueeze</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">final_output</span> <span class="o">=</span> <span class="n">decoder</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span> <span class="n">features</span>  <span class="p">,</span> <span class="n">max_len</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
 <span class="n">data_related</span><span class="o">.</span><span class="n">get_sentences</span><span class="p">(</span><span class="n">original_img</span><span class="p">,</span> <span class="n">final_output</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In [ ]:</div>
-<div class="inner_cell">
-<div class="input_area">
-<div class="highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 </div>
 </div>
