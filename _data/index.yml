@@ -104,6 +104,11 @@ learning-tasks:
     description: <p>Image captioning using CNNs for understanding the image, and LSTM
       for generating a caption</p>
     link: /edu-content/notebooks/learning-tasks/5_image_captioning/
+  - notebook: notebooks/learning-tasks/6_cgan
+    text: 6. Conditional GAN
+    kind: Notebook Exercise
+    description: <p>Generating right half of an MNIST digit given the left half.</p>
+    link: /edu-content/notebooks/learning-tasks/6_cgan/
 kind: Index
 search:
   content: true

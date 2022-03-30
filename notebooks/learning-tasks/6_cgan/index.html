@@ -1,0 +1,104 @@
+---
+layout: content
+metadata: notebooks_learning-tasks_6_cgan_metadata
+colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/master/notebooks/learning-tasks/6_cgan/index.ipynb
+---
+
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>In this task, you should train a conditional GAN to generate the right half of MNIST images, given the left half.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Load-the-dataset">Load the dataset<a class="anchor-link" href="#Load-the-dataset">¶</a></h1><p>Load the MNIST dataset bellow. You can use either <code>torchvision.datasets.MNIST</code> or <code>sklearn.datasets.fetch_openml()</code> or any other way to load the dataset.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-python"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Design-your-model">Design your model<a class="anchor-link" href="#Design-your-model">¶</a></h1><p>Implement your GAN below using <code>torch.nn</code> modules. Feel free to add extra cells. The generator should construct right half of an image given the left half of it and a noise. The general structure of this GAN is shown below.</p>
+<p><img alt="" src="/edu-content/assets/./images/CGAN.jpeg"/></p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-python"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Train-your-GAN">Train your GAN<a class="anchor-link" href="#Train-your-GAN">¶</a></h1><p>Write the training process below. Feel free to add extra cells.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-python"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Plot-Generator/Discriminator-losses">Plot Generator/Discriminator losses<a class="anchor-link" href="#Plot-Generator/Discriminator-losses">¶</a></h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-python"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Draw-examples">Draw examples<a class="anchor-link" href="#Draw-examples">¶</a></h1><p>Draw real vs. generated images below (from the best epoch).</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-python"><pre><span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
