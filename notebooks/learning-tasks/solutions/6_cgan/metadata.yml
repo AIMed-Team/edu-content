@@ -1,0 +1,41 @@
+title: 'Conditional GAN: A Solution'
+
+meta:
+  - name: keywords
+    content: Artificial Intelligence, Deep Learning, Generative Adversarial Networks, MNIST
+    
+header:
+  title: Conditional GAN
+  description: |
+    Generating right half of an MNIST digit given the left half.
+  background: images/header.png
+
+blank:
+  label: 
+    text: The blank notebook
+    position: top
+  content:
+    - notebook: notebooks/learning-tasks/6_cgan
+      text: Conditional GAN
+      kind: Notebook Exercise
+      description: Generating right half of an MNIST digit given the left half.
+
+authors:
+  label:
+    position: top
+    text: Authors
+  kind: people
+  content:
+    - name: Ahmad Salimi
+      role: Author
+      contact:
+        - link: https://github.com/ahmadsalimi
+          icon: fab fa-github
+        - link: https://www.linkedin.com/in/ahmadsalimi/
+          icon: fab fa-linkedin
+        - link: mailto://ahsalimi@ce.sharif.edu
+          icon: fas fa-envelope
+
+# comments:
+#   label: false
+#   kind: comments
