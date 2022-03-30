@@ -13,7 +13,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [1]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -38,7 +38,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [9]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">fetch_openml</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">'mnist_784'</span><span class="p">,</span> <span class="n">return_X_y</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">as_frame</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
@@ -49,7 +49,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [10]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'int32'</span><span class="p">)</span>
@@ -60,7 +60,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [11]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">X</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="mi">28</span><span class="p">,</span> <span class="mi">28</span><span class="p">))</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">'float32'</span><span class="p">)</span>
@@ -72,7 +72,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[11]:</div>
+<div class="prompt output_prompt">Out[ ]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>(70000, 28, 28)</pre>
 </div>
@@ -82,7 +82,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [12]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">)</span>
@@ -95,7 +95,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[12]:</div>
+<div class="prompt output_prompt">Out[ ]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>(((50400, 28, 28), (14000, 28, 28), (5600, 28, 28)),
  ((50400,), (14000,), (5600,)))</pre>
@@ -127,7 +127,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [3]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">ImageConv</span><span class="p">(</span><span class="n">nn</span><span class="o">.</span><span class="n">Sequential</span><span class="p">):</span>
@@ -1454,7 +1454,7 @@ Epoch 200 finished in 32.80s - Train loss: 1.11e-03 - Val loss: 1.04e-03
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [15]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">generator_train_step</span><span class="p">(</span><span class="n">generator</span><span class="p">,</span> <span class="n">discriminator</span><span class="p">,</span> <span class="n">b_images</span><span class="p">,</span> <span class="n">g_optimizer</span><span class="p">,</span> <span class="n">criterion</span><span class="p">):</span>
@@ -1481,7 +1481,7 @@ Epoch 200 finished in 32.80s - Train loss: 1.11e-03 - Val loss: 1.04e-03
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [16]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">discriminator_train_step</span><span class="p">(</span><span class="n">generator</span><span class="p">,</span> <span class="n">discriminator</span><span class="p">,</span> <span class="n">b_images</span><span class="p">,</span> <span class="n">d_optimizer</span><span class="p">,</span> <span class="n">criterion</span><span class="p">):</span>
@@ -1514,7 +1514,7 @@ Epoch 200 finished in 32.80s - Train loss: 1.11e-03 - Val loss: 1.04e-03
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [17]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">train_GAN</span><span class="p">(</span><span class="n">generator</span><span class="p">,</span> <span class="n">discriminator</span><span class="p">,</span> <span class="n">images</span><span class="p">,</span> <span class="n">g_optimizer</span><span class="p">,</span> <span class="n">d_optimizer</span><span class="p">,</span> <span class="n">criterion</span><span class="p">,</span> <span class="n">batch_size</span><span class="p">,</span> <span class="n">discriminator_step</span><span class="p">):</span>
@@ -1547,7 +1547,7 @@ Epoch 200 finished in 32.80s - Train loss: 1.11e-03 - Val loss: 1.04e-03
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [18]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">display_GAN</span><span class="p">(</span><span class="n">generator</span><span class="p">,</span> <span class="n">images</span><span class="p">,</span> <span class="n">columns</span><span class="p">,</span> <span class="n">rows</span><span class="p">):</span>
@@ -1579,7 +1579,7 @@ Epoch 200 finished in 32.80s - Train loss: 1.11e-03 - Val loss: 1.04e-03
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [19]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">imageconv</span> <span class="o">=</span> <span class="n">ImageConv</span><span class="p">()</span>
@@ -1591,7 +1591,7 @@ Epoch 200 finished in 32.80s - Train loss: 1.11e-03 - Val loss: 1.04e-03
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[19]:</div>
+<div class="prompt output_prompt">Out[ ]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>&lt;All keys matched successfully&gt;</pre>
 </div>
@@ -1601,7 +1601,7 @@ Epoch 200 finished in 32.80s - Train loss: 1.11e-03 - Val loss: 1.04e-03
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [20]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">generator</span> <span class="o">=</span> <span class="n">Generator</span><span class="p">(</span><span class="n">imageconv</span><span class="p">)</span><span class="o">.</span><span class="n">cuda</span><span class="p">()</span>
@@ -1613,7 +1613,7 @@ Epoch 200 finished in 32.80s - Train loss: 1.11e-03 - Val loss: 1.04e-03
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [21]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">discriminator</span><span class="o">.</span><span class="n">conv</span><span class="o">.</span><span class="n">load_state_dict</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">'drive/MyDrive/mnist-autoencoder-conv-model.pt'</span><span class="p">))</span>
@@ -1624,7 +1624,7 @@ Epoch 200 finished in 32.80s - Train loss: 1.11e-03 - Val loss: 1.04e-03
 <div class="output_wrapper">
 <div class="output">
 <div class="output_area">
-<div class="prompt output_prompt">Out[21]:</div>
+<div class="prompt output_prompt">Out[ ]:</div>
 <div class="output_text output_subarea output_execute_result">
 <pre>&lt;All keys matched successfully&gt;</pre>
 </div>
@@ -1634,7 +1634,7 @@ Epoch 200 finished in 32.80s - Train loss: 1.11e-03 - Val loss: 1.04e-03
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In [22]:</div>
+<div class="prompt input_prompt">In [ ]:</div>
 <div class="inner_cell">
 <div class="input_area">
 <div class="highlight hl-ipython3"><pre><span></span><span class="n">criterion</span> <span class="o">=</span> <span class="n">nn</span><span class="o">.</span><span class="n">BCELoss</span><span class="p">()</span>
