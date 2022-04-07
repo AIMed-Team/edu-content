@@ -43,7 +43,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Consider the linear regression $\hat{y}=w^T x$ on $S=\{(x^{(i)}, y^{(i)})\}_{i=1}^m$ with loss function $J(w)=\sum_{i=1}^{m} (y^{(i)}-\hat{y}^{(i)})^2$.</p>
 <ol>
-<li>Simplify $\underset{w}{argmin}$ $J(w)$.</li>
+<li>Simplify $\underset{w}{argmin}$ $J(w)$ by setting derivative of $J(w)$ w.r.t. $w$ to 0.</li>
 <li>When the formula of the previous part does not work? Simplify $\underset{w}{argmin}$ $J(w)+\lambda\lVert w \rVert^2$ and describe how this new formulat solves the problem.</li>
 </ol>
 </div>
@@ -85,7 +85,7 @@ For simplicity, consider $w_K=0$.</p>
 <li><p>How many parameters should be estimated. What are them?</p>
 </li>
 <li><p>Simplify the following log-likelihood for $n$ training samples $\{(x_1, y_1), ..., (x_n, y_n)\}$
-$$L(w_1, ..., w_{K-1}=\sum_{i=1}^{n}\ln{P(Y=y_i|X=x_i)}$$</p>
+$$L(w_1, ..., w_{K-1})=\sum_{i=1}^{n}\ln{P(Y=y_i|X=x_i)}$$</p>
 </li>
 <li><p>Compute and simplify the gradient of $L$ w.r.t. each of $w_k$s.</p>
 </li>
@@ -373,7 +373,7 @@ the most significant bit. Evaluate you NN on large sequences.</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Generative models are models that are used for generating fake data (image, text, video, etc.). We want that this fake geenrated data seems real to humans and even other intelligent systems.
+<p>Generative models are deep models that generate fake data (image, text, video, etc.). We want that this fake-generated data seem real to humans and even other intelligent systems.
 The source for this topic is:</p>
 <ul>
 <li>AI-Med internship videos<ul>
