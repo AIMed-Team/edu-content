@@ -102,7 +102,7 @@ colab: https://colab.research.google.com/github/AIMed-Team/edu-content/blob/mast
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Build-a-CNN-model">Build a CNN model<a class="anchor-link" href="#Build-a-CNN-model">¶</a></h2><p>from now on, you will learn how to build and train a CNN model.</p>
+<h2 id="Build-a-CNN-model">Build a CNN model<a class="anchor-link" href="#Build-a-CNN-model">¶</a></h2><p>In this section, you will learn how to build and train a CNN model.</p>
 <p>pytorch models are defined as python classes inherited from <code>torch.nn.Module</code>. two functions are essential for model creation:</p>
 <ol>
 <li>learning weights (parameters) and network layers are defined within <code>__init__()</code>.</li>
@@ -284,6 +284,155 @@ the backpropagation consists of three sub-parts:</p>
         <span class="c1">## backpropagation</span>
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="More-notes">More notes<a class="anchor-link" href="#More-notes">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Hooks">Hooks<a class="anchor-link" href="#Hooks">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Hooks are magic</strong> and in Pytorch (which is same as everywhere else), they are functions triggered at some certain points of the process. Currently, Pytorch supports three global hooks: <code>register_forward_pre_hook</code>, <code>register_forward_hook</code> and <code>register_backward_hook</code>.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="register_forward_pre_hook">register_forward_pre_hook<a class="anchor-link" href="#register_forward_pre_hook">¶</a></h4><p>triggers before starting the forward passing of a module and so let's see how it works :). write a hook to check the input <code>x</code> of your <code>forward</code> function has exactly 4 number of dimensions, otherwise throw an exception.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">### your code here</span>
+
+<span class="n">incorrect_x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">512</span><span class="p">,</span> <span class="mi">512</span><span class="p">)</span>
+<span class="n">correct_x</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">512</span><span class="p">,</span> <span class="mi">512</span><span class="p">)</span>
+<span class="n">incorrect_x2</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">512</span><span class="p">,</span> <span class="mi">512</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">model</span><span class="p">(</span><span class="n">incorrect_x</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"FAILED case1"</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"PASSED case1"</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">model</span><span class="p">(</span><span class="n">correct_x</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"PASSED case2"</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"FAILED case2"</span><span class="p">)</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">model</span><span class="p">(</span><span class="n">incorrect_x2</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"FAIILED case3"</span><span class="p">)</span>
+<span class="k">except</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"PASSED case3"</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="register_forward_hook">register_forward_hook<a class="anchor-link" href="#register_forward_hook">¶</a></h4><p>triggers at the end of forward passing of the module. so now write a code to visualize the importance score of each layer given to the input image. the purpose is to recognize which layer pays attention to which part of the image. also choose a sample input by your choice.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">### your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="register_backward_hook">register_backward_hook<a class="anchor-link" href="#register_backward_hook">¶</a></h4><p><br/></p>
+<html>
+<a id="register_backward_hook"></a>
+triggers at the end of backward passing of the module. clipping gradient is a way to control the movement in optimization space and to avoid fast parameter updating in order to better explore the optimization space. write a hook to ensure the gradient calculated for each layer is limited to "two" **absolute value**. use it and train again your model from scratch and check how it has varied. Also **unregister the last hook** to avoid repetitive visualizations.</html>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In [ ]:</div>
+<div class="inner_cell">
+<div class="input_area">
+<div class="highlight hl-ipython3"><pre><span></span><span class="c1">### your code here</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Python-built-in-list-and-dictionary-effect">Python built-in list and dictionary effect<a class="anchor-link" href="#Python-built-in-list-and-dictionary-effect">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Layers and parameters recorded in either of python's list or dictionary will not be registered in graph computation and therefore will not be trained. Instead, it is recommended to use <code>ModuleList</code> and <code>ModuleDict</code>. If you have use it now then please change it :).</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Avoid-looping">Avoid looping<a class="anchor-link" href="#Avoid-looping">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Using loops extremely slows down the process and it should be avoided by parallel computation as much as possible.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Save-and-load">Save and load<a class="anchor-link" href="#Save-and-load">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>parameters can be saved using <code>torch.save</code> and passing the <code>state_dict</code> object of the model. In addition, it could be loaded by passing the returned object of <code>torch.load</code> to the model's <code>load_state_dict</code> API.</p>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="gradient-clipping">gradient clipping<a class="anchor-link" href="#gradient-clipping">¶</a></h3><p><a href="#register_backward_hook">Here</a> you have learned how to clip gradients using backward hooks. Also there is an alternative for this which is <code>torch.nn.utils.clip_grad_value_</code> API.</p>
 </div>
 </div>
 </div>
